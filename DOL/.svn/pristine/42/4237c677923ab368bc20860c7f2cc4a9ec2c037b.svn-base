@@ -1,0 +1,186 @@
+header.site-header{
+  .site-logo{
+    display:block;
+    a{
+      display:block;
+      position: absolute;
+      img{
+        display:block; 
+        width:100%;
+        @include box-shadow(0 0 10px 0 rgba(0,0,0,0.3));
+      }
+    }
+  }
+  h1{
+    font-family: $fontWeb01Bold;
+    font-size:24px;
+    color:#333;
+    margin:20px 0 11px 0;
+    line-height: 32px;
+    small{
+      font-size:24px;
+      color:#333;
+      display:block;
+      font-family: $fontWeb01Regular;
+    }
+  }
+  .select_language{
+    margin-top:33px;
+    .language{
+      margin-right:3px; 
+    }
+    a{
+      cursor:pointer;
+    }
+  }
+  .dropdown-menu   {
+    &.profile{
+    right:0;
+    left:inherit;}
+  }
+  .enlace_home{
+    font-size:13px;
+    font-family: $fontWeb01Semibold;
+  }
+  .profile-info, .select_language{
+    a{
+      img{
+        width:42px;
+        height: 42px;
+        padding:0;
+        margin:0;
+        background-color: #f7f8f8;
+        border:0 none;
+      }
+    }
+    & .dropdown-toggle .dropdown-icon{
+      width:16px;
+      height: 9px;
+      line-height: 42px;
+      display: inline-block;
+      vertical-align: middle;
+      background: url($rutaImagenes+"flecha-abajo.png") no-repeat center center;
+    }
+  }
+  .header-links{
+    margin:17px 0 0;
+    >li{
+      line-height:50px;
+      //padding:0 0 0 20px;
+      //margin:0 0 0 17px;
+      padding:0 0 0 20px;
+      margin:0 0 0 20px;
+      border-left:1px solid #e0ecf6;
+      vertical-align: middle;
+      &:first-child{
+        border-left:0 none;
+        padding-left: 0;
+        margin-left: 0;
+      }
+      a{
+        font-size:13px;
+        font-family: $fontWeb01Semibold;
+        &.logout{
+          @include spr-pseudo-insert("logout",0,0);
+          width:22px;
+          height: 26px;
+          display:inline-block;
+          line-height: 50px;
+          vertical-align: middle;
+        }
+        &.help-selector{
+          i{
+            margin-right:2px;
+            display: inline-block;
+            width:40px;
+            height: 40px;
+            background: url($rutaImagenes+"help-user-ico.png") no-repeat center center;  
+            line-height: 40px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }  
+  .header-link-language{
+    a{
+        font-size:13px;
+        font-family: $fontWeb01Semibold;}
+
+  }
+  
+}
+
+.breadcrumb-container{
+  border-top:1px solid #e0ecf6;
+  .breadcrumb{
+    margin: 7px 0 10px;
+    padding: 0;
+    background-color: transparent;
+    li{
+      a{
+        line-height: 21px;
+        font-family: $fontWeb01Semibold;
+        font-size:13px;
+        text-decoration: none;
+      }
+      .glyphicon-home{
+        font-size:18px;
+        margin-right: 9px;
+        &:before{
+          margin:0;
+        }
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  padding:0;
+  >li
+    >a{
+      padding:10px 27px;
+      &:hover{
+        color:#fff;
+        background-color:#65a0d4;
+       } 
+  }
+}
+
+// Small Screens
+@media (max-width: 767px) {
+
+  header.site-header{
+    h1{
+      font-size:16px;
+      margin:4px 0 0;
+      small{
+        font-size:16px;
+      }
+    }
+    .header-links{
+      margin-top:0;
+      >li{
+        border:0 none;
+        margin:0;
+        padding:0;
+      }
+    }
+    .breadcrumb{
+      margin-bottom:0;
+      padding-bottom:0;
+      padding-left: 0;
+      padding-right: 0;
+      margin-top:9px; 
+      background-color: transparent;
+      li{
+        .glyphicon-home{
+          margin-right: 9px;
+        }
+      }
+    }
+  }
+  .breadcrumb-container{
+    border-top:0;
+  }
+}

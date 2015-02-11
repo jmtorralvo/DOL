@@ -1,0 +1,36 @@
+//funciones
+
+//pixeles a em.
+@function em($target, $context: $fontbase) {
+   @if $target == 0 { @return 0 }
+   @return $target / $context + 0em;
+}
+
+//paso a porcentaje
+@function perc($width, $container-width: $max-width) {
+  @return percentage($width / $container-width);
+}
+
+
+//calcular line-height encabezado
+@function heading-line-height($size) {
+  
+  $line-height: $fontbase-line-height;
+  
+  $match: false;
+  @while $match != true {
+    
+    @if $size == $line-height {
+      $match: true;
+    } @else if  $size < $line-height {
+      $match: true;
+    } @else if $size > $line-height {
+      $line-height: $line-height + $fontbase-line-height;
+    } @else {
+      $match: true;
+    }
+    
+  } 
+
+  @return ($line-height / $size) + 0em;
+}

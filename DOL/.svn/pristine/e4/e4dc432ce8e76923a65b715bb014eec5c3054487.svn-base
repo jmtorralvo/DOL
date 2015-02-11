@@ -1,0 +1,276 @@
+/*global app, _*/
+/*jshint camelcase: false */
+/*jshint unused:false */
+'use strict';
+
+(function(app, _) {
+
+
+    app.controller('AppCtrl', ['$scope', '$cookieStore', 'PeticionesHttpSrv', 'urlLogout', '$state', 'rutaBaseImagenes', 'UserSrv', '$window', '$rootScope', 'MisDiagnosticosSrv', '$modal', 'urlEliminarCuenta', 'rutaBaseTemplates', '$idle', '$translate', 'MisDiagnosticosListadoSrv',
+        function($scope, $cookieStore, PeticionesHttpSrv, urlLogout, $state, rutaBaseImagenes, UserSrv, $window, $rootScope, MisDiagnosticosSrv, $modal, urlEliminarCuenta, rutaBaseTemplates, $idle, $translate, MisDiagnosticosListadoSrv) {
+
+
+            $scope.rutaBaseImagenes = rutaBaseImagenes;
+            $scope.user = {};
+            $scope.eliminarCuenta = {};
+
+            $scope.cookies = {};
+            $scope.cookies.aceptadas = UserSrv.cookiesAceptadas();
+
+            $scope.capaErrores = {
+                mostrar: false,
+                mensaje: ''
+            };
+
+            $scope.idiomas = [{
+                'descripcion': 'Español',
+                'valor': 'es_ES'
+            }, {
+                'descripcion': 'Catalán',
+                'valor': 'ca_ES'
+            }];
+            $scope.idioma = {};
+            $scope.idioma.valor = UserSrv.obtenerCookieIdioma();
+            $scope.idioma.descripcion = _.find($scope.idiomas, function(obj) { return obj.valor === $scope.idioma.valor; }).descripcion;
+            $translate.use($scope.idioma.valor);
+
+            $scope.cambiarDeIdioma = function (idioma) {
+                /*$scope.idioma.descripcion = idioma.descripcion;
+                $translate.use(idioma.valor);*/
+                UserSrv.guardarCookieIdioma(idioma.valor);
+                $window.location.reload();
+            };
+
+            $scope.esFormulario = function(){
+                return $state.current.name.indexOf('crearDiagnostico')>-1;
+            };
+
+            $scope.realizarLogout = function(noIrALogin) {
+                var logout = function() {
+                    var configuracion = {
+                        url: urlLogout
+                    };
+                    return PeticionesHttpSrv.get(configuracion);
+                };
+
+                logout().then(function() {
+                    UserSrv.logout();
+                    MisDiagnosticosListadoSrv.setDiagnostico({});
+                    $scope.user = {};
+                    if (!noIrALogin) {
+                        $state.go('login');
+                    }
+                });
+            };
+
+
+            $scope.irAMisDiagnosticos = function() {
+                MisDiagnosticosSrv.navegarAMisDiagnosticos();
+            };
+
+            $scope.closeAlert = function() {
+                $scope.capaErrores.mostrar = false;
+            };
+
+            $scope.aceptarCookies = function() {
+                UserSrv.aceptarCookies();
+                $scope.cookies.aceptadas = true;
+            };
+
+            $scope.openEliminarCuenta = function() {
+                var modalInstance = $modal.open({
+                    templateUrl: rutaBaseTemplates + '/confirmacionEliminarCuenta.html',
+                    controller: ModalInstanceConfirmacionCtrl,
+                    size: 'lg',
+                });
+
+                modalInstance.result.then(function(data) {
+                    if (data === 'ok') {
+                        UserSrv.logout();
+                        $scope.user = {};
+                        $state.go('login');
+                    }
+                });
+            };
+
+            var ModalInstanceConfirmacionCtrl = ['$scope', '$modalInstance',
+                function($scope, $modalInstance) {
+
+                    var params = {};
+                    $scope.eliminarCuentaFormModel = {};
+                    $scope.eliminarCuenta = {};
+
+                    $scope.eliminarCuenta.numCapOne = Math.floor(Math.random() * 10) + 1;
+                    $scope.eliminarCuenta.numCapTwo = Math.floor(Math.random() * 10) + 1;
+
+
+                    $scope.ok = function() {
+
+                        if ($scope.eliminarCuentaFormModel.lodp) {
+                            params.lodp = $scope.eliminarCuentaFormModel.lodp;
+                        } else {
+                            params.lodp = 0;
+                        }
+
+                        var configuracion = {
+                            url: urlEliminarCuenta,
+                            params: params
+                        };
+
+                        PeticionesHttpSrv.borrar(configuracion)
+                            .then(function() {
+                                    $modalInstance.close('ok');
+                                },
+                                function() {
+                                    $modalInstance.close('error');
+                                });
+                    };
+
+                    $scope.cerrar = function() {
+                        $modalInstance.dismiss('cancel');
+                    };
+
+                }
+            ];
+
+
+            $scope.openError = function() {
+                $modal.open({
+                    templateUrl: rutaBaseTemplates + '/modalError.html',
+                    controller: ModalInstanceErrorCtrl,
+                    scope: $scope,
+                    size: 'lg'
+                });
+            };
+
+            var ModalInstanceErrorCtrl = ['$scope', '$modalInstance',
+                function($scope, $modalInstance) {
+
+                    $scope.cerrar = function() {
+                        $modalInstance.dismiss('cancel');
+                    };
+
+                }
+            ];
+
+
+            var modalDeslogado = function() {
+                var modalInstance = $modal.open({
+                    templateUrl: rutaBaseTemplates + '/deslogado.html',
+                    size: 'lg',
+                    controller: ModalDeslogadoCtrl
+                });
+
+                modalInstance.result.then(function() {
+                    $state.go('login');
+                }, function() {
+                    $state.go('login');
+                });
+            };
+
+            var ModalDeslogadoCtrl = ['$scope', '$modalInstance',
+                function($scope, $modalInstance) {
+                    $scope.cerrar = function() {
+                        $modalInstance.close();
+                    };
+
+                }
+            ];
+
+            var cargarDatosUsuario = function() {
+                var userInfo = UserSrv.obtenerDatosUsuario(),
+                    cookieSession = UserSrv.obtenerCookieSession();
+
+                if (userInfo && cookieSession) {
+                    $scope.user.userInfo = UserSrv.obtenerDatosUsuario();
+                } else {
+                    $scope.user.userInfo = undefined;
+                }
+            };
+
+            var manejarControlInactividad = function() {
+                var ejecutoControlDeInactividad = ($state.current.name !== 'login' && $state.current.name !== 'registro' && $state.current.name !== 'recuperar-contrasenia');
+
+                if (ejecutoControlDeInactividad) {
+                    $idle.watch();
+                } else {
+                    $idle.unwatch();
+                }
+            };
+
+
+            $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+                manejarControlInactividad();
+                cargarDatosUsuario();
+            });
+
+            $rootScope.$on('$stateChangeError', function(event, toState, toParams, fromState, fromParams, error) {
+
+                $state.go('login');
+            });
+
+            $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {});
+
+
+
+            $rootScope.$on('serverError', function(event, data) {
+                $scope.openError();
+                $scope.capaErrores.mostrar = true;
+                $scope.capaErrores.mensaje = data.descError;
+
+                if (data.descError === 'login_account_locked') {
+                    $state.go('recuperar-contrasenia');
+                }
+            });
+
+            $rootScope.$on('loginError', function(event, data) {
+                $scope.openError();
+                $scope.capaErrores.mostrar = true;
+                $scope.capaErrores.mensaje = data.descError;
+
+                $state.go('login');
+            });
+
+            $rootScope.$on('sessionExpire', function() {
+                UserSrv.logout();
+                $scope.user = {};
+                $state.go('login');
+            });
+
+
+
+
+
+            $scope.$on('$idleStart', function() {
+                //Se lanza cuando pasa el tiempo maximo sin acciones del usuario
+                $scope.inactividad = $modal.open({
+                    templateUrl: rutaBaseTemplates + '/inactividad.html',
+                    size: 'lg'
+                });
+
+            });
+
+            $scope.$on('$idleEnd', function() {
+                //Se lanza cuando el usuario realiza alguna accion
+                if ($scope.inactividad) {
+                    $scope.inactividad.close();
+                    $scope.inactividad = null;
+                }
+            });
+
+            $scope.$on('$idleTimeout', function() {
+                //Se lanza cuando pasa el tiempo de muestra de la ventana de alerta de inactividad
+                if ($scope.inactividad) {
+                    $scope.inactividad.close();
+                    $scope.inactividad = null;
+                    $scope.realizarLogout(true);
+                    $idle.unwatch();
+                }
+
+                $scope.timedout = modalDeslogado();
+            });
+
+        }
+    ]);
+
+}(app, _));

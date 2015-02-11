@@ -1,0 +1,13 @@
+[{
+    "id": 1,
+    "nombre_tipo": "Piso en planta"
+}, {
+    "id": 2,
+    "nombre_tipo": "Piso en planta (superior)"
+}, {
+    "id": 3,
+    "nombre_tipo": "Bloque"
+}, {
+    "id": 4,
+    "nombre_tipo": "Aislado"
+}]

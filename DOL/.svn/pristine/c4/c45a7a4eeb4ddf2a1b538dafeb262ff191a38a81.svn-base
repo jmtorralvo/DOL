@@ -1,0 +1,446 @@
+<div class="wrapper-datos-establecimiento col-sm-offset-1">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 campo-formulario" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.tipoConstruccion.$invalid && !diagnosticoForm.caracterizacionForm.tipoConstruccion.$pristine }">
+            <p class="titulo-componente pt_xs">{{ 'fd2bar_typeofconstruction' | translate }}</p>
+            <select class="form-control input-lg" name="tipoConstruccion" ng-model="diagnostico.caracterizacion.tipoConstruccion.id" ng-options="tipoConstruccion.id as tipoConstruccion.nombre_tipo for tipoConstruccion in tiposConstruccion" ed-validation required>
+            </select>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 campo-formulario" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.antiguedades.$invalid && !diagnosticoForm.caracterizacionForm.antiguedades.$pristine }">
+            <p class="titulo-componente pt_xs">{{ 'fd2bar_old' | translate }}</p>
+            <select class="form-control input-lg" name="antiguedades" ng-model="diagnostico.caracterizacion.anoConstruccion.id" ng-options="anoConstruccion.id as anoConstruccion.descripcion for anoConstruccion in anosConstruccion" ed-validation required>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="wrapper-datos-superficie mb60">
+    <div class="col-sm-offset-1">
+        <p class="linea-texto resaltado">{{ 'fd2bar_aream2' | translate }}</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_diner' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supComedor" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="111"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_store' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supAlmacen" min="0" max="200" step="2" tooltip-behaviour="always" has-controls="true" slider-id="superficieAlmacen"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_rooms' | translate }}
+                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_ZONAS_COMUNES_SLIDER' | translate }}">i</span>
+                </p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supHabitaciones" min="0" max="200" step="2" tooltip-behaviour="always" has-controls="true" slider-id="supHabitaciones"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_commonareas' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supPasillos" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficiePasillos"></div>
+            </div>            
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'SEGMENTO_COCINA_LAVADERO' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supCocina" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficieCocina"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_deskarea' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supMostrador" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficieMostrador"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_toilets' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supBano" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficieBano"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 mb30">
+                <div class="tile">
+                    <div class="bloque-texto">
+                        <span class="numero">{{diagnostico.caracterizacion.supComedor+diagnostico.caracterizacion.supAlmacen+diagnostico.caracterizacion.supPasillos+diagnostico.caracterizacion.supCocina+diagnostico.caracterizacion.supMostrador+diagnostico.caracterizacion.supBano+diagnostico.caracterizacion.supHabitaciones}}</span>
+                        <span class="descripcion">{{ 'fd2bar_totalaream2' | translate }}</span>
+                    </div>
+                    <div class="bloque-imagen">
+                        <img src="/dol/static/images/ico-superficie.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-4 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_numfloor' | translate }}
+                    <span class="tooltip-info " tooltip-placement="right" tooltip="{{ 'TOOLTIP_NUMERO_PLANTAS' | translate }}">i</span>
+                </p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.numeroPlantas.id" min="1" max="7" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_areafacade' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.longitudFachada" min="1" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb30">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-frio.png" class="mt20" />
+        </div>
+        <div class="col-xs-10 col-sm-4 col-md-3 col-lg-3">
+            <p class="titulo-componente">{{ 'fd2bar_surfaceglazed' | translate }}</p>
+            <div class="btn-group">
+                <label class="btn radio-input" ng-repeat="supAcristada in superficieAcristada" ng-model="diagnostico.caracterizacion.superficieAcristalada.id" btn-radio="supAcristada.id">{{supAcristada.de_porcentaje}}
+                </label>
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-10 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 text-center">
+            <p class="titulo-componente pt_xs">{{ 'fd2bar_doubleglazing' | translate }}</p>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div ed-check ng-model="diagnostico.caracterizacion.disponeDe.id" checked-value="1" unchecked-value="2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-10 col-sm-7 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0">
+            <p class="titulo-componente pt_xs pt_sm">{{ 'fd2bar_renovatedinsulation' | translate }}
+                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_MEJORAS_AISLAMIENTO' | translate }}">i</span>
+                </p>
+        </div>
+        <div class="col-xs-offset-2 col-xs-6 col-sm-4 col-md-2 col-md-offset-0 col-lg-2 col-lg-offset-0">
+            <div class="row">
+                <div class="col-xs-7 col-md-9 col-lg-9">
+                    <div class="mt28 mt_xs mt_sm" ed-check ng-model="diagnostico.caracterizacion.disponeMejoras.id" checked-value="1" unchecked-value="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-sol.png" class="mt20" />
+        </div>
+        <div class="col-xs-10 col-sm-4 col-md-3 col-lg-3" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.incidSol.$invalid && !diagnosticoForm.caracterizacionForm.incidSol.$pristine }">
+            <p class="titulo-componente pt_xs">{{ 'fd2bar_sunfacade' | translate }}</p>
+            <select class="form-control input-lg" name="incidSol" ng-model="diagnostico.caracterizacion.incidenciaSolar.id" ng-options="incidSol.id as incidSol.incidencia for incidSol in incidSol" ed-validation required>
+            </select>
+        </div>
+        <div class="col-xs-offset-2 col-xs-10 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 text-center">
+            <p class="titulo-componente pt_xs">{{ 'fd2bar_sunprotectersystem' | translate }}
+                <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'fd2_sunprotecter' | translate }}">i</span>
+            </p>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div ed-check ng-model="diagnostico.caracterizacion.disponeProtSolar.id" checked-value="1" unchecked-value="2"></div>
+                </div>                           
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-8 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.tipoProteccionSolar.$invalid && !diagnosticoForm.caracterizacionForm.tipoProteccionSolar.$pristine }" ng-show = "diagnostico.caracterizacion.disponeProtSolar.id == 1" >
+            <p class="titulo-componente pt_xs">{{ 'fd2bar_typesystem' | translate }}</p>
+            <select class="form-control input-lg " name="tipoProteccionSolar" ng-model="diagnostico.caracterizacion.tipoProtSolar.id" ng-options="tipoProteccionSolar.id as tipoProteccionSolar.tipo_proteccion for tipoProteccionSolar in tipoProteccionSolar" ed-validation required>
+            </select>
+        </div>
+        
+    </div>
+</div>
+<div class="wrapper-datos-equipamiento mb30">
+    <div class="col-sm-offset-1 col-lg-offset-1 mb30">
+
+        <h3 class="titulo-seccion-formulario">{{ 'fd2bar_equipmentdataservicetimetable' | translate }}</h3>
+        <p class="linea-texto resaltado">{{ 'fd2bar_numberappliances' | translate }}
+            <span class="tooltip-info ml10" tooltip-placement="right" tooltip-html-unsafe="<img class='img-tooltip' src='/dol/static/images/campana-extractora.png'>{{ 'fd2bar_tooltipnumberappliances' | translate }}">i</span>
+
+        </p>
+        <div class="row">
+            <div class="col-xs-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-sm-5 col-lg-3">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.campanaMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.campanaMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/campana-extractora.png" />
+                                <p class="descripcion">{{ 'fd2bar_cookerhood' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-1 col-sm-offset-2">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.congeladorMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.congeladorMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/congelador.png" />
+                                <p class="descripcion">{{ 'fd2bar_freezer' | translate }} </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-1">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.lavavajillasMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.lavavajillasMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/lavavajillas.png" />
+                                <p class="descripcion">{{ 'fd2bar_washer' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-0 col-sm-offset-2">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.hornoMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.hornoMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/horno.png" />
+                                <p class="descripcion">{{ 'fd2bar_oven' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-1">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.botelleroMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.botelleroMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/botellero.png" />
+                                <p class="descripcion">{{ 'fd2bar_bottlerack' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-1 col-sm-offset-2">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.microondasMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.microondasMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/microondas.png" />
+                                <p class="descripcion">{{ 'fd2bar_microwave' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-0">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.frigorificoMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.frigorificoMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/frigorifico.png" />
+                                <p class="descripcion">{{ 'fd2bar_refrigerator' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-1 col-sm-offset-2">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.cafeteraMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.cafeteraMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/cafetera.png" />
+                                <p class="descripcion">{{ 'fd2bar_coffeemachines' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-1">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.televisorMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.televisorMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/televisor.png" />
+                                <p class="descripcion">{{ 'fd2bar_tvs' | translate }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-5 col-lg-3 col-lg-offset-0 col-sm-offset-2">
+                        <div class="stepper-with-image">
+                            <div class="stepper-wrapper">
+                                <span class="leyenda_a">> {{ 'fd2bar_8years' | translate }}</span>
+                                <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.recreativasMas8a" min="0" max="10"></div>
+                                <span class="leyenda_a">
+                                    < {{ 'fd2bar_8years' | translate }} </span>
+                                        <div ed-stepper ng-model="diagnostico.descripcionNegocio.usoElectrodomestico.recreativasMenos8a" min="0" max="10"></div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="/dol/static/images/recreativas.png" />
+                                <p class="descripcion">{{ 'fd2bar_recre' | translate }}</p>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-cocina.png" class="mt20" />
+        </div>
+        <div class="col-xs-10 col-sm-4 col-lg-3">
+            <p class="linea-texto resaltado mt0">{{ 'fd2bar_typekitchen' | translate }}</p>
+            <div class="btn-group">
+                <label class="btn radio-input" ng-repeat="sistemaCocina in sistemasCocina" ng-model="diagnostico.descripcionNegocio.sistemaCocina.id" btn-radio="sistemaCocina.id">{{sistemaCocina.tipo_cocina}}</label>
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-0 mb60">
+            <p class="linea-texto resaltado mt0 pt_xs">{{ 'fd2bar_cutlerydaily' | translate }}
+                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_ALMUERZOS_DIARIOS' | translate }}">i</span>
+                </p>
+            <div ed-slider ng-model="diagnostico.descripcionNegocio.almuerzosDiarios" min="0" max="200" tooltip-behaviour="always" has-controls="true" slider-id="almuerzosDiarios"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-horario.png" />
+        </div>
+        <p class="linea-texto resaltado mt8">{{ 'fd2bar_opening' | translate }}</p>
+    </div>
+    <div class="col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+        <div class="row">
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 col-lg-offset-2 hidden-xs">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{ 'fd2bar_opening' | translate }}</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                        <span>{{ 'fd2bar_morning' | translate }}</span>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{ 'fd2bar_to' | translate }}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4 hidden-xs">
+                <div class="row">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{ 'fd2bar_opening' | translate }}</span>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-center">
+                        <span>{{ 'fd2bar_afternoon' | translate }}</span>
+                    </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{ 'fd2bar_to' | translate }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt20">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <p class="titulo-componente text-right text-center-xs">{{ 'fd2bar_days' | translate }}</p>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <div class="row mb15-xs">
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioEntManLV*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                        <div ed-slider ng-model="slider.aperturaLunesViernesMan" min="6" max="15" step="0.5" range="true" tooltip-behaviour="hide" slider-id="aperturaLunesViernesMan" precision="1"></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioSalManLV*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioEntTarLV*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                        <div ed-slider ng-model="slider.aperturaLunesViernesTar" min="15" max="30" step="0.5" range="true" tooltip-behaviour="hide" slider-id="aperturaLunesViernesTar" precision="1"></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioSalTarLV*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt20">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <p class="titulo-componente text-right text-center-xs">{{ 'fd2bar_saturday' | translate }}</p>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <div class="row mb15-xs">
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioEntManS*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                        <div ed-slider ng-model="slider.aperturaSabadosMan" min="6" max="15" step="0.5" range="true" tooltip-behaviour="hide" slider-id="aperturaSabadosMan" precision="1"></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioSalManS*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioEntTarS*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                        <div ed-slider ng-model="slider.aperturaSabadosTar" min="15" max="30" step="0.5" range="true" tooltip-behaviour="hide" slider-id="aperturaSabadosTar" precision="1"></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioSalTarS*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt20">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                <p class="titulo-componente text-right text-center-xs">{{ 'fd2bar_sundayandholidays' | translate }}</p>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <div class="row mb15-xs">
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioEntManD*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                        <div ed-slider ng-model="slider.aperturaFestivosMan" min="6" max="15" step="0.5" range="true" tooltip-behaviour="hide" slider-id="aperturaFestivosMan" precision="1"></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioSalManD*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-md-5 col-lg-4">
+                <div class="row">
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3 text-right">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioEntTarD*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                    <div class="col-xs-8 col-sm-6 col-md-6 col-lg-6">
+                        <div ed-slider ng-model="slider.aperturaFestivosTar" min="15" max="30" step="0.5" range="true" tooltip-behaviour="hide" slider-id="aperturaFestivosTar" precision="1"></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-3 col-md-3 col-lg-3">
+                        <span>{{millisToUTCDate(diagnostico.descripcionNegocio.horarioSalTarD*3600000) | date:'HH:mm'}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

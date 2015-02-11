@@ -1,0 +1,39 @@
+'use strict';
+(function(angular) {
+
+    app.directive('edSoloNumeros', function() {
+        return {
+            restrict: 'A',
+            require: 'ngModel',
+            scope: {
+                value: '=ngModel',
+            },
+            link: function(scope, elem, attrs, ngModelController) {
+
+
+
+                var deVistaAModelo = function(value) {
+                    
+                    if (value === undefined) {
+                        return null;
+                    }
+
+                    var valorTransformado = value.replace(/[^0-9]/g, '');
+
+
+                    if (valorTransformado !== value) {
+                        ngModelController.$setViewValue(valorTransformado);
+                        ngModelController.$render();
+                    }
+
+                    return valorTransformado;
+
+                }
+
+
+                ngModelController.$parsers.push(deVistaAModelo);
+
+            }
+        };
+    });
+}(angular));

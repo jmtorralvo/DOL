@@ -1,0 +1,381 @@
+<div class="paso-formulario">
+    <span class="numero-paso">5</span>
+    <h3 class="titulo-seccion-formulario con-numero col-xs-offset-1">{{ 'fd5_resultdiagnosis' | translate }}</h3>
+</div>
+<div class="wrapper-desplegables resultado_diagnostico col-sm-offset-1">
+    <div class="row">
+        <div accordion close-others="true">
+            <div accordion-group is-open="situacionActual.open">
+                <div accordion-heading>
+                    <div class="titulo-acordeon" ng-class="{'abierto': situacionActual.open}">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <span class="texto-icono nopad situacion_actual ">{{ 'fd5_currentsituation' | translate }}</span>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <span class="texto-icono nopad energia_total ">{{ 'fd5_totalenergyconsumption' | translate }}   
+                                            <div class="row">
+                                                <div class="col-lg-12 mt7">
+                                                    <span class="cifra">{{resultadoDiagnostico.resultadoAngular.energiasEmpleadas.energiaElectrica.euros + resultadoDiagnostico.resultadoAngular.energiasEmpleadas.gasNatural.euros | number : 0  }} {{ 'fd5_euroyear' | translate }}</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <span class="texto-icono nopad energia_electrica">{{ 'fd5_electricity' | translate }}  
+                                            <div class="row">
+                                                <div class="col-lg-12 mt7">
+                                                    <span class="cifra">{{resultadoDiagnostico.resultadoAngular.energiasEmpleadas.energiaElectrica.euros | number : 0 }} {{ 'fd5_euroyear' | translate }}</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <span class="texto-icono nopad gas_natural">{{ 'fd5_naturalgas' | translate }}  
+                                            <div class="row">
+                                                <div class="col-lg-12 mt7">
+                                                    <span class="cifra">{{resultadoDiagnostico.resultadoAngular.energiasEmpleadas.gasNatural.euros | number : 0 }} {{ 'fd5_euroyear' | translate }}</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="pull-right ico-acordeon">&gt;</span>
+                    </div>
+                </div>
+                <div class="contenido-acordeon">
+                    <div class="parte1">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 borde">
+                                    <p class="etiqueta_cabecera">{{ 'fd5_dataowner' | translate }}</p>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <p class="etiqueta">{{ 'fd5_owner' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.titular}}</span>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <p class="etiqueta">{{ 'fd5_address' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.direccion}}</span>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        </div>
+                                    </div>
+                                    <div class="row mt28">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <p class="etiqueta ">{{ 'fd5_zipcode' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.codigoPostal}}</span>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <p class="etiqueta ">{{ 'fd5_town' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.poblacion}}</span>
+                                        </div>
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                            <p class="etiqueta">{{ 'fd5_province' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.provincia}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt15_sm">
+                                    <p class="etiqueta_cabecera">{{ 'fd5_databusiness' | translate }}</p>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+                                            <p class="etiqueta">{{ 'fd5_area' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.superficie | number : 0 }} {{ 'fd5_squaremeter' | translate }}</span>
+                                        </div>
+                                        <div class="col-xs-5 col-sm-5 col-md-6 col-lg-6">
+                                            <p class="etiqueta">{{ 'fd5_climaticfeature' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.severidad}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="row mt9">
+                                        <div class="col-xs-4 col-sm-4 col-md-6 col-lg-6">
+                                            <p class="etiqueta ">{{ 'fd5_openinghours' | translate }}</p>
+                                            <span class="dato">{{resultadoDiagnostico.resultadoAngular.horarioApertura}} {{ 'fd5_daysweek' | translate }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="parte2">
+                        <h3 class="titulo-seccion-formulario">{{ 'fd5_totalenergeticconsumption' | translate }}</h3>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p class="titulos_tablas">{{ 'fd5_energiesused' | translate }}</p>
+                                <div class="gridStyle short " ng-grid="opcionesTablaEnergiasEmpleadas"></div>
+                            </div>
+                            <div ng-if="situacionActual.open" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <div nvd3-pie-chart data="datosGraficaEnergiasEmpleadas" id="datosGraficaEnergiasEmpleadas" x="funcionesGraficas.xFunction" y="funcionesGraficas.yFunction" margin="{left:0,top:0,bottom:0,right:0}" showLabels="false" pieLabelsOutside="false" showValues="false" showLegend="false" height="200" tooltips="true" tooltipcontent="funcionesGraficas.toolTipContentEnergiasEmpleadas" color="funcionesGraficas.colorFunction" class="grafica h200">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt28">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <p class="titulos_tablas">{{ 'fd5_uses' | translate }}</p>
+                                <div class="gridStyle large" ng-grid="opcionesTablaUsos"></div>
+                            </div>
+                            <div ng-if="situacionActual.open" class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                                <div nvd3-pie-chart data="datosGraficaUsos" id="datosGraficaUsos" x="funcionesGraficas.xFunction" y="funcionesGraficas.yFunction" margin="{left:0,top:0,bottom:0,right:0}" showLabels="false" pieLabelsOutside="false" showValues="false" showLegend="false" height="200" tooltips="true" tooltipcontent="funcionesGraficas.toolTipContentUsos" color="funcionesGraficas.colorFunction" class="grafica h200">
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt9">
+                                <p class="dato">{{ 'fd5_economiccalculation' | translate }}</p>
+                            </div>
+                        </div>
+                        <div class="row mt28">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <p class="titulos_tablas">{{ 'fd5_comparativeconsumption' | translate }}</p>
+                                <p class="dato">{{ 'fd5_calculation' | translate }}</p>
+                            </div>
+                            <div ng-if="situacionActual.open" class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+                                <div nvd3-discrete-bar-chart data="datosGraficaComparativaSector" id="datosGraficaComparativaSector" showXAxis="true" showYAxis="true" margin="{left:80,top:50,bottom:30,right:80}" height="200" tooltips="true" tooltipcontent="funcionesGraficas.toolTipContentComparativaSector" color="funcionesGraficas.colorFunction" yaxislabel="{{ 'fd5_KWHm2' | translate }}" yaxisrotateylabel="false" yaxistickvalues="funcionesGraficas.yAxisTickValuesComparativa" yaxistickpadding="10" xaxistickpadding="10" yAxisTickFormat="funcionesGraficas.valueFormatSinDecimales" class="grafica h200">
+
+                                    <svg></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt28">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <p class="titulos_tablas">{{ 'fd5_energyperformance' | translate }}</p>
+                                <p class="dato">{{ 'fd5_comparativecalculation' | translate }}</p>
+                            </div>
+                            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-md-offset-1 col-md-5 col-lg-offset-1 col-lg-4">
+                                <div class="rating-tile">
+                                    <div class="rating-text">
+                                        <span class="resaltado">{{comportamientoEnergetico}}</span>/{{comportamientoEnergeticoMax}}</div>
+                                    <div rating ng-model="comportamientoEnergetico" max="comportamientoEnergeticoMax" readonly="true" state-on="'glyphicon-star icon on'" state-off="'glyphicon-star icon off'"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div accordion-group is-open="medidas.open">
+                <div accordion-heading>
+                    <div class="titulo-acordeon" ng-class="{'abierto': medidas.open}">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <span class="texto-icono nopad ">{{ 'fd5_measurestoimprove' | translate }}</span>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <span class="texto-icono nopad energia_total">{{ 'fd5_investmenttodo' | translate }}
+                                            <div class="row">
+                                                <div class="col-lg-12 mt7">
+                                                    <span class="cifra">{{resultadoDiagnostico.resultadoAngular.inversion | number : 0}} €</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <span class="texto-icono nopad energia_electrica">{{ 'fd5_savingenergetic' | translate }}
+                                            <div class="row">
+                                                <div class="col-lg-12 mt7">
+                                                    <span class="cifra">{{resultadoDiagnostico.resultadoAngular.ahorroEnergetico | number : 0}} kWh</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-3 col-md-3 col-lg-3">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <span class="texto-icono nopad gas_natural">{{ 'fd5_savingeconomic' | translate }}
+                                            <div class="row">
+                                                <div class="col-lg-12 mt7">
+                                                    <span class="cifra">{{resultadoDiagnostico.resultadoAngular.ahorroEconomico | number : 0}} €</span>
+                                                </div>
+                                            </div>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="pull-right ico-acordeon">&gt;</span>
+                    </div>
+                </div>
+                <div class="contenido-acordeon">
+                    <div class="contenido-2">
+                        <h3 class="titulo-seccion-formulario">{{ 'fd5_personalizesavings' | translate }}</h3>
+                        <p class="dato">{{ 'fd5_energeticproposals' | translate }}</p>
+                    </div>
+                    <div class="medidas1 mt28">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                            <div class="gridStyle avanzada x-large" ng-grid="opcionesTablaAhorro"></div>
+                            <div class="row wrapper-botonera">
+                                <div class="col-sm-12 col-md-12 col-lg-12 text-right text-right-sm">
+                                    <div class="btn-group">
+                                        <button class=" btn btn-lg btn-guardar botons" ng-click="copia(resultadoDiagnostico.resultadoAngular.idDiagnostico, resultadoDiagnostico.resultadoAngular.nombreDiagnostico)">{{ 'fd5_saveacopy' | translate }}
+                                            <div class="btn-lg btn-guardar dropdown-toggle">
+                                                <span class="icon guardar">x</span>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-1 col-sm-10 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4">
+                            <div class="tile">
+                                <div class="bloque-texto titulo">
+                                    <!--span class="numero">120</span-->
+                                    <span class="descripcion descripcion2">{{ 'fd5_cansaving' | translate }}</span>
+                                </div>
+                                <div class="bloque-separacion">
+                                    <div class="bloque-imagen bloque-img2">
+                                        <img src="/dol/static/images/ico-inversion.png" />
+                                    </div>
+                                    <div class="bloque-texto bloque-texto2">
+                                        <!--span class="numero">120</span-->
+                                        <span class="descripcion descripcion3">{{ 'fd5_investmenttomake' | translate }}</span>
+                                        <span class="descripcion descripcion4">{{resultadoDiagnostico.resultadoAngular.inversion | number : 0}} {{ 'fd5_eurosymbol' | translate }}</span>
+                                    </div>
+                                </div>
+                                <div class="bloque-separacion">
+                                    <div class="bloque-imagen bloque-img2">
+                                        <img src="/dol/static/images/ico-ahorro-energetico.png" />
+                                    </div>
+                                    <div class="bloque-texto bloque-texto2">
+                                        <!--span class="numero">120</span-->
+                                        <span class="descripcion descripcion3">{{ 'fd5_savingenergetic' | translate }}</span>
+                                        <span class="descripcion descripcion4">{{resultadoDiagnostico.resultadoAngular.ahorroEnergetico | number : 0}} kWh</span>
+                                    </div>
+                                </div>
+                                <div class="bloque-separacion sinborde">
+                                    <div class="bloque-imagen bloque-img2">
+                                        <img src="/dol/static/images/ico-ahorro-economico.png" />
+                                    </div> 
+                                    <div class="bloque-texto bloque-texto2">
+                                        <!--span class="numero">120</span-->
+                                        <span class="descripcion descripcion3">{{ 'fd5_savingeconomic' | translate }}</span>
+                                        <span class="descripcion descripcion4">{{resultadoDiagnostico.resultadoAngular.ahorroEconomico | number : 0}} {{ 'fd5_eurosymbol' | translate }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="medidas2 mt20 mb20">
+                        <div ng-if="medidas.open" class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-0 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4">
+
+                            <p class="titulos_tablas">{{ 'fd5_comparativeconsumptionkwh' | translate }}</p>
+                            <div nvd3-discrete-bar-chart data="datosGraficaComparativaConsumo" id="datosGraficaComparativaConsumo" showXAxis="true" showYAxis="true" margin="{left:80,top:50,bottom:30,right:80}" height="350" tooltips="true" tooltipcontent="funcionesGraficas.toolTipContentComparativaConsumo" color="funcionesGraficas.colorFunction" yaxislabel="kWh/año" yaxisrotateylabel="false" yaxistickvalues="funcionesGraficas.yAxisTickValuesComparativa" yaxistickpadding="10" xaxistickpadding="10" yAxisTickFormat="funcionesGraficas.valueFormatSinDecimales" objectequality="true" class="grafica h350">
+
+                                <svg></svg>
+                            </div>
+
+                        </div>
+                        <div ng-if="medidas.open" class="col-xs-10 col-xs-offset-1 col-sm-5 col-sm-offset-2 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4">
+
+                            <p class="titulos_tablas">{{ 'fd5_comparativeconsumptioneuro' | translate }}</p>
+                            <div nvd3-line-chart data="datosGraficaComparativaConsumoAnio" id="datosGraficaComparativaConsumoAnio" showXAxis="true" showYAxis="true" margin="{left:80,top:50,bottom:30,right:80}" height="350" forcex="[0,3]" interactive="true" tooltips="true" tooltipcontent="funcionesGraficas.toolTipContentComparativaConsumoAnio" color="funcionesGraficas.colorFunction" yaxislabel="€/año" yaxisrotateylabel="false" xaxistickvalues="[0,1,2,3]" yaxistickvalues="funcionesGraficas.yAxisTickValuesComparativa" yaxistickpadding="10" xaxistickpadding="10" xAxisTickFormat="funcionesGraficas.valueFormatXLineaTexto" yAxisTickFormat="funcionesGraficas.valueFormatSinDecimales" objectequality="true" class="grafica h350">
+
+                                <svg></svg>
+                            </div>
+                        </div>
+                        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-0 col-sm-6 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-4 pt_sm">
+                            <p class="titulos_tablas">{{ 'fd5_energyperformance' | translate }}</p>
+                            <div class="rating-tile bkg-color mt20">
+                                <div class="rating-titulo">{{ 'fd5_current' | translate }}</div>
+                                <div class="rating-text">
+                                    <span class="resaltado">{{comportamientoEnergetico}}</span>/{{comportamientoEnergeticoMax}}</div>
+                                <div rating ng-model="comportamientoEnergetico" max="comportamientoEnergeticoMax" readonly="true" state-on="'glyphicon-star icon on'" state-off="'glyphicon-star icon off'"></div>
+                            </div>
+                            <div class="rating-tile mt20">
+                                <div class="rating-titulo">{{ 'fd5_provided' | translate }}</div>
+                                <div class="rating-text">
+                                    <span class="resaltado">{{comportamientoEnergeticoPrevisto}}</span>/{{comportamientoEnergeticoMax}}</div>
+                                <div rating ng-model="comportamientoEnergeticoPrevisto" max="comportamientoEnergeticoMax" readonly="true" state-on="'glyphicon-star icon on'" state-off="'glyphicon-star icon off'"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div accordion-group is-open="recomendaciones.open">
+                <div accordion-heading>
+                    <div class="titulo-acordeon" ng-class="{'abierto': recomendaciones.open}">
+                        <span class="texto-icono nopad ">{{ 'fd5_recommendations' | translate }}</span>
+                        <span class="pull-right ico-acordeon">&gt;</span>
+                    </div>
+                </div>
+                <div class="contenido-acordeon">
+                    <div class="contenido-3">
+                        <h3 class="titulo-seccion-formulario">{{ 'fd5_reportrecommendations' | translate }}</h3>
+                        <div class="informe-recomendac">
+                            <div class=" col-xs-11 col-xs-offset-1 col-sm-11 col-sm-offset-1 col-md-11 col-md-offset-1 col-lg-11 col-lg-offset-1">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"  ng-repeat="recomendacion in recomendaciones">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                                                <img ng-src="{{rutaBaseImagenes}}/{{recomendacion.icono}}" alt="">
+                                            </div>
+                                            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+                                                <p class="titulos_tablas">{{recomendacion.desc}}</p>
+                                                <ul class="listado_txt" ng-repeat = " rec in recomendacion.recomendaciones">
+                                                    <li>{{rec}}</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row wrapper-botonera">
+    <div class="col-sm-12 col-md-5 col-lg-6 text-left text-center-sm">
+        <div class="btn-group">
+
+           <a class="btn btn-lg btn-continuar botons enlace_pdf" href="/services/dol/pdf/download/{{resultadoDiagnostico.resultadoAngular.idDiagnostico}}" target="_blank">{{ 'fd5_seepdf' | translate }}
+
+            <div class="btn-lg btn-continuar dropdown-toggle">
+                <span class="icon continuar">&gt;</span>
+            </div>
+           </a>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 text-right text-center-sm " ng-show = "estadoInforme.accesoInforme == false">
+        <div class="btn-group">
+            <button class="btn btn-lg btn-continuar botons" ng-click="openContacto()" ng-disabled="diagnosticoForm.identificacionForm.$invalid">{{ 'fd5_endingsave' | translate }}
+                <div class="btn-lg btn-continuar dropdown-toggle">
+                    <span class="icon continuar">&gt;</span>
+                </div>
+            </button>
+        </div>
+    </div>    
+    <div class="col-sm-12 col-md-6 text-right text-center-sm " ng-show = "estadoInforme.accesoInforme == true">
+        <div class="btn-group">
+            <button class="btn btn-lg btn-continuar botons" ng-click="cerrar()" ng-disabled="diagnosticoForm.identificacionForm.$invalid">{{ 'fd5_close' | translate }}
+                <div class="btn-lg btn-continuar dropdown-toggle">
+                    <span class="icon continuar">&gt;</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+    

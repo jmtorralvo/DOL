@@ -1,0 +1,111 @@
+//mixins
+@mixin clearfix() {
+   *zoom: 1;
+   &:before,
+   &:after {
+      display: table;
+      content: "";
+      // Fixes Opera/contenteditable bug:
+      // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+      line-height: 0;
+   }
+   &:after {
+      clear: both;
+   }
+}
+
+@mixin spr-insert ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
+   position:relative;
+   &:after{
+      @include spr-sprite($nameImg);
+      position:absolute;
+      content:'';
+      width:$w;
+      height:$h;   
+      left:$l;
+      top:$t;
+      bottom:$b;
+      right:$r;
+   }
+}
+
+@mixin spr-insert-before ($nameImg,$w,$h,$l:auto,$t:auto,$b:0,$r:0){
+   position:relative;
+   &:before{
+      @include spr-sprite($nameImg);
+      position:absolute;
+      content:'';
+      width:$w;
+      height:$h;   
+      left:$l;
+      top:$t;
+      bottom:$b;
+      right:$r;
+   }
+}
+
+// Mixin para los bullets cuadrados de colores
+@mixin bullet_color($color:$c-Texto, $width:6px, $height:6px, $radio:50%){
+  position: relative;
+  &:before{
+    position: absolute;
+    content: " ";
+    top:6px;
+    left:6px;
+    background-color:$color;
+    width:  $width;
+    height: $height;
+    @include border-radius($radio);
+  }
+}
+
+@mixin double-top_border($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+    border-top: 1px solid $colorOne;
+
+    -webkit-box-shadow:  inset 0 1px 0  $colorTwo;
+    -moz-box-shadow:     inset 0 1px 0  $colorTwo;
+    box-shadow:          inset 0 1px 0  $colorTwo;
+
+    @include border-radius( $radius );
+}
+
+@mixin double-bottom_border_withShadow($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0, $shadow: 2px) {
+    border-bottom: 1px solid $colorOne;
+
+    -webkit-box-shadow:  0 0 $shadow  $colorTwo;
+    -moz-box-shadow:     0 0 $shadow  $colorTwo;
+    box-shadow:          0 0 $shadow  $colorTwo;
+
+    @include border-radius( $radius );
+}
+
+//mixin para estilar los placeholders.
+@mixin custom_placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+//Mixin para añadir imagenes generadas en un sprite
+@mixin spr-pseudo-insert ($nameImg,$t:auto,$r:auto,$b:0,$l:0,$ins:after){
+    position:relative;
+    &:#{$ins}{
+        @include spr-sprite($nameImg);
+        position:absolute;
+        content:'';
+        width: spr-sprite-width($nameImg);
+        height: spr-sprite-height($nameImg);
+        left:$l;
+        top:$t;
+        bottom:$b;
+        right:$r;
+        @if $l == 50%{
+            margin-left:-(spr-sprite-width($nameImg))/2;
+        }
+        @if $t == 50%{
+            margin-top:-(spr-sprite-height($nameImg))/2;
+        }
+    }
+}
+

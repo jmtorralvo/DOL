@@ -1,0 +1,263 @@
+body{
+  font-family: $fontWeb01Regular;
+}
+a{color: $colorEnlace;
+  &:hover, &:focus{
+    text-decoration: none;
+    color: $colorEnlaceHover;
+  }
+}
+
+.row.con-separacion{margin: 10px 0;}
+
+.form-control{
+  @include custom_placeholder{
+    font-family: $fontWeb01Italic;
+    font-size: 18px;
+    color: #666;
+  }
+}
+.campo-formulario{
+  margin-bottom: 15px;
+}
+.texto-con-icono{
+  font-size: 13px;
+  font-family: "Open Sans Semibold";
+  .icono{
+    margin-right: 2px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.paginacion{
+  padding-right:5px;
+}
+
+.icono{
+  display: inline-block;
+  vertical-align: middle;
+  &.ayuda{
+    background: url($rutaImagenes+"help-user-ico.png") no-repeat center center;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  &.consumo{
+    background: url($rutaImagenes+"ico-consumo.png") no-repeat center center;
+    width: 71px;
+    height: 71px;
+    line-height: 71px;
+  }
+  &.eficiencia{
+    background: url($rutaImagenes+"ico-eficiencia.png") no-repeat center center;
+    width: 95px;
+    height: 71px;
+    line-height: 71px;
+  }
+  &.ahorro{
+    background: url($rutaImagenes+"ico-ahorro.png") no-repeat center center;
+    width: 66px;
+    height: 81px;
+    line-height: 81px;
+  }
+}
+
+.text-hide:hover{color: transparent;}
+
+.form-container{
+  background-color: $bgFullWidth;
+}
+
+.form-wizard{
+  .titulo-seccion-formulario{
+    font-family: $fontWeb01Light;
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 30px;
+    margin-top: 0;
+    &.con-numero{
+      padding-top: 7px;
+      clear: none;
+    }
+  }
+  .paso-formulario{
+    .numero-paso{
+      font-family: $fontWeb01Light;
+      font-size: 36px;
+      color: #000;
+      border: 5px solid $colorResaltado;
+      @include border-radius(30px);
+      width: 50px;
+      height: 50px;
+      bottom: 2px;
+      text-align: center;
+      line-height: 38px;
+      float: left;
+      margin-right: 20px;
+    }
+    .titulo-paso{
+      font-family: $fontWeb01Bold;
+      font-size: 18px;
+      color: #000;
+      margin-bottom: 0;
+    }
+  }
+
+  >ul{
+    >li{
+       a{
+        font-family: $fontWeb01Regular;
+        small{
+          font-size:14px;
+          font-family: $fontWeb01Regular;
+        }
+      }
+    }
+  }
+}
+
+.wrapper-botonera{
+  padding-top: 20px;
+  border-top: 4px solid $colorSinResaltar;
+  .btn-group{
+    margin-bottom: 15px;
+  }
+}
+
+// Small Screens
+@media (max-width: 767px) {
+  .form-wizard{
+    .paso-formulario{
+      .titulo-paso{
+        padding-top: 15px;
+      }
+    }
+    .titulo-seccion-formulario {
+      padding-top: 15px;
+      clear: both;
+    }
+  }
+}
+
+.steps-container{
+  background-color: $bgSteps;
+  margin-bottom: 30px;
+  padding-top: 25px;
+  padding-bottom: 12px;
+  width: 100%;
+  z-index: 1000;
+}
+
+.linea-texto{
+  margin-top: 15px;
+  font-size: 14px;
+  color: #000;
+  &.resaltado{
+    font-family: $fontWeb01Semibold;
+  }
+}
+
+.titulo-componente{
+  font-size: 13px;
+  color: #000;
+  font-family: $fontWeb01Regular;
+}
+
+.barra-progreso {
+  width: 80%;
+  height: 5px;
+  background-color: #ccc;
+  margin: 0 auto;
+
+  .indicador-progreso {
+    height: 100%;
+    width: 0%;
+    background-color: $colorResaltado;
+    @include transition(width 1s ease-in-out);
+  }
+}
+
+.alert{
+  margin-top:40px;
+}
+
+.listado-pasos {
+  list-style-type: none;
+  padding: 0;
+
+  .paso {
+    float: left;
+    margin-left: 0;
+    text-align: center;
+    width: 20%;
+
+    &.activo .descripcion{
+      font-family: $fontWeb01Bold;
+    }
+    .descripcion{
+      position: relative;
+      display: block;
+      padding-top: 35px;
+      color: #333;
+    }
+
+    .numero{
+      display: block;
+      position: absolute;
+      border: 5px solid $colorResaltado;
+      @include border-radius(50%);
+      width: 36px;
+      height: 36px;
+      line-height: 26px;
+      background-color: #fff;
+      margin-top: -55px;
+      margin-left: 40%;
+      border-color: #ccc;
+    }
+    &.activo .numero{
+      border-color: $colorResaltado;
+      font-family: $fontWeb01Regular;
+    }
+    &.hecho .numero{
+      background-color: $colorResaltado;
+      color: #fff;
+      border-color: $colorResaltado;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.cookie-warning{
+  padding: 10px 20px;
+  width: 100%;
+  background: $bgCookieWarning;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  z-index: 9999;
+  .aviso{
+    margin-right: 40px;
+  }
+}
+
+.loading-wrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2000;
+
+      #loading-bar-spinner {
+      top: 40%;
+      left: 50%;
+      .spinner-icon {
+        width: 80px;
+        height: 80px;
+        @include border-radius(50%);
+      }
+    }
+  }

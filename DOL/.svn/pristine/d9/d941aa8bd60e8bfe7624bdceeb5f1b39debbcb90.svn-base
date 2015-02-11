@@ -1,0 +1,129 @@
+
+.resultado_diagnostico{
+    .panel-collapse{
+        .panel-body{
+            padding:0; }
+    }
+    .nopad {
+        padding-left:0 !important;} 
+
+    .cifra{
+        font-size:18px;
+        font-family:"Open Sans Bold";} 
+
+    .energia_total, .energia_electrica, .gas_natural, .consumo_energia{
+        font-size: 13px !important;
+        font-family:"Open Sans Regular"; }
+
+    .etiqueta_cabecera{
+        font-family: "Open Sans Bold";
+        font-size:14px;
+        color:#333333; }
+
+    .etiqueta{
+        @extend .etiqueta_cabecera;
+        font-family: "Open Sans Semibold"; 
+        margin:0; 
+        word-break:break-word;}
+
+    .dato{
+        font-family: "Open Sans Regular";
+        font-size:13px;
+        color:#666666;
+        word-break:break-word;}
+
+    .borde{
+        border-right:1px solid #dddddd;}
+
+    .parte1{
+        background:#f7f8f8;
+        padding:22px 18px;
+        overflow:hidden;}
+
+    .parte2{
+        padding: 30px 40px;}
+
+     .titulos_tablas{
+        font-family:"Open Sans Bold";
+        font-size:18px;
+        color:#333333; }
+
+    .contenido-2, .contenido-3{
+        padding-top:32px;
+        padding-left:16px; }
+
+    .listado_txt{
+        >li{
+            font-family:"Open Sans Regular";
+            font-size:13px;
+            color:#333333;}
+        >li+li{
+            padding:10px 0;
+        } 
+    }
+    
+    .bloque-texto{
+    &.titulo{
+        width:100%;
+        margin:10px 0;         
+    }
+    &.bloque-texto2{
+        text-align:center;
+        }
+    }
+
+    .descripcion{
+    &.descripcion2{
+        font-family:"Open Sans Bold";
+        font-size: 22px; 
+        }
+    &.descripcion3{
+        font-family:"Open Sans Regular";
+        font-size: 13px;
+        }
+    &.descripcion4{
+        font-family:"Open Sans Bold";
+        font-size: 30px;
+        }
+    }
+
+    .bloque-imagen{
+    &.bloque-img2{
+        text-align:center; 
+        }
+    }
+
+    .bloque-separacion{
+        padding:14px 0;
+        border-bottom:1px solid white;
+    &.sinborde{
+        border-bottom:0px;}
+    }
+
+    .medidas1,.medidas2{
+        overflow:hidden;
+    }
+
+    .ngCanvas{
+        margin:17px 0;
+    }     
+  }
+
+
+
+// Extra Small Screens
+@media (max-width: 767px) {
+.borde{
+    border-right:0 !important;} 
+.pt_sm{
+    padding-top:15px;
+  } 
+}
+
+// Small Screens
+@media (max-width: 991px) {
+.mt15_sm{
+    margin-top:15px;}
+.borde{
+    border-right:0 !important;}
+}

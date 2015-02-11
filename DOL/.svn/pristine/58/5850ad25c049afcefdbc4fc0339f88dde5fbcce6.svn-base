@@ -1,0 +1,26 @@
+[{
+    "descripcion": "0-2 años",
+    "id": 1,
+    "id_antiguedad": 1,
+    "idioma": "ES"
+}, {
+    "descripcion": "2-5 años",
+    "id": 2,
+    "id_antiguedad": 2,
+    "idioma": "ES"
+}, {
+    "descripcion": "5-10 años",
+    "id": 3,
+    "id_antiguedad": 3,
+    "idioma": "ES"
+}, {
+    "descripcion": "10-15 años",
+    "id": 4,
+    "id_antiguedad": 4,
+    "idioma": "ES"
+}, {
+    "descripcion": "más de 15 años",
+    "id": 5,
+    "id_antiguedad": 5,
+    "idioma": "ES"
+}]

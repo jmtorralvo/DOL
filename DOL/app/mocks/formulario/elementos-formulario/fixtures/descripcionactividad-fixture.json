@@ -1,0 +1,42 @@
+[
+    {
+        "descripcion": "Actividades Médicas",
+        "id": 1
+    },
+    {
+        "descripcion": "Centro Educativo",
+        "id": 2
+    },
+    {
+        "descripcion": "Comercio al por mayor",
+        "id": 3
+    },
+    {
+        "descripcion": "Comercio al por menor",
+        "id": 4
+    },
+    {
+        "descripcion": "Fabricación de artículos",
+        "id": 5
+    },
+    {
+        "descripcion": "Pompas fúnebres",
+        "id": 6
+    },
+    {
+        "descripcion": "Reparación de electrodomésticos",
+        "id": 7
+    },
+    {
+        "descripcion": "Reparación de vehículos",
+        "id": 8
+    },
+    {
+        "descripcion": "Venta de vehículos",
+        "id": 9
+    },
+    {
+        "descripcion": "Venta de maquinaría",
+        "id": 10
+    }
+]

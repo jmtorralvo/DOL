@@ -1,0 +1,168 @@
+[{
+    "request": {
+        "url": "^/services/dol/diagnosticos$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/mis-diagnosticos-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/diagnosticos(/[0-9]+)?$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/diagnostico-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/resultadodiagnostico(/[0-9]+)?$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/consultarinforme-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/combos/situacioncomercial$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/situacioncomercial-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/combos/motivorechazo$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/motivorechazo-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/gestionComercial(/[0-9]+)?$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/historico-estados.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/asignarPDS$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/asignarPDS.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/admin/versionesalgoritmo$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/versiones-algoritmo.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/admin/usuariosExternos$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/usuariosexternos-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/admin/usuariosadmin$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/usuariosadmin-fixtures.json"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/gestionComercial/exportarPdf$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/pdf"
+        },
+        "latency": 500,
+        "file": "fixtures/listado.pdf"
+    }
+},
+{
+    "request": {
+        "url": "^/services/dol/gestionComercial/exportarExcel$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/vnd.ms-excel"
+        },
+        "latency": 500,
+        "file": "fixtures/listado.xls"
+    }
+}]

@@ -1,0 +1,49 @@
+<div class="copia">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-12 text-right">
+                    <a href="" ng-click="cancelar()" class="glyphicon glyphicon-remove-circle"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-11">
+                    <h3>{{ 'MIS_DIAGNOSTICOS_DUPLICAR_MAYUSCULAS' | translate }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <form name="copiaForm" ed-form>
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-11">
+                        <div class="row mb30">
+                            <div class="col-xs-12 mb15-xs col-sm-2 col-md-2 col-lg-2">
+                                <img src="/dol/static/images/help-user-ico.png" />
+                            </div>
+                            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+                                <p class="mb30">{{ 'MIS_DIAGNOSTICOS_LISTADO_DUPLICAR_NOMBRE' | translate }}</p>
+                                <div class="campo-formulario" ng-class="{ 'has-error' : copiaForm.nombre.$invalid }">
+                                    <input type="text" name="nombre" ng-model="nombreDiagnostico" class="form-control input-lg" ng-maxlength="50" ed-validation required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-11">
+                    <div class="row mb20">
+                        <div class="col-xs-12 col-sm-12 mb15-sm col-md-6 col-lg-6 text-right">
+                            <button ng-click="duplicar(nombreDiagnostico)" class="btn btn-primary info" ng-disabled="copiaForm.$invalid">{{ 'MIS_DIAGNOSTICOS_DUPLICAR_MAYUSCULAS' | translate }}</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right">
+                            <button ng-click="cancelar()" class="btn btn-primary finalizar">{{ 'MIS_DIAGNOSTICOS_LISTADO_CANCELAR_ELIMINAR' | translate }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

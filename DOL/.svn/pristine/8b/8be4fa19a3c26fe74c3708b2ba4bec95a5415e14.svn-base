@@ -1,0 +1,317 @@
+{
+    "acs_emision": 188.19295901999993,
+    "acs_euros": 53.05261913883854,
+    "acs_kwh": 922.5145049999998,
+    "ahorro_economico": null,
+    "ahorro_energetico": null,
+    "cal_emision": 17.797803690958165,
+    "cal_euros": 4.745633462971637,
+    "cal_kwh": 45.635394079379914,
+    "clasificacion": "*******",
+    "clasificacion_futura": "*******",
+    "de_xml_informar": null,
+    "ee_consumo_coherente": "",
+    "ee_consumo_euros": 184.38707228909027,
+    "ee_consumo_kwn": 1326.273960258167,
+    "ee_emision": 517.2468445006853,
+    "ee_kwh_entrada": 0.0,
+    "facturacion_euros": 289.0396914279288,
+    "facturacion_kwh": 2248.788465258167,
+    "gn_consumo_coherente": "",
+    "gn_consumo_euros": 104.65261913883853,
+    "gn_consumo_kwh": 922.5145049999998,
+    "gn_emision": 188.19295901999993,
+    "gn_kwh_entrada": 0.0,
+    "id": 477,
+    "ilu_emision": 0.0,
+    "ilu_euros": 0.0,
+    "ilu_kwh": 0.0,
+    "inversion": null,
+    "ma1": 1,
+    "ma1_ahorro_economico": 1.3783683908929822,
+    "ma1_ahorro_energetico": 13.254792051633416,
+    "ma1_inversion": 60.0,
+    "ma1_retorno": "Superior a 5 años",
+    "ma2": 1,
+    "ma2_ahorro_economico": 0.8584833965973099,
+    "ma2_ahorro_energetico": 8.25542647151487,
+    "ma2_inversion": 100.0,
+    "ma2_retorno": "Superior a 5 años",
+    "mac1": 0,
+    "mac1_ahorro_economico": 0.5248865287693553,
+    "mac1_ahorro_energetico": 9.127078815875983,
+    "mac1_inversion": 1800.0,
+    "mac1_retorno": "Superior a 5 años",
+    "mac2": 1,
+    "mac2_ahorro_economico": 1.502345944045292,
+    "mac2_ahorro_energetico": 14.44699632515102,
+    "mac2_inversion": 0.0,
+    "mac2_retorno": "0 meses",
+    "mac3": 0,
+    "mac3_ahorro_economico": 0.6891841954464911,
+    "mac3_ahorro_energetico": 6.627396025816708,
+    "mac3_inversion": 75.0,
+    "mac3_retorno": "Superior a 5 años",
+    "mac4": 0,
+    "mac4_ahorro_economico": 47.966230963072256,
+    "mac4_ahorro_energetico": 461.2572524999999,
+    "mac4_inversion": 1095.0,
+    "mac4_retorno": "Superior a 5 años",
+    "mc1": 0,
+    "mc1_ahorro_economico": 0.0,
+    "mc1_ahorro_energetico": 0.0,
+    "mc1_inversion": 15.15,
+    "mc1_retorno": "0 meses",
+    "mc2": 1,
+    "mc2_ahorro_economico": 30.68,
+    "mc2_ahorro_energetico": 0.0,
+    "mc2_inversion": 9.04,
+    "mc2_retorno": "4 meses",
+    "mc3": 1,
+    "mc4": 1,
+    "mg1": 1,
+    "mg1_ahorro_economico": 0.0,
+    "mg1_ahorro_energetico": 0.0,
+    "mg1_inversion": 750.0,
+    "mg1_retorno": "0 meses",
+    "mi1": 0,
+    "mi1_ahorro_economico": 0.0,
+    "mi1_ahorro_energetico": 0.0,
+    "mi1_inversion": 0.0,
+    "mi1_retorno": "0.0",
+    "mi2": 0,
+    "mi2_ahorro_economico": 0.0,
+    "mi2_ahorro_energetico": 0.0,
+    "mi2_inversion": 0.0,
+    "mi2_retorno": "0.0",
+    "mi3": 0,
+    "mi3_ahorro_economico": 0.0,
+    "mi3_ahorro_energetico": 0.0,
+    "mi3_inversion": 0.0,
+    "mi3_retorno": "0.0",
+    "mi4": 0,
+    "mi4_ahorro_economico": 0.0,
+    "mi4_ahorro_energetico": 0.0,
+    "mi4_inversion": 0.0,
+    "mi4_retorno": "0.0",
+    "mi5": 1,
+    "mi5_ahorro_economico": 0.0,
+    "mi5_ahorro_energetico": 0.0,
+    "mi5_inversion": 0.0,
+    "mi5_retorno": "0 meses",
+    "precalculo_consumo_ee": 1326.273960258167,
+    "precalculo_consumo_gn": 922.5145049999998,
+    "ratio_establecimiento": 2248.7884652581665,
+    "ratio_sector": 47701.97530864198,
+    "rc1": 1,
+    "rc2": 1,
+    "rc3": 1,
+    "re3": 0,
+    "ref_emision": 8.049040809726998,
+    "ref_euros": 2.1462084914932746,
+    "ref_kwh": 20.638566178787173,
+    "res_emision": 491.40000000000003,
+    "res_euros": 131.02764387096778,
+    "res_kwh": 1260.0,
+    "resultadoAngular": {
+        "nombreDiagnostico": "asdasd",
+        "ahorro": {
+            "ahorroEconomico": 32,
+            "ahorroEnergetico": 35,
+            "inversion": 919,
+            "recomendaciones": [{
+                "activar": 1,
+                "ahorro": 13,
+                "ahorroEuros": 1,
+                "desc": "Aislamiento",
+                "icono": "ico-aislamiento",
+                "inversion": 60,
+                "retorno": "Superior a 5 años",
+                "tooltip": "Sustitución del acristalamiento simple por doble acristalamiento, y marcos con puerte de rotura térmica."
+            }, {
+                "activar": 1,
+                "ahorro": 8,
+                "ahorroEuros": 0,
+                "desc": "Aislamiento",
+                "icono": "ico-aislamiento",
+                "inversion": 100,
+                "retorno": "Superior a 5 años",
+                "tooltip": "La disposición de persianas, toldos y otros elementos de protección externa puede ayudar a reducir el incremento de temperatura en el interior debido a la incidencia directa del sol, reduciendo así las necesidades de climatización."
+            }, {
+                "activar": 1,
+                "ahorro": 0,
+                "ahorroEuros": 0,
+                "desc": "Iluminación",
+                "icono": "ico-bombilla",
+                "inversion": 0,
+                "retorno": "0 meses",
+                "tooltip": "Apagado automático de las luces según el horario establecido mediante un reloj programador, evitando así mantenerlas encendidas fuera del horario deseado."
+            }, {
+                "activar": 1,
+                "ahorro": 0,
+                "ahorroEuros": 0,
+                "desc": "Gestión",
+                "icono": "ico-gestion",
+                "inversion": 750,
+                "retorno": "0 meses",
+                "tooltip": "Compensación de la energía reactiva de la instalación, para minimizar la penalización por este concepto."
+            }, {
+                "activar": 1,
+                "ahorro": 14,
+                "ahorroEuros": 1,
+                "desc": "ACS y Calefacción",
+                "icono": "ico-agua",
+                "inversion": 0,
+                "retorno": "0 meses",
+                "tooltip": "Por la antigüedad indicada de su equipo, seguramente se trate de un equipo con un rendimiento inferior al disponible en nuevos equipo. Incorporar una bomba de calor, sistema inverter, para la climatización del local. Ventaja adicional por la posibilidad tanto de generar frío como calor. Sistema altamente eficiente"
+            }, {
+                "activar": 1,
+                "ahorro": 0,
+                "ahorroEuros": 30,
+                "desc": "Contratación",
+                "icono": "ico-gestion",
+                "inversion": 9,
+                "retorno": "4 meses",
+                "tooltip": "Por el horario de su establecimiento, puede resultar de su interés contratar una tarifa con Discrimación Horaria (DH)."
+            }]
+        },
+        "ahorroEconomico": 32,
+        "ahorroEnergetico": 35,
+        "codigoPostal": "12342",
+        "comparativaConsumo": {
+            "actual": {
+                "desc": "Actual",
+                "euros": 2248
+            },
+            "previsto": {
+                "desc": "Previsto",
+                "euros": 2213
+            }
+        },
+        "comparativaConsumoAnio": {
+            "actual": {
+                "desc": "Actual",
+                "euros": 289
+            },
+            "previsto": {
+                "desc": "Previsto",
+                "euros": 257
+            }
+        },
+        "comparativaSector": {
+            "establecimiento": {
+                "desc": "Tu establecimiento",
+                "euros": 2248
+            },
+            "sector": {
+                "desc": "Sector",
+                "euros": 47701
+            }
+        },
+        "comportamientoEnergetico": 7,
+        "comportamientoEnergeticoActual": 7,
+        "comportamientoEnergeticoMax": 7,
+        "comportamientoEnergeticoPrevisto": 7,
+        "direccion": "asdfadfasd",
+        "energiasEmpleadas": {
+            "energiaElectrica": {
+                "desc": "Energía eléctrica",
+                "euros": 184,
+                "kgco2": 517,
+                "kwh": 1326
+            },
+            "gasNatural": {
+                "desc": "Gas Natural",
+                "euros": 104,
+                "kgco2": 188,
+                "kwh": 922
+            }
+        },
+        "horarioApertura": 7,
+        "inversion": 919,
+        "poblacion": "Altarejos",
+        "provincia": "Cuenca",
+        "recomendaciones": {
+            "tipos": [{
+                "desc": "Climatización",
+                "icono": "ico-climatic.png",
+                "recomendaciones": ["Asegurar que elementos inmóviles no obstruyen la circulación de aire en los puntos de difusión del aire de climatización.", "El uso de ventiladores reduce muy significativamente la factura energética en el acondicionamiento de las estancias en épocas de calor.", "Mantener la temperatura de confort en invierno a los valores recomendados: 22ºC. Cada grado de aumento supone aproximadamente un incremento del 7% de la energía consumida.", "Mantener la temperatura de confort en verano en los valores recomendados: 26ºC. Cada grado de descenso supone aproximadamente un incremento del 7% de la energía consumida.", "Uso racional de los consumos energéticos. Reducción de cargas térmicas internas, en la medida de lo posible."]
+            }, {
+                "desc": "Electrodomésticos",
+                "icono": "ico-gest.png",
+                "recomendaciones": ["En caso de estar pensando en comprar o sustituir algún electrodoméstico o equipamiento eléctrico, fíjate en su etiqueta energética donde se indica la clase de eficiencia energética (desde A++ más alta, hasta G más baja). Opta por los electrodomésticos con una categorización más alta-", "No hacer uso del modo \u0027stand-by\u0027 de los equipos ya que su consumo está alrededor del 20% del consumo en operación de su equipo."]
+            }, {
+                "desc": "Gestión",
+                "icono": "ico-gest.png",
+                "recomendaciones": ["Designar un responsable de la gestión energética del establecimiento ayudaría al control e implatación de medidas  para el ahorro energético.", "La realización de auditorías energéticas en su establecimiento constituye una interesante vía para incrementar la eficiencia energética de su establecimiento.", "Recuerde: De cumplimiento con el Reglamento de Instalaciones Térmicas en los Edificios (RITE), se deberá realizar el mantenimiento preventivo de las instalaciones térmicas según se indica en el mismo.", "Si decide realizar el control de consumo de los equipos presentes en su establecimiento, podrá comprobar la eficiencia de los mismos.", "Si el personal de su establecimiento recibe formación e información sobre las maneras de ahorrar energía, así como en la mejora de la eficiencia energética, le será más fácil reducir la factura energética.", "Una verificación y mantenimiento, de forma regular, de los sistemas de control de funcionamiento de los equipos nos ayudará a no incrementar la factura energética.", "Verificar que los termostatos y humidostatos trabajan adecuadamente contribuye a la reducción de la factura energética."]
+            }, {
+                "desc": "Iluminación",
+                "icono": "ico-bombilla.png",
+                "recomendaciones": ["Formación de personal y usuarios para su correcta concienciación con la minimización del consumo energético.", "Plan de limpieza de vidrios y de luminarias: estado de limpieza de las lámparas y luminarias, eliminando depósitos de suciedad acumulada.", "Plan de sustitucion de lámparas: comprobación del desgaste acumulado en la lámpara, sustituyendo en caso que sea necesario.", "Uso de colores claros y brillantes para las paredes."]
+            }, {
+                "desc": "Varios",
+                "icono": "ico-gest.png",
+                "recomendaciones": ["Cocinar con olla a presión y con poca agua supone un ahorro del 50% de energía.", "Emplear grifería con pulsadores para el ahorro de la demanda de agua caliente, al mismo tiempo que se produce un control y ahorro de agua.", "Hacer uso de perlizadores en la grifería para el ahorro del 60% de agua, reduciendo así la cantidad de agua caliente requerida.", "Instalar los equipos de frío lejos de las fuentes de calor tales como hornos, cocinas, etc.", "Lavadora: su uso debe ser lo más programado posible, debiéndose utilizar a plena carga en la medida de lo posible.", "Lavavajillas: su uso debe ser lo más programado posible, debiéndose utilizar a plena carga en la medida de lo posible.", "Tapar los recipientes y cazuelas al cocinar en recipientes y ollas adecuadas al tamaño del fogón.", "Utilizar hornos microondas, permite cocinar y calentar con el mínimo consumo energético representando ahorros superiores al 50% respecto a los hornos convencionles."]
+            }]
+        },
+        "superficie": 1,
+        "titular": "asdfadfasd",
+        "usos": {
+            "aguaCaliente": {
+                "desc": "Agua caliente sanitaria",
+                "euros": 53,
+                "kgco2": 188,
+                "kwh": 922
+            },
+            "aireAcondicionado": {
+                "desc": "Aire acondicionado",
+                "euros": 2,
+                "kgco2": 8,
+                "kwh": 20
+            },
+            "calefaccion": {
+                "desc": "Calefacción",
+                "euros": 4,
+                "kgco2": 4,
+                "kwh": 45
+            },
+            "iluminacion": {
+                "desc": "Iluminación",
+                "euros": 0,
+                "kgco2": 0,
+                "kwh": 0
+            },
+            "resto": {
+                "desc": "Resto",
+                "euros": 131,
+                "kgco2": 131,
+                "kwh": 1260
+            }
+        }
+    },
+    "rg1": 1,
+    "rg2": 1,
+    "rg3": 1,
+    "rg4": 1,
+    "rg5": 1,
+    "rg6": 1,
+    "rg7": 1,
+    "ri1": 1,
+    "ri2": 1,
+    "ri3": 1,
+    "ri4": 1,
+    "ro1": 0,
+    "ro2": 0,
+    "ro3": 0,
+    "ro4": 1,
+    "ro5": 1,
+    "rv1": 1,
+    "rv2": 1,
+    "rv3": 1,
+    "rv4": 1,
+    "rv5": 1,
+    "rv6": 1,
+    "rv7": 1,
+    "rv8": 1,
+    "severidad": "Severidad Verano:Media; Severidad Invierno:Media"
+}

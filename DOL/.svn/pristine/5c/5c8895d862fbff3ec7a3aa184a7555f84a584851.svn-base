@@ -1,0 +1,101 @@
+<div class="row diagnosticoMain">
+    <div class="col-sm-6 col-xs-12">
+         <p class="diagnosticoMain__title">{{ 'MIS_DIAGNOSTICOS' | translate }}</p>
+    </div>
+    <div class="col-sm-6 col-xs-12 text-right text-left-xs">
+            <div class="btn-group" ng-click="nuevoDiagnostico()">
+                <button class="  btn btn-lg btn-continuar botons" >{{ 'MIS_DIAGNOSTICOS_NUEVO_DIAGNOSTICO' | translate }}
+                    <div class="btn-lg btn-continuar dropdown-toggle">
+                        <span class="icon continuar">&gt;</span>
+                    </div>
+                </button>
+            </div>
+    </div>
+</div>
+
+<div ng-repeat="diagnostico in misdiagnosticos" class="diagnostico clearfix">
+    <div class="row">
+        <div class="col-lg-1 col-sm-2 hidden-xs text-center" ng-switch on="diagnostico.segmento.id">
+            <img ng-switch-when="1" ng-src="{{rutaBaseImagenes}}/type-business-hairdressing.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="2" ng-src="{{rutaBaseImagenes}}/type-business-supermarket.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="3" ng-src="{{rutaBaseImagenes}}/type-business-hotel.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="4" ng-src="{{rutaBaseImagenes}}/type-business-office.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="5" ng-src="{{rutaBaseImagenes}}/type-business-hotel.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="6" ng-src="{{rutaBaseImagenes}}/type-business-coffe.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="7" ng-src="{{rutaBaseImagenes}}/type-business-restaurant.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="8" ng-src="{{rutaBaseImagenes}}/type-business-cleaning.png" alt="" class="diagnostico__img">
+            <img ng-switch-when="9" ng-src="{{rutaBaseImagenes}}/type-business-other.png" alt="" class="diagnostico__img">
+        </div>
+        <div class="col-lg-11 col-sm-10">
+            <div class="row">
+                <div class="col-sm-5">
+                    <p class="diagnostico__title">{{diagnostico.nombreDiagnostico}}</p>
+                    <p class="diagnostico__subtitle">{{diagnostico.fechaCreacion | date : 'longDate'}}</p>
+                </div>
+                <div class="col-sm-7">
+                    <ul class="diagnostico__utils clearfix pull-left-xs">
+                        <li ng-show="diagnostico.situacionDiagnostico.id < 5"><a ng-click="modificarDiagnostico(diagnostico.id)" class="utl--modify text-hide-sm" href>{{ 'MIS_DIAGNOSTICOS_LISTADO_MODIFICAR' | translate }}</a>
+                        </li>
+                        <li ng-if="diagnostico.situacionDiagnostico.id == 5"><a ng-click="consultarInforme(diagnostico.id)" href  class="utl--file text-hide-sm">{{ 'MIS_DIAGNOSTICOS_LISTADO_INFORME' | translate }}</a>
+                        </li>
+                        <li><a href ng-click="copia(diagnostico.id, diagnostico.nombreDiagnostico)" class="utl--duplicate text-hide-sm">{{ 'MIS_DIAGNOSTICOS_LISTADO_DUPLICAR' | translate }}</a>
+                        </li>
+                        <li><a ng-click="saveId(diagnostico.id); openConfirmacion()" class="utl--delete text-hide-sm" href>{{ 'MIS_DIAGNOSTICOS_LISTADO_ELIMINAR' | translate }}</a>
+                        </li>
+                        <li>
+                            <a class="utl--fav text-hide-sm" ng-model = "diagnostico.favorito" checked-value="1" unchecked-value="0"  ng-click="favorito(diagnostico, diagnostico.favorito)" ng-class="{sel: diagnostico.favorito}">
+                                <span class="text-hide">{{ 'MIS_DIAGNOSTICOS_LISTADO_FAVORITO' | translate }}</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div ng-if="diagnostico.situacionDiagnostico.id < 6" class="row">
+                <div class="col-md-4">
+                    <p class="diagnostico__progress__title">{{ 'MIS_DIAGNOSTICOS_LISTADO_HAS_COMPLETADO_EL' | translate }}{{(diagnostico.situacionDiagnostico.porcentaje)}}%{{ 'MIS_DIAGNOSTICOS_LISTADO_DE_TU_DIAGNOSTICO' | translate }}</p>
+                    <div class="progress progress-striped diagnostico__progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="{{(diagnostico.situacionDiagnostico.porcentaje)}}" aria-valuemin="0" aria-valuemax="100" ng-style="{'width': '{{(diagnostico.situacionDiagnostico.porcentaje)}}%'}">
+                            <span class="sr-only">{{(diagnostico.situacionDiagnostico.porcentaje)}}%{{ 'MIS_DIAGNOSTICOS_LISTADO_COMPLETADO' | translate }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="diagnostico.situacionDiagnostico.id == 5" class="row">
+                <div class="ahorro col-md-12 clearfix">
+                    <div class="col-md-9 col-sm-12 col-xs-7">
+                        <ul class="ahorro__list clearfix">
+                            <li>{{ 'MIS_DIAGNOSTICOS_LISTADO_INVERSION' | translate }}
+                                <strong>{{diagnostico.resultadoDiagnostico.resultadoAngular.inversion | number : 0}} €</strong>
+                            </li>
+                            <li>{{ 'MIS_DIAGNOSTICOS_LISTADO_AHORRO_ENERGETICO' | translate }}
+                                <strong>{{diagnostico.resultadoDiagnostico.resultadoAngular.ahorroEnergetico | number : 0}} kWh</strong>
+                            </li>
+                            <li>{{ 'MIS_DIAGNOSTICOS_LISTADO_AHORRO_ECONOMICO' | translate }}
+                                <strong>{{diagnostico.resultadoDiagnostico.resultadoAngular.ahorroEconomico | number : 0}} €</strong>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3 col-sm-12 col-xs-5">
+                        <a class="btn-group pull-right">
+                            <div ng-show = "diagnostico.tlfContacto == null">
+                                <span type="button" ng-click = "saveId(diagnostico.id); openContacto()" class="btn ahorro__btn btn-guardar">{{ 'MIS_DIAGNOSTICOS_LISTADO_AYUDAME' | translate }}</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<div ng-include src="'/dol/views/footer-extendido.html'">
+
+
+
+
+
+
+
+
+

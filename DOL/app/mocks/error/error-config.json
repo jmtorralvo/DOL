@@ -1,0 +1,14 @@
+[{
+    "request": {
+        "url": "^/services/dol/error$",
+        "method": "POST"
+    },
+    "response": {
+        "status": 401,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/error-fixture.json"
+    }
+}]

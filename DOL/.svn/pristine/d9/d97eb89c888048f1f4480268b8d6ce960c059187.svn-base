@@ -1,0 +1,101 @@
+.desviacion_consumo{ 
+    .modal-content{
+        .modal-header{
+            .bloque-imagen{
+                .btn-lg{
+                    font-size:50px;
+                }
+                &.btn{
+                    border:none;
+                }
+            }
+            .glyphicon{
+            &.glyphicon-warning-sign{
+                font-size:51px;
+                color:#FFBF00;
+            }
+            &.glyphicon-remove-circle{
+                font-size:20px;
+                color:#B40404;
+            }
+            &.glyphicon-exclamation-sign{
+                font-size:50px;
+                color:#FE642E;
+            }
+        }
+        }
+        .modal-body{
+            .numero_consumo{
+                font-size:45px;
+                color: green;
+            }
+            .letra_consumo{
+                font-size:27px;
+                color:green;
+            }
+        &.barra_progresion{
+            padding:25px 0;
+        }
+            .x_segundos{
+                color:#FE642E;
+                font-family:$fontWeb01Bold;
+            }
+        }  
+        .modal-footer{
+            .btn-primary{
+            &.cambiar{
+                border:none;
+            }
+            &.correctos{
+                background-color:#ff832b;
+                border:none;
+            }
+            }
+
+        }  
+
+    }
+}
+
+.contacto_telefonico{
+    .modal-content{
+        .modal-header{
+            .glyphicon{
+            &.glyphicon-remove-circle{
+                font-size:20px;
+                color:#B40404;
+            }
+            }
+        }
+        .modal-footer{
+            .btn-primary{
+            &.info{
+                border:none;
+            }
+            &.finalizar{
+                background-color:#ff832b;
+                border:none;
+            }
+            }
+
+        }  
+
+    }
+
+}
+
+.confirmacion{
+    .modal-content{
+        .modal-footer{
+            .captcha{
+                font-size:28px;
+                font-family:"Open Sans Italic";
+                color:blue;
+            }
+            .captcha_error{
+                font-family:"Open Sans Italic";
+                color:red;
+            }
+        }
+    }
+}

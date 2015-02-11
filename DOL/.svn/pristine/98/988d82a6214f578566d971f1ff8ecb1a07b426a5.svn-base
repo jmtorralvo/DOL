@@ -1,0 +1,47 @@
+<div class="desviacion_consumo">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-12 text-right">
+                    <a href="" class="glyphicon glyphicon-remove-circle" ng-click="cerrar()"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-2 mb15-xs col-sm-2 col-md-2 col-lg-2 text-center">
+                    <span class="glyphicon glyphicon-warning-sign"></span>
+                </div>
+                <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+                    <h3>ERROR</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <div class="row mb30">
+                        <div class="col-xs-10">
+                            <div class="capaMensajes" ng-if="capaErrores.mostrar">
+                                <alert type="danger">{{capaErrores.mensaje | translate}}</alert>
+                            </div>
+                            <div class="capaMensajes" ng-if="mensajeError">
+                                <alert type="danger">{{mensajeError}}</alert>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-10">
+                        <div class="row mb20">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                                <button class="btn btn-primary correctos" ng-click="cerrar()">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

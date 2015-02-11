@@ -1,0 +1,70 @@
+<div class="row diagnosticoMain">
+    <div class="col-sm-6 col-xs-12">
+         <p class="diagnosticoMain__title">{{ 'MIS_DIAGNOSTICO_ADMINISTRACION' | translate }}</p>
+    </div>
+</div>
+
+<div tabset>
+
+	<div tab heading = "{{ 'MIS_DIAGNOSTICOS_ADMIN_USUARIOS_INTERNOS' | translate }}">
+		<br><br>
+		<form id = "excel" method="POST" enctype="multipart/form-data"
+		    action="/services/dol/files/usuariosinternos/upload" target = "_blank">
+
+		    {{ 'MIS_DIAGNOSTICOS_ADMIN_REL_USR_INTERNOS' | translate }}<input type="file" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"><br /> 
+		    <input type="submit"
+		        value="{{ 'MIS_DIAGNOSTICOS_ADMINISTRACION_CARGAR' | translate }}">
+
+		</form>
+		<br>
+		<br>
+		<div class="gridStyle avanzada x-large" ng-grid="tablaFicherosUsuarios"></div>
+
+		<div class="text-right">
+             <button  class="btn btn-primary finalizar" ng-click = "guardarFicherosUsuarios()">{{ 'MIS_DIAGNOSTICOS_ADMIN_GUARDAR' | translate }}</button>
+        </div>
+
+	</div>
+	<div tab heading = "{{ 'MIS_DIAGNOSTICOS_ADMIN_USUARIOS_EXTERNOS' | translate }}">
+		<br><br>
+
+		    <div class="gridStyle avanzada x-large" ng-grid="tablaUsuarioExterno"></div>
+ 			
+	</div>
+
+	<div tab heading = "{{ 'MIS_DIAGNOSTICOS_ADMIN_USR_ADMINISTRADORES' | translate }}">
+
+		<br>
+		<div class="text-right">
+             <button  class="btn btn-primary finalizar" ng-click = "openNuevoAdmin()">{{ 'MIS_DIAGNOSTICOS_ADMIN_NUEVO' | translate }}</button>
+        </div>
+        <br>
+		<div class="gridStyle avanzada x-large" ng-grid="tablaAdministradores "></div>
+
+	</div>
+
+
+	<div tab heading = "{{ 'MIS_DIAGNOSTICOS_ADMIN_ALGORITMO' | translate }}">
+		<br>
+		<form id = "excel" method="POST" enctype="multipart/form-data"
+		    action="/services/dol/files/algoritmo/upload" target = "_blank">
+
+		    {{ 'MIS_DIAGNOSTICOS_ADMIN_FICHERO_ALGORITMO' | translate }}<input type="file" name="file" accept="application/vnd.ms-excel"><br /> 
+		    <input type="submit"
+		        value="{{ 'MIS_DIAGNOSTICOS_ADMINISTRACION_CARGAR' | translate }}" ng-click = "subir(this)">
+
+		</form>
+		<br><br>
+		<div class="gridStyle avanzada x-large" ng-grid="tablaVersionesAlgoritmo"></div>
+		<div class="text-right">
+             <button  class="btn btn-primary finalizar" ng-click = "guardarFicherosMaestros()">{{ 'MIS_DIAGNOSTICOS_ADMIN_GUARDAR' | translate }}</button>
+        </div>
+
+
+
+		
+	</div>
+
+
+
+</div>

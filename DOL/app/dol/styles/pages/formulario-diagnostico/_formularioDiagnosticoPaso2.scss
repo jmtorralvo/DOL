@@ -1,0 +1,9 @@
+.equipo .btn-eliminar{
+	@include spr-insert(ico-eliminar, 22px, 23px, 0 ,2px);
+	text-indent: -9999px;
+	width: 22px;
+	height: 26px;
+	background-color: #fff;
+	border: none;
+	margin-top: 22px;
+}

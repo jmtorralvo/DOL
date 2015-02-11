@@ -1,0 +1,25 @@
+$bgFullWidth: #fff;
+$bgFullWidth2: #f7f8f8;
+$bgFooter: #ecf0f3;
+$bgSteps: #f0f4f6;
+$colorResaltado: #65a0d4;
+$colorSinResaltar: #dde3e9;
+$colorBotonClaro: #b9c7d4;
+$borderColor1: #dedfdf;
+
+$bgBtnGuardar: #3c89ce;
+$bgBtnGuardarHover: #5296d3;
+$bgBtnGuardarToggle: #5698d4;
+$bgBtnGuardarToggleHover: #96bfe4;
+$bgBtnContinuar: #ff7f24;
+$bgBtnContinuarHover: #ff832b;
+$bgBtnContinuarToggle: #fa904a;
+$bgBtnContinuarToggleHover: #ffaf77;
+$bgProgress: #999;
+$colorEnlace: #428bca;
+$colorEnlaceHover: #5296d3;
+$tooltipInfoIconBackground: #f16101;
+$tooltipInfoColor: #ffd8b1;
+$bgCookieWarning: #e0ecf6;
+
+$rutaImagenes: "/dol/static/images/";

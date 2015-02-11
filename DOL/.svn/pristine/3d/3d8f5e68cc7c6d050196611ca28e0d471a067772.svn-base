@@ -1,0 +1,36 @@
+[{
+    "request": {
+        "url": "^/dol/i18n/dol.json$",
+        "method": "GET",
+        "query":{
+         "lang": "es_ES"
+        }
+
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/es-fixture.json"
+    }
+},
+{
+    "request": {
+        "url": "^/dol/i18n/dol.json$",
+        "method": "GET",
+        "query":{
+         "lang": "ca_ES"
+        }
+
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/ca-fixture.json"
+    }
+}]

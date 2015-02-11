@@ -1,0 +1,130 @@
+.diagnostic-name{
+  background-color: $bgFullWidth2;
+  border-bottom:1px solid #dedfdf;
+  margin-bottom:1px;
+  padding:70px 0 16px;
+  .control-label{
+    font-size:40px;
+    margin-top:0;
+    padding-top:0;
+    line-height: 40px;
+    font-family: "Open Sans Light";
+    font-weight: normal;
+    color:#333;
+    padding-left: 15px;
+    text-align:left;
+  }
+  .control-ayuda{
+    text-align:right;
+  }
+  
+  .diagnostic-help{
+    cursor: pointer;
+    font-size:13px;
+    font-family: $fontWeb01Semibold;
+    line-height: 32px;
+    display:inline-block;
+    color:#000;
+    .icon{
+      display:block;
+      float:left;
+      width:32px;
+      height: 32px;
+      @include spr-insert(helpicon, 28px, 29px, 2px ,0);
+      margin-right:8px;
+    }
+  }
+}
+
+.type-business{
+  display:block;
+  text-align:center;
+  color:#333;
+  font-size:14px;
+  font-family: "Open Sans SemiBold";
+  margin-bottom: 32px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #ffffff;
+  @include border-radius(4px);
+
+  &.desmarcado{
+    @include opacity(0.3);
+  }
+
+  &:hover, &.seleccionado {
+    border: 1px solid #0b72bf;
+    background-color: #e6f2fe;
+    color: #333;
+  }
+  .icon{
+    display:block;
+    margin:0 auto 16px;
+    width:79px;
+    height:69px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &.type-business-coffe{
+      @include spr-insert(type-business-coffe, 79px, 69px, 0 ,0); 
+    }
+    &.type-business-restaurant{
+      @include spr-insert(type-business-restaurant, 79px, 69px, 0 ,0);
+    }
+    &.type-business-hotel{
+      @include spr-insert(type-business-hotel, 79px, 69px, 0 ,0);
+    }
+    &.type-business-office{
+      @include spr-insert(type-business-office, 78px, 69px, 0 ,0);
+    }
+    &.type-business-supermarket{
+      @include spr-insert(type-business-supermarket, 79px, 69px, 0 ,0);
+    }
+    &.type-business-cleaning{
+      @include spr-insert(type-business-cleaning, 79px, 69px, 0 ,0);
+    }
+    &.type-business-hairdressing{
+      @include spr-insert(type-business-hairdressing, 79px, 69px, 0 ,0);
+    }
+    &.type-business-other{
+      @include spr-insert(type-business-other, 79px, 69px, 0 ,0);
+    }
+  }
+}
+
+.wrapper-datos-titular{
+  margin-bottom: 47px;
+}
+
+// Extra Small Screens
+@media (max-width: 767px) {
+  .diagnostic-name .control-label{
+    font-size:24px; 
+  } 
+  .titulo-componente{
+    text-align:left;
+  }
+  .pt_xs{
+    padding-top:15px;
+  }
+  .mt_xs{
+    margin-top:0 !important;
+  } 
+}
+
+// Small Screens
+@media (max-width: 991px) {
+
+  .mt_sm{
+    margin-top:0 !important;
+   }
+  .pt_sm{
+    padding-top:15px;
+  }
+}
+
+// Medium Screens
+@media (max-width: 1199px) {
+  
+}
+
+// Large Screens

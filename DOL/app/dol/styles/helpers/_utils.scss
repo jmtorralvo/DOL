@@ -1,0 +1,86 @@
+// Small Tablets
+@media (max-width: 991px) {
+  .text-center-sm{
+    text-align: center !important;
+  }
+  .text-left-sm{
+    text-align: left !important;
+  }
+  .text-right-sm{
+    text-align: right !important;
+  }
+  .text-hide-sm{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    text-indent: -9999px;
+    white-space: nowrap;
+  }
+  .pull-left-sm{
+    float: left !important;
+  }
+  .pull-right-sm{
+    float: right !important;
+  }
+  .mb15-sm{
+    margin-bottom: 15px !important;
+  }
+}
+
+// Small Screens
+@media (max-width: 767px) {
+  .text-center-xs{
+    text-align: center !important;
+  }
+  .text-left-xs{
+    text-align: left !important;
+  }
+  .text-right-xs{
+    text-align: right !important;
+  }
+  .text-hide-xs{
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+    display: block;
+    text-indent: -9999px;
+    white-space: nowrap;
+  }
+  .pull-left-xs{
+    float: left !important;
+  }
+  .pull-right-xs{
+    float: right !important;
+  }
+  .mb15-xs{
+    margin-bottom: 15px !important;
+  }
+  .mt17-xs{
+    margin-top: 17px !important;
+  }
+  .mr30-xs{
+    margin-right: 30px !important;
+  }
+}
+
+.mt2{margin-top: 2px!important;}
+.mt7{margin-top: 7px!important;}
+.mt9{margin-top: 9px!important;}
+.ml10{margin-left: 10px !important;}
+.ml8{margin-left: 8px !important;}
+.mr7{margin-right: 7px !important;} 
+.mb10{margin-bottom: 10px !important;}
+.mb20{margin-bottom: 20px !important;}
+.mb30{margin-bottom: 30px !important;}
+.mb60{margin-bottom: 60px !important;}
+.mt0{margin-top: 0 !important;}
+.mt8{margin-top: 8 !important;}
+.mt20{margin-top: 20px !important;}
+.mt28{margin-top: 28px !important;}
+.mt38{margin-top: 38px !important;}
+.mt49{margin-top: 49px !important;}

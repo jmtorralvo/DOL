@@ -1,0 +1,3 @@
+<button type="button" class="stepper-button menos" ng-disabled="isOverMin()" ng-click="decrement()">-</button>
+<span class="stepper-value"></span>
+<button type="button" class="stepper-button mas" ng-disabled="isOverMax()" ng-click="increment()">+</button>

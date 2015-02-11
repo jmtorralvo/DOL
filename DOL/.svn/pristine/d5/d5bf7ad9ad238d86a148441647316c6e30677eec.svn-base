@@ -1,0 +1,16 @@
+[{
+    "descripcion": "0-2 años",
+    "id": 1
+}, {
+    "descripcion": "2-5 años",
+    "id": 2
+}, {
+    "descripcion": "5-10 años",
+    "id": 3
+}, {
+    "descripcion": "10-15 años",
+    "id": 4
+}, {
+    "descripcion": "más de 15 años",
+    "id": 5
+}]

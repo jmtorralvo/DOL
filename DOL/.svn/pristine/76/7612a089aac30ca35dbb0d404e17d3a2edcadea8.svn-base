@@ -1,0 +1,70 @@
+/*jshint unused:false */
+'use strict';
+
+var app;
+(function(angular) {
+
+    var moduleDependencies = [];
+
+    moduleDependencies = [
+        'ngCookies',
+        'ngResource',
+        'ui.router',
+        'ngLocale',
+        'ui.bootstrap',
+        'pascalprecht.translate',
+        'ngGrid',
+        'nvd3ChartDirectives',
+        'angular-loading-bar',
+        'ngIdle',
+        'edPlaceholder',
+        'angularFileUpload',
+        'tmh.dynamicLocale'
+    ];
+
+    app = angular.module('endesaApp', moduleDependencies);
+
+    angular.module('angularTestApp', ['netCaptcha']);
+
+    app.config(['$translateProvider', '$httpProvider', 
+        function($translateProvider, $httpProvider) {
+
+            $translateProvider.useUrlLoader('/dol/i18n/dol.json');
+            $translateProvider.preferredLanguage('es_ES');
+
+            $httpProvider.interceptors.push('interceptorSrv');
+        }
+    ]);
+
+    app.config(['cfpLoadingBarProvider',
+        function(cfpLoadingBarProvider) {
+            cfpLoadingBarProvider.includeBar = false;
+            cfpLoadingBarProvider.spinnerTemplate = '<div class="loading-wrapper"><div id="loading-bar-spinner"><div class="spinner-icon"></div></div></div>';
+        }
+    ]);
+
+    app.config(['$idleProvider',
+        function($idleProvider) {
+            $idleProvider.idleDuration(15*60);
+            $idleProvider.warningDuration(10);
+        }
+    ]);
+
+    app.config(['tmhDynamicLocaleProvider',
+        function(tmhDynamicLocaleProvider) {
+            tmhDynamicLocaleProvider.localeLocationPattern('https://code.angularjs.org/1.2.8/i18n/angular-locale_{{locale}}.js');
+        }
+    ]);
+    
+
+    app.run(['$rootScope', '$location', '$state', '$idle',
+        function($rootScope, $location, $state, $idle) {
+
+            document.documentElement.setAttribute('data-useragent', navigator.userAgent);
+
+           
+        }
+    ]);
+
+
+}(angular));

@@ -1,0 +1,7 @@
+<div class="container">
+    
+    <div ui-view class="list_diag"></div>
+
+    
+
+</div>

@@ -1,0 +1,67 @@
+<div class="desviacion_consumo">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-12 mb15-xs col-sm-2 col-md-2 col-lg-2 text-center">
+                    <a href="" ng-click="cerrar()" class="glyphicon glyphicon-warning-sign"></a>
+                </div>
+                <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                    <h3>{{ 'fd4_checkconsumption' | translate }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <div class="row mb30" ng-if = "resultadoDiagnostico.ee_consumo_coherente==='Excesivo'">
+                        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <p>{{ 'fd4_yearlyconsumptionEE' | translate }}</p>
+                            <span class="numero_consumo">{{resultadoDiagnostico.ee_kwh_entrada | number : 0}}</span>
+                            <span class="letra_consumo">{{ 'fd4_kwyear' | translate }}</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <p>{{ 'fd4_adviceconsumption' | translate }}</p>
+                            <span class="numero_consumo">{{resultadoDiagnostico.precalculo_consumo_ee | number : 0}}</span>
+                            <span class="letra_consumo">{{ 'fd4_kwyear' | translate }}</span>
+                        </div>
+                    </div>
+                    <div class="row mb30" ng-if = "resultadoDiagnostico.gn_consumo_coherente==='Excesivo'">
+                        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
+                            <p>{{ 'fd4_yearlyconsumptionGN' | translate }}</p>
+                            <span class="numero_consumo">{{resultadoDiagnostico.gn_kwh_entrada | number : 0}}</span>
+                            <span class="letra_consumo">{{ 'fd4_kwyear' | translate }}</span>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                            <p>{{ 'fd4_adviceconsumption' | translate }}</p>
+                            <span class="numero_consumo">{{resultadoDiagnostico.precalculo_consumo_gn | number : 0}}</span>
+                            <span class="letra_consumo">{{ 'fd4_kwyear' | translate }}</span>
+                        </div>
+                    </div>
+                    <div class="row mb20">
+                        <div class="col-xs-12">
+                            <p>{{ 'fd4_datareview' | translate }}</p>
+                            <ul>
+                                <li>{{ 'fd4_yearlyconsumptionelectricity' | translate }}</li>
+                                <li>{{ 'fd4_yearlyconsumptiongas' | translate }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-xs-offset-2 col-xs-10">
+                    <div class="row mb20">
+                        <div class="col-xs-12 col-sm-12 mb15-sm col-md-5 col-lg-5 text-right">
+                            <button class="btn btn-primary cambiar" ng-click="revisar()">{{ 'fd4_datareviewandchange' | translate }}</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                            <button class="btn btn-primary correctos" ng-click="datosCorrectos()">{{ 'fd4_rightdata' | translate }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

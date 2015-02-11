@@ -1,0 +1,217 @@
+<div class="wrapper-datos-establecimiento col-sm-offset-1">
+    <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 campo-formulario" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.tipoConstruccion.$invalid && !diagnosticoForm.caracterizacionForm.tipoConstruccion.$pristine }">
+            <p class="titulo-componente pt_xs">{{ 'fd2hotel_typeofconstruction' | translate }}</p>
+            <select class="form-control input-lg" name="tipoConstruccion" ng-model="diagnostico.caracterizacion.tipoConstruccion.id" ng-options="tipoConstruccion.id as tipoConstruccion.nombre_tipo for tipoConstruccion in tiposConstruccion" ed-validation required>
+            </select>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 campo-formulario" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.antiguedades.$invalid && !diagnosticoForm.caracterizacionForm.antiguedades.$pristine }">
+            <p class="titulo-componente pt_xs">{{ 'fd2hotel_old' | translate }}</p>
+            <select class="form-control input-lg" name="antiguedades" ng-model="diagnostico.caracterizacion.anoConstruccion.id" ng-options="anoConstruccion.id as anoConstruccion.descripcion for anoConstruccion in anosConstruccion" ed-validation required>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="wrapper-datos-superficie mb60">
+    <div class="col-sm-offset-1">
+        <p class="linea-texto resaltado">{{ 'fd2hotel_aream2' | translate }}</p>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_diner' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supComedor" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="111"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_store' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supAlmacen" min="0" max="200" step="2" tooltip-behaviour="always" has-controls="true" slider-id="superficieAlmacen"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_rooms' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supHabitaciones" min="0" max="200" step="2" tooltip-behaviour="always" has-controls="true" slider-id="supHabitaciones"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_commonareas' | translate }}
+                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_ZONAS_COMUNES_SLIDER' | translate }}">i</span>
+                </p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supPasillos" min="0" max="200" step="2" tooltip-behaviour="always" has-controls="true" slider-id="supPasillos"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_cooking' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supCocina" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficieCocina"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_deskarea' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supMostrador" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficieMostrador"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_toilets' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.supBano" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="superficieBano"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-3 col-sm-6 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4 mb30">
+                <div class="tile">
+                    <div class="bloque-texto">
+                        <!--span class="numero">120</span-->
+                        <span class="numero">{{diagnostico.caracterizacion.supComedor+diagnostico.caracterizacion.supAlmacen+diagnostico.caracterizacion.supHabitaciones+diagnostico.caracterizacion.supPasillos+diagnostico.caracterizacion.supCocina+diagnostico.caracterizacion.supMostrador+diagnostico.caracterizacion.supBano}}</span>
+                        <span class="descripcion">{{ 'fd2hotel_totalaream2' | translate }}</span>
+                    </div>
+                    <div class="bloque-imagen">
+                        <img src="/dol/static/images/ico-superficie.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-offset-2 col-sm-4 col-md-4 col-md-offset-2 col-lg-4 col-lg-offset-2 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_numfloor' | translate }}
+                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_NUMERO_PLANTAS' | translate }}">i</span>
+                </p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.numeroPlantas.id" min="1" max="7" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 mb60">
+                <p class="titulo-componente">{{ 'fd2bar_areafacade' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.caracterizacion.longitudFachada" min="1" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb30">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-frio.png" class="mt20" />
+        </div>
+        <div class="col-xs-10 col-sm-4 col-md-3 col-lg-3">
+            <p class="titulo-componente">{{ 'fd2hotel_surfaceglazed' | translate }}</p>
+            <div class="btn-group">
+                <label class="btn radio-input" ng-repeat="supAcristada in superficieAcristada" ng-model="diagnostico.caracterizacion.superficieAcristalada.id" btn-radio="supAcristada.id">{{supAcristada.de_porcentaje}}
+                </label>
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-10 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 text-center">
+            <p class="titulo-componente pt_xs">{{ 'fd2hotel_doubleglazing' | translate }}</p>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div ed-check ng-model="diagnostico.caracterizacion.disponeDe.id" checked-value="1" unchecked-value="2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-10 col-sm-7 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0">
+            <p class="titulo-componente pt_xs pt_sm">{{ 'fd2hotel_renovatedinsulation' | translate }}
+                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_MEJORAS_AISLAMIENTO' | translate }}">i</span>
+                </p>
+        </div>
+        <div class="col-xs-offset-2 col-xs-6 col-sm-4 col-md-2 col-md-offset-0 col-lg-2 col-lg-offset-0">
+            <div class="row">
+                <div class="col-xs-7 col-md-9 col-lg-9">
+                    <div class="mt28 mt_xs mt_sm" ed-check ng-model="diagnostico.caracterizacion.disponeMejoras.id" checked-value="1" unchecked-value="2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-sol.png" class="mt20" />
+        </div>
+        <div class="col-xs-10 col-sm-4 col-md-3 col-lg-3" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.incidSol.$invalid && !diagnosticoForm.caracterizacionForm.incidSol.$pristine }">
+            <p class="titulo-componente pt_xs">{{ 'fd2hotel_sunfacade' | translate }}</p>
+            <select class="form-control input-lg" name="incidSol" ng-model="diagnostico.caracterizacion.incidenciaSolar.id" ng-options="incidSol.id as incidSol.incidencia for incidSol in incidSol" ed-validation required>
+            </select>
+        </div>
+        <div class="col-xs-offset-2 col-xs-10 col-sm-6 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 text-center">
+            <p class="titulo-componente pt_xs">{{ 'fd2hotel_sunprotectersystem' | translate }}
+                <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'fd2_sunprotecter' | translate }}">i</span>
+            </p>
+            <div class="row">
+                <div class="col-xs-4 col-sm-4 col-sm-offset-4 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3">
+                    <div ed-check ng-model="diagnostico.caracterizacion.disponeProtSolar.id" checked-value="1" unchecked-value="2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-8 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0" ng-class="{ 'has-error' : diagnosticoForm.caracterizacionForm.tipoProteccionSolar.$invalid && !diagnosticoForm.caracterizacionForm.tipoProteccionSolar.$pristine }" ng-show = "diagnostico.caracterizacion.disponeProtSolar.id == 1">
+            <p class="titulo-componente pt_xs">{{ 'fd2hotel_typesystem' | translate }}</p>
+            <select class="form-control input-lg " name="tipoProteccionSolar"  ng-model="diagnostico.caracterizacion.tipoProtSolar.id" ng-options="tipoProteccionSolar.id as tipoProteccionSolar.tipo_proteccion for tipoProteccionSolar in tipoProteccionSolar" ed-validation required>
+            </select>
+        </div>
+    </div>
+</div>
+<div class="wrapper-datos-equipamiento mb30">
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+
+           <img src="/dol/static/images/ico-numero-estrellas.png" class="mt20" />
+
+        </div>
+        <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-0 mb60">
+            <p class="linea-texto resaltado mt0">{{ 'fd2hotel_starnumbers' | translate }}</p>
+            <div ed-slider ng-model="diagnostico.descripcionNegocio.estrellasHotel.id" min="1" max="5" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+        </div>
+        <div class="col-xs-offset-2 col-xs-9 col-sm-6 col-sm-offset-0 col-lg-3 col-lg-offset-1 mb60">
+            <p class="linea-texto resaltado mt0">{{ 'fd2hotel_roomnumbers' | translate }}</p>
+            <div ed-slider ng-model="diagnostico.descripcionNegocio.numHabitaciones" min="1" max="200" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1">
+
+            <img src="/dol/static/images/ico-ocupacion-mes.png" />
+
+        </div>
+        <p class="linea-texto resaltado mt8">{{ 'fd2hotel_occupancymonth' | translate }}</p>
+    </div>
+    <div class="col-xs-offset-0 col-sm-offset-0 col-md-offset-1 col-lg-offset-1">
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-0 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_january' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionEnero" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_february' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionFebrero" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_march' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionMarzo" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_april' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionAbril" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-0 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_may' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionMayo" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_june' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionJunio" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_july' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionJulio" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_august' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionAgosto" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-0 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_september' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionSeptiembre" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_octuber' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionOctubre" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_november' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionNoviembre" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+            <div class="col-xs-offset-2 col-xs-9 col-sm-4 col-sm-offset-0 col-lg-2 col-lg-offset-1 mb60">
+                <p class="titulo-componente">{{ 'fd2hotel_december' | translate }}</p>
+                <div ed-slider ng-model="diagnostico.descripcionNegocio.ocupacionDiciembre" min="0" max="100" tooltip-behaviour="always" has-controls="true" slider-id="100"></div>
+            </div>
+        </div>
+    </div>
+</div>

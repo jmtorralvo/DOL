@@ -1,0 +1,46 @@
+.pl{
+	padding-left:14px;
+}
+
+.borde_f3{
+  border-right: 1px solid #dddddd;
+}
+// Extra Small Screens
+@media (max-width: 767px) {
+  .borde_f3{
+  border-right: 0 !important;
+  }
+  .pt_xs{
+    padding-top:15px;
+  }
+  .mt_xs{
+    margin-top:0 !important;
+  }
+  .mt9_xs_sm_md{
+    margin-top:9px;
+  } 
+}
+
+// Small Screens
+@media (max-width: 991px) {
+
+  .pt_sm{
+    padding-top:15px;
+  }
+  .pl{
+  	padding-left:0px;
+  } 
+  .mt9_xs_sm_md{
+      margin-top:9px;
+  }
+}
+// Medium Screens
+@media (max-width: 1199px) {
+  .mt9_xs_sm_md{
+      margin-top:9px;}
+  .pt_md{
+    padding-top:15px !important;
+  }     
+}
+
+

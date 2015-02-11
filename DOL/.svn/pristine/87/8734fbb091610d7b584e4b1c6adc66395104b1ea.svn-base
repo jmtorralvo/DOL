@@ -1,0 +1,74 @@
+.btn-lg, .btn-group-lg > .btn {
+  font-size: 16px;
+  font-family: $fontWeb01Bold;
+}
+
+.btn-group{
+ 
+  .btn{
+  &.radio-input{
+    padding-right:12px;
+      } 
+  } 
+  .icon{
+    text-indent: -9999px;
+    width: 22px;
+    display: inline-block;
+    &.guardar{
+      @include spr-insert(ico-guardar, 22px, 22px, 0 ,0);}
+    &.continuar{
+      @include spr-insert(ico-continuar, 10px, 17px, 7px ,0);}
+  }
+  .btn-guardar {
+    color: #fff;
+    background-color: $bgBtnGuardar;
+    border: none;
+    &.dropdown-toggle{
+      background-color: $bgBtnGuardarToggle;
+      display:inline; 
+    }
+    &.botons{
+      padding-right:0;
+      height:43px;
+    }
+    &.enlace_pdf{
+      padding-top:11px; 
+    }
+  }
+
+  &:hover,&:active,&:focus{
+    .btn-guardar {
+      @extend .btn-guardar; 
+      background-color: $bgBtnGuardarHover; 
+      &.dropdown-toggle{
+        background-color: $bgBtnGuardarToggleHover;
+      }
+    }
+  }
+
+  .btn-continuar {
+    @extend .btn-guardar;
+    background-color: $bgBtnContinuar; 
+    &.dropdown-toggle{
+      background-color: $bgBtnContinuarToggle;
+      display:inline;
+    }
+    &.botons{
+    padding-right:0;
+    height:43px;
+    }
+    &.enlace_pdf{
+      padding-top:11px; 
+    }
+  }
+
+  &:hover,&:active,&:focus{
+    .btn-continuar {
+      @extend .btn-guardar;
+      background-color: $bgBtnContinuarHover; 
+      &.dropdown-toggle{
+        background-color: $bgBtnContinuarToggleHover;
+      }
+    }
+  }
+}

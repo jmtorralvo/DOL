@@ -1,0 +1,29 @@
+<div class="container wrapper-login">
+    <div class="row">     
+        <div class="col-md-6">
+
+            <form name="loginForm" ed-form>
+
+                <h3 class="titulo-seccion-formulario">{{ 'remind_pass_email' | translate }}</h3>
+                
+                <div ng-class="{ 'has-error' : loginForm.username.$invalid && !loginForm.username.$pristine }">
+                    <input type="email" name="username" id="j_username" class="form-control input-lg campo-formulario" placeholder="Correo electrónico*" ng-model="loginForm.username" ed-validation required>
+                </div> 
+
+                <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="btn-group mt20 mb20">
+                                    <a ng-click="aceptar();" class=" btn btn-lg btn-guardar botons enlace_pdf" ng-disabled="loginForm.$invalid">{{ 'cc_send' | translate }}
+                                        <div class="btn-lg btn-guardar dropdown-toggle">
+                                            <span class="icon continuar">&gt;</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+            </form>
+            <p>{{ 'remind_pass_nueva' | translate }}
+            <p>Si ya conoces tu contraseña <a ui-sref="login">accede ahora<a/></p>
+        </div>
+    </div>
+</div>

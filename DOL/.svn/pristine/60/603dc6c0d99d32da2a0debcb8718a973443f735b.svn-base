@@ -1,0 +1,284 @@
+<!doctype html>
+<!--[if IE 8]>         <html class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]>         <html class="no-js ie"> <![endif]-->
+<!--[if !IE]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <title>Diagnóstico energético</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- build:css(app/..) dol/styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/nvd3/src/nv.d3.css" />
+    <link rel="stylesheet" href="bower_components/ng-grid/ng-grid.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" /> -->
+    <!--link rel="stylesheet" href="bower_components/seiyria-bootstrap-slider/dist/css/bootstrap-slider.css" /-->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) dol/styles/main.css -->
+    <link rel="stylesheet" href="dol/scripts/directives/ed-slider/bootstrap-slider.css" />
+    <link rel="stylesheet" href="dol/styles/main.css">
+    <!-- endbuild -->
+
+    <!-- build:js(app/..) dol/scripts/vendorIE8.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/html5shiv/dist/html5shiv.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+</head>
+
+<body ng-app="endesaApp" ng-controller="AppCtrl">
+
+    <!-- Logo and Navigation -->
+    <header class="site-header">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-3 col-sm-2">
+                    <section class="site-logo">
+                        <a href="" ng-click="irAMisDiagnosticos()">
+                            <img src="dol/static/images/logo-endesa.png">
+                        </a>
+                    </section>
+                </div>
+                <div class="col-xs-9 col-sm-4">
+                    <h1>Diagnóstico energético
+                        <small>Online</small>
+                    </h1>
+                </div>
+
+                <div class="col-xs-offset-3 col-xs-9 col-sm-offset-0 col-sm-6">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-2 col-sm-offset-0 col-md-1 col-md-offset-4 col-lg-1 col-lg-offset-4">
+                            <div class="pull-left hidden-sm hidden-md hidden-lg">
+                                <ol class="breadcrumb">
+                                    <li ng-show="user.userInfo.mail!==undefined">
+                                        <a href="" ng-click="irAMisDiagnosticos()" class="enlace_home">
+                                            <span class="glyphicon glyphicon-home"></span>Mis diagnósticos</a>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-4 col-md-3 col-lg-3">
+                            <div class="pull-right select_language mt17-xs dropdown header-link-language" ng-show="esFormulario() === false">
+                                <a ng-href="#" class="dropdown-toggle">
+                                    <span class="language">{{idioma.descripcion}}</span>
+                                    <span class="hidden-xs text-hide dropdown-icon"></span>
+                                </a>
+                                <ul class="dropdown-menu" >
+                                    <li ng-repeat="idioma in idiomas">
+                                        <a ng-click = "cambiarDeIdioma(idioma)" ng-href="" >
+                                           {{idioma.descripcion}}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xs-5 col-sm-6 col-md-4 col-lg-4">
+                            <div class="pull-right" ng-show="user.userInfo.mail!==undefined">
+                                <ul class="list-inline pull-right header-links">
+                                    <li class="profile-info mr30-xs dropdown">
+                                        <a ng-href="#" class="dropdown-toggle">
+                                            <img src="dol/static/images/user-profile-image.png" alt="" class="img-circle" width="44">
+                                            <span class="hidden-xs text-hide dropdown-icon"></span>
+                                        </a>
+                                        <ul class="dropdown-menu profile">
+                                            <!-- Reverse Caret -->
+                                            <!-- <li class="caret"></li> -->
+                                            <!-- Profile sub-links -->
+                                            <li>
+                                                <a href="" ng-click="irAMisDiagnosticos()">
+                                                    {{user.userInfo.mail}}
+                                                </a>
+                                            </li>
+                                            <li ng-show="user.userInfo.perfilUsuario == 'USR-01'">
+                                                <a ui-sref="cambio-contraseña">
+                                                    Cambiar contraseña
+                                                </a>
+                                            </li>                                           
+                                            <li>
+                                                <a target="_blank" ui-sref="terminos-condiciones">
+                                                    Términos y Condiciones
+                                                </a>
+                                            </li>
+                                            <li ng-show="user.userInfo.perfilUsuario == 'USR-01'">
+                                                <a href="" ng-click="openEliminarCuenta()">
+                                                    Eliminar cuenta
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="" ng-click="realizarLogout()" class="logout text-hide">Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+    <section class="breadcrumb-container hidden-xs">
+        <div class="container">
+            <div class="col-sm-offset-2">
+                <ol class="breadcrumb">
+                    <li ng-show="user.userInfo.mail!==undefined">
+                        <a href="" ng-click="irAMisDiagnosticos()">
+                            <span class="glyphicon glyphicon-home"></span>Mis diagnósticos</a>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Site main content -->
+    <section class="main-content">
+        <div ui-view></div>
+    </section>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                    <p>Endesa S.A.
+                        <strong>2014</strong>
+                    </p>
+                </div>
+                <div class="col-sm-8 col-xs-6">
+                    <ul class="subpienel">
+                        <li class="hidden-xs">
+                            <a target="_blank" ui-sref="aviso-legal" class="text-info" title="Aviso Legal">Aviso Legal</a>
+                        </li>
+
+                        <li>
+                            <a target="_blank" href="http://www.enel.com/" target="_blank" class="text-hide grupoEnel" title="Grupo Enel">Grupo Enel</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div ng-if="cookies.aceptadas !== true" class="cookie-warning">
+        <span class="aviso">Esta página web utiliza cookies para mejorar la experiencia de usuario. Utilizando nuestra web consientes la utilización de cookies de acuerdo a nuestra <a href="http://www.endesa.com/es/CookiesEndesa" target="_blank">Política de Cookies</a>
+        </span>
+        <div class="btn-group">
+            <button type="button" ng-click="aceptarCookies()" class="btn btn-guardar">Acepto</button>
+        </div>
+    </div>
+
+    <!-- build:js(app/..) dol/scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_es-es.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/affix.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/alert.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/button.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/carousel.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tab.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/transition.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/modal.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap/popover.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/respond/dest/respond.src.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+    <script src="bower_components/lodash/dist/lodash.compat.js"></script>
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/nv.d3.js"></script>
+    <script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+    <script src="bower_components/ng-grid/build/ng-grid.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/js-base64/base64.js"></script>
+    <!-- <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+    <script src="bower_components/bootstrap-sass-official/vendor/assets/javascripts/bootstrap.js"></script>
+    <script src="bower_components/jquery-bridget/jquery.bridget.js"></script>
+    <!--script src="bower_components/seiyria-bootstrap-slider/js/bootstrap-slider.js"></script-->
+    <script src="bower_components/jspdf/dist/jspdf.min.js"></script>
+    <script src="bower_components/ng-idle/angular-idle.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp,app}) dol/scripts/scripts.js -->
+    <script src="dol/scripts/app.js"></script>
+    <script src="dol/scripts/router.js"></script>
+    <script src="dol/scripts/app-controller.js"></script>
+    <script src="dol/scripts/services/angular-locale_es-es.js"></script>
+    <script src="dol/scripts/directives/ed-check/ed-check.js"></script>
+    <script src="dol/scripts/directives/ed-slider/bootstrap-slider.js"></script>
+    <script src="dol/scripts/directives/ed-slider/ed-slider.js"></script>
+    <script src="dol/scripts/directives/ed-stepper/ed-stepper.js"></script>
+    <script src="dol/scripts/directives/ed-form/ed-form.js"></script>
+    <script src="dol/scripts/directives/ed-validate-equal/ed-validate-equal.js"></script>
+    <script src="dol/scripts/directives/ed-captcha/ed-captcha.js"></script>
+	<script src="dol/scripts/directives/ed-placeholder/ed-placeholder.js"></script>	
+    <script src="dol/scripts/directives/advanced-number/advanced-number.js"></script>
+    <script src="dol/scripts/services/constantes-service.js"></script>
+    <script src="dol/scripts/services/peticionesHttp-service.js"></script>
+    <script src="dol/scripts/services/user-service.js"></script>
+    <script src="dol/scripts/services/interceptor-service.js"></script>
+    <script src="dol/scripts/services/ngGridPlugins-service.js"></script>
+
+    <script src="dol/scripts/filters/meses-filter.js"></script>
+
+    <script src="dol/modulos/login/login-controller.js"></script>
+    <script src="dol/modulos/login/login-service.js"></script>
+
+    <script src="dol/modulos/cambio-contrasenia/cambio-contrasenia-controller.js"></script>
+    <script src="dol/modulos/cambio-contrasenia/cambio-contrasenia-service.js"></script>
+
+    <script src="dol/modulos/recuperar-contrasenia/recuperar-contrasenia-controller.js"></script>
+    <script src="dol/modulos/recuperar-contrasenia/recuperar-contrasenia-service.js"></script>
+
+    <script src="dol/modulos/registro/registro-controller.js"></script>
+    <script src="dol/modulos/registro/registro-service.js"></script>
+
+    <script src="dol/modulos/mis-diagnosticos/controllers/misDiagnosticos-controller.js"></script>
+    <script src="dol/modulos/mis-diagnosticos/controllers/misDiagnosticosListado-controller.js"></script>
+    <script src="dol/modulos/mis-diagnosticos/controllers/misDiagnosticosComercialListado-controller.js"></script>
+    <script src="dol/modulos/mis-diagnosticos/controllers/misDiagnosticosAdministracion-controller.js"></script>
+    <script src="dol/modulos/mis-diagnosticos/services/misDiagnosticos-service.js"></script>
+    <script src="dol/modulos/mis-diagnosticos/services/misDiagnosticosListado-service.js"></script>
+
+    <script src="dol/modulos/formulario-diagnostico/controllers/formularioDiagnostico-controller.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/controllers/formularioDiagnosticoPaso1-controller.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/controllers/formularioDiagnosticoPaso2-controller.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/controllers/formularioDiagnosticoPaso3-controller.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/controllers/formularioDiagnosticoPaso4-controller.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/controllers/formularioDiagnosticoPaso5-controller.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/services/formularioDiagnosticoPaso1-service.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/services/formularioDiagnosticoPaso2-service.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/services/formularioDiagnosticoPaso3-service.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/services/formularioDiagnosticoPaso4-service.js"></script>
+    <script src="dol/modulos/formulario-diagnostico/services/formularioDiagnosticoPaso5-service.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

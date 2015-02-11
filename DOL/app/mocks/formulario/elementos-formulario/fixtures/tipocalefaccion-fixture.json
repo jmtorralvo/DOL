@@ -1,0 +1,13 @@
+[{
+    "descripcion": "Bomba de calor",
+    "id": 1
+}, {
+    "descripcion": "Caldera gas",
+    "id": 2
+}, {
+    "descripcion": "Caldera eléctrica/emisor",
+    "id": 3
+}, {
+    "descripcion": "Bomba de calor/inverter",
+    "id": 4
+}]

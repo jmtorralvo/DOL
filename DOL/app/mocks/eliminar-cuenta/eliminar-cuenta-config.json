@@ -1,0 +1,11 @@
+[{
+    "request": {
+        "url": "^/services/dol/usuario$",
+        "method": "DELETE"
+    },
+    "response": {
+        "status": 200,
+        "latency": 500,
+        "file": "fixtures/eliminar-cuenta-fixture.json"
+    }
+}]

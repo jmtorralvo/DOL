@@ -1,0 +1,73 @@
+.panel-group .panel {
+  &.panel-default{
+    border: none;
+    border-bottom: 1px solid $borderColor1;
+    & > .panel-heading{
+      background: $bgFullWidth2;
+      &:hover{
+        background: $bgBtnGuardar;
+      }
+    }
+  }
+  @include border-radius(0);
+  & + .panel {
+    margin-top: 2px;
+  }
+  .panel-heading{
+    //padding: 18px 22px 18px 10px;
+    padding: 0;
+    .panel-title > a{
+      display: block;
+      cursor: pointer;
+      &:hover .titulo-acordeon, .titulo-acordeon.abierto {
+        background: $bgBtnGuardar;
+        .ico-acordeon{
+          @include spr-insert(flecha-abajo, 16px, 9px, 22px ,0);
+          right: 22px;}
+        .texto-icono{
+          color: #fff;
+          &.calefaccion{
+            @include spr-insert(ico-calefaccion-hover, 26px, 19px, 0 ,0);}
+          &.aire{
+            @include spr-insert(ico-aire-hover, 18px, 18px, 0 ,0);}
+          &.agua{
+            @include spr-insert(ico-agua-hover, 12px, 17px, 0 ,0);}
+          &.iluminacion{
+            @include spr-insert(ico-iluminacion-hover, 15px, 20px, 0 ,0);}
+          &.gestion{
+            @include spr-insert(ico-gestion-hover, 14px, 21px, 0 ,0);}
+
+        }
+      }
+    }
+    .titulo-acordeon{
+      padding: 18px 22px 18px 10px;
+      position:relative;
+      .ico-acordeon{
+        width: 16px;
+        text-indent: -9999px;
+        @include spr-insert(ico-acordeon-abajo, 16px, 9px, 22px ,0);
+        right: 22px;
+      }
+      .texto-icono{
+        padding-left: 40px;
+        font-size: 18px;
+        font-family: $fontWeb01Semibold;
+        color: #000;
+        &.calefaccion{
+          @include spr-insert(ico-calefaccion, 26px, 19px, 0 ,0);}
+        &.aire{
+          @include spr-insert(ico-aire, 18px, 18px, 0 ,0);}
+        &.agua{
+          @include spr-insert(ico-agua, 12px, 17px, 0 ,0);}
+        &.iluminacion{
+          @include spr-insert(ico-iluminacion, 15px, 20px, 0 ,0); }
+        &.gestion{
+          @include spr-insert(ico-gestion, 14px, 21px, 0 ,0); } 
+      }
+    }
+  }
+  .panel-body{
+    padding: 30px 20px;
+  }
+}

@@ -1,0 +1,43 @@
+    <div class="container wrapper-registro">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="nuevo-user">
+                <h3 class="titulo-seccion-formulario">{{ 'cc_changepassword' | translate }}</h3>
+                <div class="row">
+                    <form name="changePassForm" novalidate ed-form ng-submit="cambiarContrasenia()">
+                        <div class="form-group">
+                            <div class="col-xs-12" ng-class="{ 'has-error' : changePassForm.oldPass.$invalid && !changePassForm.oldPass.$pristine }">
+                                    <label class="titulo-componente">{{ 'cc_oldpassword' | translate }}</label>  
+                                    <input type="password" name="oldPass" id="oldPass" class="form-control input-lg campo-formulario" placeholder="{{ 'cc_oldpassword' | translate }}" ng-model="changePassFormModel.viejaPass" required ed-validation>
+
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12" ng-class="{ 'has-error' : changePassForm.newPass.$invalid && !changePassForm.newPass.$pristine }">
+                                    <label class="titulo-componente">{{ 'cc_newpassword' | translate }}</label>
+                                    <input type="password" name="newPass" id="newPass" class="form-control input-lg campo-formulario" placeholder="{{ 'cc_newpassword' | translate }}" ng-minlength="6" ng-model="changePassFormModel.nuevaPass" required ed-validation>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12" ng-class="{ 'has-error' : changePassForm.newConfirmacionPass.$invalid && !changePassForm.newConfirmacionPass.$pristine }"> 
+                                    <label class="titulo-componente">{{ 'cc_repeatpassword' | translate }}</label> 
+                                    <input type="password" name="newConfirmacionPass" id="newConfirmacionPass" class="form-control input-lg campo-formulario" placeholder="{{ 'cc_repeatpassword' | translate }}" ng-minlength="6" ng-model="changePassFormModel.confirmacionNuevaPass" ed-validate-equal="{{changePassFormModel.nuevaPass}}" required ed-validation>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-xs-12">
+                                <div class="btn-group mt20 mb20">
+                                    <a ng-click="cambiarContrasenia()" class=" btn btn-lg btn-guardar botons enlace_pdf" >{{ 'cc_send' | translate }}
+                                        <div class="btn-lg btn-guardar dropdown-toggle">
+                                            <span class="icon continuar">&gt;</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,168 @@
+//Módulo Diagnóstico
+.diagnosticoMain {
+    margin-top: em(60px);
+    margin-bottom: em(20px);
+
+    .diagnosticoMain__title{
+        font-family: $fontWeb01Light;
+        font-size: em(40px);
+        margin-bottom: 0;
+    }
+
+    .btn {
+        margin-top: em(16px);
+    }
+}
+
+.list_diag{
+    margin-bottom:70px;
+}
+.diagnostico { 
+    background-color: $bgFullWidth2;
+    border-bottom: 1px solid $borderColor1;
+    margin-bottom: em(11px);
+    padding: em(14px) em(10px) 0 em(18px);
+
+    .diagnostico__title {
+        font-family: $fontWeb01Semibold;
+        font-size: em(18px);
+        margin-bottom: 0;
+    }
+
+    .diagnostico__subtitle {
+        font-family: $fontWeb01Regular;
+        font-size: em(13px);
+    }
+
+    .diagnostico__utils { 
+        list-style-type: none;
+        padding: 0;
+        float: right;
+
+        >li {
+
+            float: left;
+            margin-left: em(20px);
+
+            &:first-child{
+                margin-left: 0;
+            }
+
+            // botones para útiles
+
+            a {
+                padding: em(4px) 0 em(4px) em(33px);
+                font-family: $fontWeb01Semibold;
+                font-size: em(13px);
+                height: em(30px);
+            }
+
+            .utl--file {
+                @include spr-insert(ico-consultar, 29px, 26px, 0 ,0);
+            }
+
+            .utl--modify {
+                @include spr-insert(ico-modificar, 25px, 26px, 0 ,0);
+            }
+            
+            .utl--duplicate {
+                @include spr-insert(ico-duplicar, 23px, 26px, 0 ,0);
+            } 
+            
+            .utl--delete {
+                @include spr-insert(ico-eliminar, 22px, 23px, 0 ,2px);
+            } 
+            
+            .utl--fav {
+                @include spr-insert(ico-star, 26px, 26px, 0 , 0);
+
+                &.sel, &:hover {
+                    @include spr-insert(ico-star-sel, 26px, 26px, 0 , 0);
+                
+                }
+            } 
+            
+        }
+    }
+
+    .diagnostico__progress__title {
+         font-size: em(13px);
+         margin-bottom: em(6px);
+    }
+
+    .diagnostico__progress {
+        background-color: $bgProgress;
+        @include border-radius(10px);
+        border-top: 1px solid rgba(166,166,166, .6);
+        margin-bottom: em(18px);
+
+        .progress-bar-info {
+            background-color: $colorResaltado;
+        }
+    }
+
+    .ahorro{
+        background-color: #fff;
+        padding: em(8px) 0 0 0;
+
+        .ahorro__list {
+            list-style-type: none;
+            padding: 0 0 0 em(5px);
+            margin-top: em(5px);
+
+            >li {
+                float: left;
+                font-size: em(13px);
+                margin-right: em(15px,13px);
+
+
+                strong {
+                    font-family: $fontWeb01Bold;
+                    font-size: em(18px, 13px);
+                }
+            }
+        }
+
+        .btn.ahorro__btn {
+            font-family: $fontWeb01Semibold;
+            font-size: em(13px);
+            padding-top: em(11px);
+            padding-bottom: em(11px);
+            margin-bottom: em(8px, 13px);
+            padding-right:12px;
+        }
+
+    }
+}
+
+
+.filepickerContainer
+{
+    background-color:transparent !important;
+    
+    /// Ocultamos el btn de subida que tiene el input por defecto
+    .filepicker
+    {
+        width: 100%;
+        height: 100%;
+        display: block;
+        opacity: 0;
+    } 
+}
+
+.uploadLink
+{
+    @include spr-pseudo-insert(uploadIcon, 0, 0, 0 ,0);
+    cursor: pointer;
+}
+
+.downloadLink
+{
+    @include spr-pseudo-insert(downloadIcon, 0, 0, 0 ,0);
+    cursor: pointer;
+}
+.ngCell
+{
+    background-color:white;
+}
+

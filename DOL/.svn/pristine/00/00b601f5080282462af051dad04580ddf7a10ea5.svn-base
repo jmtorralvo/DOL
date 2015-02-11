@@ -1,0 +1,13 @@
+[{
+    "id": 1,
+    "tipo_proteccion": "Persiana"
+}, {
+    "id": 2,
+    "tipo_proteccion": "Toldo"
+}, {
+    "id": 3,
+    "tipo_proteccion": "Cortina"
+}, {
+    "id": 4,
+    "tipo_proteccion": "Protección Vegetal"
+}]

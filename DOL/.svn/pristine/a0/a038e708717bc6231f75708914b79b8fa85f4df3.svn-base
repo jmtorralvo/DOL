@@ -1,0 +1,22 @@
+.terminos_condiciones{
+    margin-top: 79px;
+    margin-bottom: 45px;
+    text-align:justify;
+    .titulo_terminos{
+    font-family: "Open Sans Bold";
+    font-size:24px;
+    }  
+    .indice_terminos{
+        margin:20px 0 20px 30px;
+    }
+    .lista_terminos{
+        font-family: "Open Sans Bold";
+    }
+    .subdivisiones1{
+        margin-left:15px;
+    }
+    .subdivisiones2{
+        margin-left:25px;
+
+    }
+}

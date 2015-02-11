@@ -1,0 +1,318 @@
+/* global app */
+
+'use strict';
+
+
+(function(app) {
+
+    app.config(['$stateProvider', '$urlRouterProvider',
+        function($stateProvider, $urlRouterProvider) {
+
+            $urlRouterProvider.otherwise('/dol/login');
+
+            $stateProvider
+
+            .state('login', {
+                url: '/dol/login',
+                templateUrl: '/dol/modulos/login/login.html',
+                controller: 'LoginCtrl'
+
+            })
+
+            .state('registro', {
+                url: '/dol/registro',
+                templateUrl: '/dol/modulos/registro/registro.html',
+                controller: 'RegistroCtrl'
+            })
+
+            .state('cambio-contraseña', {
+                url: '/dol/cambio-contraseña',
+                templateUrl: '/dol/modulos/cambio-contrasenia/cambio-contrasenia.html',
+                controller: 'CambioContraseniaCtrl',
+                resolve: {
+                    autenticado: ['LoginSrv',
+                        function(LoginSrv) {
+                            return LoginSrv.obtenerAcessoAURL('/dol/cambio-contraseña');
+                        }
+                    ]
+                }
+            })
+
+            .state('modales', {
+                url: '/dol/modales',
+                templateUrl: '/dol/modulos/modales/modales.html',
+                controller: 'ModalesCtrl'
+            })
+
+            .state('terminos-condiciones', {
+                url: '/dol/terminos-y-condiciones',
+                templateUrl: '/dol/modulos/pantallas-estaticas/terminos-condiciones.html'
+            })
+
+            .state('aviso-legal', {
+                url: '/dol/aviso-legal',
+                templateUrl: '/dol/modulos/pantallas-estaticas/aviso-legal.html'
+            })
+
+            .state('recuperar-contrasenia', {
+                url: '/dol/recuperar-contrasenia',
+                templateUrl: '/dol/modulos/recuperar-contrasenia/recuperar-contrasenia.html', 
+                controller: 'RecuperarContraseniaCtrl'
+            })
+
+            .state('misDiagnosticos', {
+                url: '/dol/mis-diagnosticos',
+                templateUrl: '/dol/modulos/mis-diagnosticos/views/misDiagnosticos.html',
+                controller: 'MisDiagnosticosCtrl',
+                abstract: true,
+                resolve: {
+                    diagnosticos: ['MisDiagnosticosListadoSrv',
+                        function(MisDiagnosticosListadoSrv) {
+                            return MisDiagnosticosListadoSrv.obtenerListado();
+                        }
+                    ],
+                    situacionComercial: ['MisDiagnosticosListadoSrv',
+                        function(MisDiagnosticosListadoSrv) {
+                            return MisDiagnosticosListadoSrv.obtenerSituacionComercial();
+                        }
+                    ],
+                    motivoRechazo: ['MisDiagnosticosListadoSrv',
+                        function(MisDiagnosticosListadoSrv) {
+                            return MisDiagnosticosListadoSrv.obtenerMotivosRechazo();
+                        }
+                    ]
+                }
+            })
+
+                .state('misDiagnosticos.basico', {
+                    url: '/listado',
+                    templateUrl: '/dol/modulos/mis-diagnosticos/views/misDiagnosticosListado.html',
+                    controller: 'MisDiagnosticosListadoCtrl',
+                    resolve: {
+                        autenticado: ['LoginSrv',
+                            function(LoginSrv) {
+                                return LoginSrv.obtenerAcessoAURL('/dol/mis-diagnosticos/listado');
+                            }
+                        ]
+                    }
+                })
+
+                .state('misDiagnosticos.comercial', {
+                    url: '/listado-comercial',
+                    templateUrl: '/dol/modulos/mis-diagnosticos/views/misDiagnosticosComercialListado.html',
+                    controller: 'MisDiagnosticosComercialCtrl',
+                    resolve: {
+                        autenticado: ['LoginSrv',
+                            function(LoginSrv) {
+                                return LoginSrv.obtenerAcessoAURL('/dol/mis-diagnosticos/listado-comercial');
+                            }
+                        ],
+                        i18n: ['$translate',
+                            function($translate) {
+                                return $translate(['ADJUNTAR_DOCUMENTACION','DOCUMENTACION_DIAGNOSTICO','COMERCIAL_NUMERO_DIAGNOSTICO', 'COMERCIAL_FECHA', 'COMERCIAL_NOMBRE', 'COMERCIAL_TITULAR', 'COMERCIAL_DIRECCION', 'COMERCIAL_TELEFONO' , 'COMERCIAL_ESTADO', 'COMERCIAL_ID_PDS', 'COMERCIAL_PDS', 'COMERCIAL_ID_GESTOR_COMERCIAL', 'COMERCIAL_GESTOR_COMERCIAL', 'COMERCIAL_ID_DELEGADO_COMERCIAL', 'COMERCIAL_DELEGADO_COMERCIAL', 'COMERCIAL_FECHA_ACTUACION', 'COMERCIAL_MOTIVO_RECHAZO', 'COMERCIAL_COMENTARIO', 'COMERCIAL_SEGMENTO', 'COMERCIAL_COD_POSTAL','MIS_DIAGNOSTICOS_COMERCIAL_DESCARGAR_ARCHIVO', 'MIS_DIAGNOSTICOS_COMERCIAL_SUBIR_ARCHIVO','MIS_DIAGNOSTICOS_COMERCIAL_ARCHIVO_INCOMPATIBLE']);
+                            }
+                        ]
+                    }
+                })
+
+                .state('misDiagnosticos.administracion', {
+                    url: '/listado-administracion',
+                    templateUrl: '/dol/modulos/mis-diagnosticos/views/misDiagnosticosAdministracion.html',
+                    controller: 'MisDiagnosticosAdministracionCtrl',
+                    resolve: {
+                        autenticado: ['LoginSrv',
+                            function(LoginSrv) {
+                                return LoginSrv.obtenerAcessoAURL('/dol/mis-diagnosticos/listado-administracion');
+                            }
+                        ],
+                        i18n: ['$translate',
+                            function($translate) {
+                                return $translate(['ADMINISTRACION_NOMBRE', 'ADMINISTRACION_EMAIL', 'ADMINISTRACION_ACCION', 'ADMINISTRACION_VERSION', 'ADMINISTRACION_FECHA', 'ADMINISTRACION_COMENTARIO', 'ADMINISTRACION_ACTUAL']);
+                            }
+                        ]
+                    }
+                })
+
+            .state('nuevoDiagnostico', {
+                url: '/dol/nuevo-diagnostico',
+                resolve: {
+                    autenticado: ['LoginSrv',
+                        function(LoginSrv) {
+                            return LoginSrv.obtenerAcessoAURL('/dol/nuevo-diagnostico');
+                        }
+                    ]
+                },
+                views: {
+                    '': {
+                        templateUrl: '/dol/modulos/nuevo-diagnostico/views/nuevo-diagnostico.html'
+                    },
+
+                    'nuevo-diagnostico-content@nuevoDiagnostico': {
+                        templateUrl: '/dol/modulos/nuevo-diagnostico/views/nuevo-diagnostico-content.html',
+                    },
+
+                    'footer-extendido@nuevoDiagnostico': {
+                        templateUrl: '/dol/views/footer-extendido.html'
+                    }
+                }
+            })
+
+            .state('crearDiagnostico', {
+                url: '/dol/formulario-diagnostico',
+                templateUrl: '/dol/modulos/formulario-diagnostico/views/formularioDiagnostico.html',
+                controller: 'FormularioDiagnosticoCtrl',
+                abstract: true,
+                resolve: {
+                    autenticado: ['LoginSrv',
+                        function(LoginSrv) {
+                            return LoginSrv.obtenerAcessoAURL('/dol/formulario-diagnostico');
+                        }
+                    ]
+                }
+            })
+
+                .state('crearDiagnostico.paso1', {
+                    url: '/negocio-y-titular',
+                    templateUrl: '/dol/modulos/formulario-diagnostico/views/formularioDiagnosticoPaso1.html',
+                    controller: 'FormularioDiagnosticoPaso1Ctrl',
+                    resolve: {
+                        provincias: ['FormularioDiagnosticoPaso1Srv',
+                            function(FormularioDiagnosticoPaso1Srv) {
+                                return FormularioDiagnosticoPaso1Srv.obtenerProvincias();
+                            }
+                        ]
+                    }
+                })
+
+                .state('crearDiagnostico.paso2', {
+                    url: '/datos-establecimiento',
+                    templateUrl: '/dol/modulos/formulario-diagnostico/views/formularioDiagnosticoPaso2.html',
+                    controller: 'FormularioDiagnosticoPaso2Ctrl',
+                    resolve: {
+                        tiposConstruccion: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerTiposDeConstruccion();
+                            }
+                        ],
+                        anosConstruccion: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerAnosConstruccion();
+                            }
+                        ],
+                        incidSol: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerIncidSol();
+                            }
+                        ],
+                        tipoProteccionSolar: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerTipoProteccionSolar();
+                            }
+                        ],
+                        sistemasCocina: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerSistemasCocina();
+                            }
+                        ],
+                        superficieAcristada: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerSuperficiesAcristalada();
+                            }
+                        ],
+                        tiposPeluqueria: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerTiposPeluqueria();
+                            }
+                        ],
+                        sistemasCierre: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerSistemasCierre();
+                            }
+                        ],
+                        descripcionesActividad: ['FormularioDiagnosticoPaso2Srv',
+                            function(FormularioDiagnosticoPaso2Srv) {
+                                return FormularioDiagnosticoPaso2Srv.obtenerDescripcionesActividad();
+                            }
+                        ]
+                    }
+                })
+
+                .state('crearDiagnostico.paso3', {
+                    url: '/agua-caliente-climatizacion-iluminacion',
+                    templateUrl: '/dol/modulos/formulario-diagnostico/views/formularioDiagnosticoPaso3.html',
+                    controller: 'FormularioDiagnosticoPaso3Ctrl',
+                    resolve: {
+                        tiposDeCalefaccion: ['FormularioDiagnosticoPaso3Srv',
+                            function(FormularioDiagnosticoPaso3Srv) {
+                                return FormularioDiagnosticoPaso3Srv.obtenerTiposDeCalefaccion();
+                            }
+                        ],
+                        tiposDeClimatizacion: ['FormularioDiagnosticoPaso3Srv',
+                            function(FormularioDiagnosticoPaso3Srv) {
+                                return FormularioDiagnosticoPaso3Srv.obtenerTiposDeClimatizacion();
+                            }
+                        ],
+                        antiguedades: ['FormularioDiagnosticoPaso3Srv',
+                            function(FormularioDiagnosticoPaso3Srv) {
+                                return FormularioDiagnosticoPaso3Srv.obtenerAntiguedades();
+                            }
+                        ],
+                        usosSistema: ['FormularioDiagnosticoPaso3Srv',
+                            function(FormularioDiagnosticoPaso3Srv) {
+                                return FormularioDiagnosticoPaso3Srv.obtenerUsosSistema();
+                            }
+                        ],
+                        sistemasProduccion: ['FormularioDiagnosticoPaso3Srv',
+                            function(FormularioDiagnosticoPaso3Srv) {
+                                return FormularioDiagnosticoPaso3Srv.obtenerSistemasProduccion();
+                            }
+                        ]
+
+                    }
+                })
+
+                .state('crearDiagnostico.paso4', {
+                    url: '/contrato-de-energia',
+                    templateUrl: '/dol/modulos/formulario-diagnostico/views/formularioDiagnosticoPaso4.html',
+                    controller: 'FormularioDiagnosticoPaso4Ctrl'
+                })
+
+                .state('crearDiagnostico.paso5', {
+                    url: '/resultado',
+                    templateUrl: '/dol/modulos/formulario-diagnostico/views/formularioDiagnosticoPaso5.html',
+                    controller: 'FormularioDiagnosticoPaso5Ctrl',
+                    resolve: {
+                        i18n: ['$translate',
+                            function($translate) {
+                                return $translate(['RESULTADO_KWHA', 'RESULTADO_EURA', 'RESULTADO_KGCO2', 'PASO5_FAMILIA', 'PASO5_INVERSION', 'PASO5_RETORNO', 'PASO5_AHORRO_ENERGETICO', 'PASO5_AHORRO_ECONOMICO','PASO5_ACTIVAR']);
+                            }
+                        ]
+
+                    }
+                })
+
+            .state('ayudaCrearDiagnostico-paso1', {
+                url: '/dol/formulario-diagnostico/negocio-y-titular/ayuda',
+                templateUrl: '/dol/modulos/pantallas-estaticas/ayudaFormularioDiagnosticoPaso1.html'
+            })
+            .state('ayudaCrearDiagnostico-paso2', {
+                url: '/dol/formulario-diagnostico/datos-establecimiento/ayuda',
+                templateUrl: '/dol/modulos/pantallas-estaticas/ayudaFormularioDiagnosticoPaso2.html'
+            })
+            .state('ayudaCrearDiagnostico-paso3', {
+                url: '/dol/formulario-diagnostico/agua-caliente-climatizacion-iluminacion/ayuda',
+                templateUrl: '/dol/modulos/pantallas-estaticas/ayudaFormularioDiagnosticoPaso3.html'
+            })
+            .state('ayudaCrearDiagnostico-paso4', {
+                url: '/dol/formulario-diagnostico/contrato-de-energia/ayuda',
+                templateUrl: '/dol/modulos/pantallas-estaticas/ayudaFormularioDiagnosticoPaso4.html'
+            })
+            .state('ayudaCrearDiagnostico-paso5', {
+                url: '/dol/formulario-diagnostico/resultado/ayuda',
+                templateUrl: '/dol/modulos/pantallas-estaticas/ayudaFormularioDiagnosticoPaso5.html'
+            });
+
+        }
+    ]);
+
+}(app));

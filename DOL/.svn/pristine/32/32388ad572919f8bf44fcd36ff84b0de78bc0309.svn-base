@@ -1,0 +1,119 @@
+<div class="container aviso-legal">
+    <div class="row">
+        <div class="col-md-12">
+            <p class="titulo_aviso">Aviso Legal<p>
+                <ul class="indice_aviso">
+                    <li>Información general</li>
+                    <ul>
+                       <li>Identificación de la empresa</li> 
+                    </ul>                     
+                    <li>Términos y condiciones generales de acceso y uso de la Web </li>
+                    <ul>
+                        <li>Usuario</li>
+                        <li>Modificaciones</li>
+                        <li>Accesibilidad</li>
+                        <li>Acceso y uso de la Web</li>
+                        <li>Restricciones de uso</li>
+                        <li>Titularidad de los contenidos</li>
+                        <li>Traducción de contenidos al catalán y al inglés</li>
+                        <li>Exclusión de garantías y responsabilidades</li>
+                        <li>Empleo de cookies</li>
+                        <li>Duración y terminación</li>
+                        <li>Indemnización del usuario</li>
+                        <li>Legislación aplicable y jurisdicción</li>
+                        <li>Copyright</li>  
+                    </ul>
+
+                    <li>Política de protección de datos</li>
+                    <ul>
+                        <li>Protección de datos personales</li>
+                    </ul>
+                    
+                </ul>
+            
+            <p class="lista_aviso">Información general</p>  
+                <p class="lista_aviso2">Identificación de la empresa</p>
+                    <p>Información General a efectos del Artículo 10 de la Ley 34/2002 de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico</p>
+                    <p>Denominación social del prestador de servicios de la sociedad de la información:
+                    ENDESA …….. 
+                    Domicilio social: (indicar calle, número, población y CP)
+                    Datos de inscripción en el Registro Mercantil de …………..: Tomo xxx, Folio xxx, Hoja xxx Código de identificación Fiscal número: xxxxxx
+                    Dirección de correo electrónico: xxxxxxxxx</p>
+            <p class="lista_aviso">Términos y condiciones generales de acceso y uso de la Web</p>
+                <p class="lista_aviso2">Usuario</p>
+                    <p>La utilización de esta Web le atribuye la condición de usuario de la misma y expresa su aceptación plena y sin reservas de todas y cada una de las Condiciones Generales publicadas por ENDESA ……..  (a partir de ahora “Endesa”) en el momento mismo en que Ud. acceda a la Web, sin perjuicio de la aceptación de las condiciones particulares que en su caso resulten de aplicación. Cualquier utilización distinta a la autorizada está expresamente prohibida, quedando Endesa facultada para denegar o retirar el acceso y uso de la Web, en cualquier momento, y sin previo aviso, a aquellos usuarios que incumplan estas condiciones generales o las condiciones particulares que, en su caso, resulten de aplicación.</p>
+                <p class="lista_aviso2">Modificaciones</p>
+                    <p>Endesa se reserva el derecho de modificar, unilateralmente, en cualquier momento y sin previo aviso las presentes condiciones. En estos casos se procederá a su publicación y aviso con la máxima antelación posible. De igual modo, se reserva el derecho a modificar, unilateralmente, en cualquier momento y sin previo aviso, la presentación y configuración de la Web.</p>
+                <p class="lista_aviso2">Accesibilidad</p>
+                    <p>La Web ha sido diseñada y programada siguiendo las técnicas y directrices de accesibilidad internacional, que hacen posible su uso por todo tipo de usuarios, incluidos los que sufren algún tipo de discapacidad.</p>
+                    <p>Para ello, la Web se ha desarrollado bajo el cumplimiento de las normas WCAG (Web Content Accessibility Guidelines) del W3C (World Wide Web Consortium), en su nivel AA. Pautas de Contenido Accesible en Web 1.0. Además, la presentación se basa en la Recomendación del W3C sobre las Hojas de Estilo en Cascada, Nivel 2 (CSS2) y se ha empleado el estándar recomendado en empleo de código HTML verificando las recomendaciones HTML 4.01 Transitional.</p>
+                <p class="lista_aviso2">Acceso y uso de la Web </p>
+                    <p>El acceso y uso de la Web tiene carácter gratuito para los usuarios y no exige el registro previo del usuario con carácter general. No obstante, es posible que el acceso y uso de determinadas informaciones y servicios ofrecidos a través de la Web sólo puede hacerse previo registro del usuario.</p>
+                    <p>El Usuario se compromete a hacer un uso diligente y a no poner a disposición de terceros su nombre de usuario y contraseña, así como a comunicar a Endesa con la mayor brevedad, la pérdida, robo o cualquier riesgo de acceso a los mismos por un tercero.</p>
+                <p class="lista_aviso2">Restricciones de uso</p>
+                    <p>Cuando Ud. accede a nuestra página Web está expresamente autorizado para visualizar toda la información contenida en la página, así como para efectuar reproducciones privadas de la misma en sus sistemas informáticos, siempre y cuando dichos contenidos sean para su uso exclusivo y no sean posteriormente cedidos a terceros. Por consiguiente:</p>
+                        <p class="subdivisiones-aviso1">1.   No se encuentra autorizado a reproducir o copiar, distribuir, modificar, ceder o comunicar públicamente la información contenida en la Web, a menos que se cuente con la autorización del titular de los correspondientes derechos o ello resulte legalmente permitido.</p>
+                        <p class="subdivisiones-aviso1">2.   No se encuentra autorizado para emplear la información contenida en la Web con fines de venta directa o con cualquier otra clase de finalidad comercial, enviar mensajes no solicitados dirigidos a una pluralidad de personas con independencia de su finalidad, así como comercializar de cualquier modo dicha información.</p>
+                        <p class="subdivisiones-aviso1">3.   No se encuentra autorizado a suprimir, eludir, manipular el "copyright" y demás datos identificativos de los derechos de Endesa o de sus titulares incorporados, así como los dispositivos técnicos de protección, las huellas digitales o cualesquiera otros mecanismos de protección.</p>
+                        <p class="subdivisiones-aviso1">4.   No se encuentra autorizado para desmontar, descompilar o invertir las bases de datos en la que se almacena la información de la Web.</p>
+                        <p class="subdivisiones-aviso1">5.   No se encuentra autorizado a realizar prácticas o actos de "spamming" en el uso o como consecuencia del uso de la Web o de las informaciones y servicios con fines de venta u otros de naturaleza comercial, a una pluralidad de personas sin que medie su previa solicitud o consentimiento, ni cualesquiera otros mensajes no solicitados ni consentidos previamente a una pluralidad de personas, y a no enviar cadenas de mensajes electrónicos no solicitados ni previamente consentidos, ni utilizar listas de distribución a las que pueda accederse a través de la Web.</p>
+                    <p>Cualquier infracción de lo dispuesto en este párrafo será considerada como infracción de los derechos de propiedad intelectual de titularidad de Endesa, dando lugar a las responsabilidades legalmente establecidas al efecto y pudiendo ser perseguida dicha actuación mediante las acciones administrativas, civiles o penales, que en su caso correspondan.</p> 
+            <p class="lista_aviso2">Titularidad de los contenidos </p>
+                <p>Toda la información contenida en esta Web, incluyendo imágenes, diseños gráficos o códigos informáticos, nombres comerciales, marcas y signos distintivos, entre otros, es propiedad intelectual e industrial de Endesa. Corresponde a la misma el ejercicio exclusivo de los derechos de explotación de la propiedad intelectual mencionada, en cualquier forma y, en especial, los derechos de reproducción, distribución, comunicación pública y transformación. Endesa no cede total ni parcialmente, ni concede licencia o autorización alguna a los usuarios sobre los derechos de propiedad intelectual o industrial o de cualquier otra forma relativa a la Web.</p>
+                <p>Asimismo, Endesa garantiza que los contenidos, incluidos los de propiedad intelectual, no son de carácter ilícito ni infringen la normativa vigente. Por consiguiente, los contenidos de la Web no tendrán carácter xenófobo, pornográfico, discriminatorio, racista o que de cualquier modo fomente la violencia. Además, Endesa adoptará las medidas legales que considere convenientes para impedir cualquier tipo de conducta contraria a la Ley o a la moral.</p>
+                <p>Supone una infracción de los derechos de propiedad intelectual e industrial protegidos por la Ley reproducir o copiar, distribuir, modificar, ceder o comunicar públicamente la información contenida en la Web, a menos que se cuente con la autorización del titular de los correspondientes derechos o ello resulte legalmente permitido.</p>
+            <p class="lista_aviso2">Traducción de contenidos al catalán y al inglés</p>
+                <p>Las versiones de la Web en catalán e inglés tienen únicamente un efecto informativo. Ante cualquier discrepancia en el contenido de la versión en catalán o en inglés con la versión original en castellano, prevalecerá siempre lo publicado en esta última.</p> 
+            <p class="lista_aviso2">Exclusión de garantías y responsabilidades</p>
+                <p>Respecto a la exclusión de garantías y responsabilidades, Endesa no responderá por:</p>
+                    <p class="subdivisiones-aviso1">1.   Los daños y perjuicios de toda naturaleza que puedan deberse a los productos o servicios prestados u ofertados por terceras personas o entidades a través de la Web, y en particular de:</p>
+                    <ul>
+                        <li>el incumplimiento de la Ley, la moral y las buenas costumbres, así como el orden público, o el uso de los productos y/o servicios ofertados de forma no diligente o incorrecta, o con fines o efectos ilícitos o contrarios a lo establecido en estas condiciones generales o en las condiciones aplicables que en su caso resulten de aplicación.</li>
+                        <li>la infracción de los derechos de propiedad industrial e intelectual.</li>
+                        <li>la infracción del secreto profesional.</li>
+                        <li>la infracción de los derechos al honor, a la intimidad personal y familiar y a la imagen de las personas, y los relativos a la protección de la infancia y la juventud.</li> 
+                        <li>la realización de actos de competencia desleal.</li>             
+                        <li>la realización de publicidad ilícita o actos constitutivos de delito o de naturaleza pornográfica.</li>
+                        <li>la ilicitud o falta de veracidad, exactitud, fiabilidad, pertinencia, actualidad y exhaustividad de los contenidos e informaciones transmitidas o puestos a disposición de los usuarios, incluidos las informaciones y servicios prestados por terceros o por los usuarios a través de la Web. </li>
+                        <li>el incumplimiento o cumplimiento defectuoso o terminación por cualquier causa de los contratos realizados con terceros con motivo de la prestación de servicios a través de la Web.</li>
+                        <li>la incapacidad de cualquier Usuario o la suplantación de la personalidad de un tercero efectuada por el Usuario.</li>
+                    </ul>
+                    <p class="subdivisiones-aviso1">2.   Endesa sólo responderá de los servicios propios y contenidos directamente originados por ella e identificados con su Copyright como una marca o propiedad intelectual o industrial de la misma.</p>
+                    <p class="subdivisiones-aviso1">3.   Los daños y perjuicios de toda naturaleza que puedan deberse al conocimiento por terceros no autorizados de la clase, condiciones, características y circunstancias del uso que los usuarios hacen de la Web y de los servicios que éste ofrece.</p>
+                    <p class="subdivisiones-aviso1">4.   Los daños y perjuicios de toda naturaleza que puedan deberse a la existencia de errores en el acceso o uso de la página Web, así como en el acceso o uso de sus servicios o del contenido, aunque se comprometa a evitarlos, actualizarlo o subsanar dicho contenido. Es decir, se excluye la responsabilidad por la falta de disponibilidad o continuidad del funcionamiento de la Web y de los servicios, así como respecto a los fallos en el acceso a las distintas páginas Web o a aquellas desde las que se prestan los servicios.</p> 
+                    <p class="subdivisiones-aviso1">5.   Los daños y perjuicios de toda naturaleza que puedan deberse a las informaciones contenidas en su página Web, a las que esta Web pueda remitir enlaces hipertextuales o "links". La finalidad de los "links" que aparecen en la página es puramente informativa, no siendo Endesa responsable en ningún caso del resultado que Ud. pretenda obtener mediante el acceso a los citados "links". Por consiguiente, Endesa no responderá por:</p>
+                        <ul>
+                            <li>la disponibilidad, accesibilidad y funcionamiento o continuidad de los sitios enlazados.</li>
+                            <li>la calidad, licitud, fiabilidad, utilidad, veracidad, vigencia, exhaustividad y/o autenticidad del contenido existente en los sitios enlazados.</li>
+                            <li>del mantenimiento, prestación o transmisión de los contenidos existentes en los sitios enlazados.</li>
+                        </ul>
+                    <p class="subdivisiones-aviso1">6.   Los daños y perjuicios de toda naturaleza que puedan deberse a la existencia de virus en el sistema informático, documentos electrónicos o ficheros de los usuarios. De igual modo, por la presencia de virus en los servicios prestados por terceros a través de la Web, causando alteraciones en el sistema informático, documentos electrónicos o ficheros de los usuarios.</p>
+                    <p class="subdivisiones-aviso1">7.   Bajo ninguna circunstancia, incluida la negligencia, de la pérdida de negocio, pérdida de uso, pérdida de beneficios, pérdida de datos, por daños indirectos, secundarios, especiales o consecuentes que resulten del acceso o uso de los servicios de la Web, o que de otra forma se encuentren dentro del ámbito de la misma.</p>
+                    <p class="subdivisiones-aviso1">8.   Los daños y perjuicios que puedan derivarse del conocimiento que puedan tener terceros no autorizados de la clase, condiciones, características y circunstancias de acceso y uso que los usuarios hacen de la Web y de las informaciones y servicios, así como del incumplimiento por los usuarios de sus obligaciones en relación con los datos de carácter personal.</p>
+                <p>En relación con la limitación de responsabilidades, Endesa rechaza todas las garantías respecto a los servicios de la Web, expresas, implícitas u obligatorias, incluidas, pero no limitadas a las garantías implícitas de comercialización y adecuación a fines específicos y a las garantías obligatorias de protección frente a incumplimiento.</p>
+                <p class="lista_aviso2">Empleo de cookies </p>
+                    <p> Endesa utiliza en la Web cookies propias y de empresas colaboradoras para mejorar su experiencia de usuario y ofrecerle los mejores servicios.</p>
+                    <p>Al navegar por nuestra Web, estará aceptando el uso de las cookies en las condiciones establecidas en la Política de Cookies.</p>
+                    <p>Las cookies son pequeños ficheros de datos que el servidor de Internet envía al dispositivo con el que se conecta a la Web y que éste archiva. Se asocian únicamente a su navegador y no proporcionan por sí mismas datos personales. Las cookies no pueden dañar su dispositivo y además son muy útiles, ya que nos ayudan a identificar y resolver errores.</p>
+                    <p>Puede consultar los pasos para deshabilitar la instalación de cookies en las secciones de "Ayuda" de las páginas web de cada navegador.</p>
+                <p class="lista_aviso2">Duración y terminación </p>         
+                    <p>El acceso y uso de la Web tienen, en principio, una duración indefinida. No obstante lo anterior, Endesa se reservará el derecho a dar por terminado o suspendido el acceso y uso a la Web en cualquier momento. Cuando ello sea razonablemente posible, se advertirá previamente de la terminación o suspensión del acceso y/o uso de la Web.</p>
+                <p class="lista_aviso2">Indemnización del usuario</p>
+                    <p>El usuario se compromete expresamente a indemnizar a Endesa y al resto de las sociedades de su grupo, empleados, administradores, agentes, proveedores de información o de servicios y licenciantes, cualesquiera daños y perjuicios (incluidos honorarios de letrados y costas) derivados del incumplimiento por el usuario de estas condiciones generales o las condiciones particulares aplicables, en su caso, así como a colaborar con Endesa en la defensa de sus intereses en caso de que se presente cualquier reclamación o se inicie o invoque cualquier procedimiento judicial o administrativo por tal causa. Asimismo, el usuario se compromete a realizar sus mayores esfuerzos a fin de evitar o, en su caso, mitigar los efectos dañinos y perjudiciales que de ello pudieran derivarse para Endesa.</p>
+                <p class="lista_aviso2">Legislación aplicable y jurisdicción</p>
+                    <p>Todas las condiciones establecidas se regirán por la Ley Española. Endesa y el usuario, con renuncia expresa al fuero que pudiera corresponderles, se someten a los Tribunales y Juzgados del domicilio del usuario, para cualquier controversia que pudiera surgir de la prestación de los servicios objeto de estas condiciones generales. En el supuesto de que el usuario tuviera su domicilio fuera del Territorio Español, Endesa y el usuario se someten, con renuncia expresa al fuero que pudiera corresponderles, a los Juzgados y Tribunales de Madrid (España).</p> 
+                <p class="lista_aviso2">Copyclass="lista_aviso2"right</p>
+                    <p>© Copyright 2014. Endesa Energía, SA (Unipersonal).  Prohibida su reproducción total o parcial. Reservados todos los derechos.</p>              
+            <p class="lista_aviso">Política de protección de datos</p>
+                <p>Protección de datos personales</p>
+                    <p>ENDESA………….. (a partir de ahora "Endesa") garantiza el cumplimiento de la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal. Esta ley tiene por objeto garantizar y proteger, en lo que concierne al tratamiento de datos personales, las libertades públicas y los derechos fundamentales de las personas físicas, y en especial de su honor e intimidad personal y familiar. En definitiva, se trata de proteger los derechos fundamentales del individuo y, en concreto, los contemplados en el artículo 18 de nuestra Constitución.</p>
+                    <p>En todo momento se informará en la recogida de los datos de la finalidad de su tratamiento y de la existencia de un fichero debidamente declarado en la Agencia de Protección de Datos, si bien, existen otros datos personales que debido a su carácter temporal, una vez alcanzada la finalidad serán debidamente eliminados cumpliendo con todas las garantías legales.</p>
+                    <p>Le comunicamos que existen determinados campos en el formulario que deber ser cumplimentados de forma obligatoria (marcados con un asterisco o con menciones específicas) para así poder atender adecuadamente a la petición realizada, siendo voluntaria la inclusión de datos en los campos restantes.</p>
+                    <p>El usuario debe saber que rellenar el formulario y enviar los datos solicitados, implica que la información reflejada en este aviso ha sido leída y aceptada expresamente y que en consecuencia, otorga su consentimiento inequívoco y expreso al tratamiento de sus datos personales conforme a la finalidad explicada.</p> 
+                    <p>Endesa ha adoptado las medidas de seguridad de índole técnica y organizativa que vienen exigidas en la legislación vigente en materia de protección de datos de carácter personal. Para ello se han establecido todos los medios y mecanismos necesarios para evitar la alteración, pérdida, mal uso, tratamiento y acceso no autorizado o robo de los mismos habida cuenta del estado de la tecnología. No obstante, deberá tener en cuenta que las medidas en Internet, debido a su naturaleza y carácter global, no son inexpugnables.</p> 
+                    <p>En el supuesto de que ENDESA cediese sus datos a terceros, dicha circunstancia le será notificada al Usuario Registrado en los formularios de recogida de datos, junto con la información consistente en la identificación del tercero a quien se cede, el tipo de actividades a las que se dedica dicho cesionario y la finalidad a la que responde dicha cesión.</p>
+                    <p>No obstante lo anterior, Vd. consiente expresamente el tratamiento de sus datos para que podamos remitirle, por cualquier medio, incluyendo medios telefónicos y telemáticos (entre otros, por correo electrónico y sms), información comercial, de los productos y servicios comercializados por el Grupo Endesa y sus filiales o terceros relacionados con el suministro de energía,  servicios de mantenimiento, las telecomunicaciones e Internet, los servicios financieros y seguros, el equipamiento y asistencia en el hogar o para realizar prospecciones relacionadas con los productos o servicios mencionados así como la cesión a las empresas del Grupo Endesa o sus filiales con esta misma finalidad.</p>
+                    <p>Para finalizar se informa que la Ley Orgánica 15/1999, de 13 de diciembre, de Protección de Datos de Carácter Personal concede a los interesados la posibilidad de ejercer una serie de derechos que les permiten garantizar y proteger de forma real y efectiva su derecho al honor y a la intimidad personal y familiar. Para alcanzar ese objetivo, los usuarios de la página Web están legitimados para ejercer los derechos de acceso, rectificación, cancelación y oposición previstos en la normativa legal y reglamentaria sobre protección de datos personales. El ejercicio de estos derechos consiste en remitir una solicitud escrita y firmada dirigiéndose al Apartado postal 1128, 41080 - Sevilla, A/A. Endesa Operaciones y Servicios Comerciales o preferentemente a la dirección de correo electrónico solicitudeslopd@endesa.es con la siguiente información: nombre y apellidos del usuario, domicilio a efectos de notificaciones, fotocopia del Documento Nacional de Identidad y petición en la que se concrete la solicitud.</p>
+        </div>
+    </div>
+</div>

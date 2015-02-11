@@ -1,0 +1,59 @@
+<div class="container wrapper-login">
+	<div class="row">
+		<div class="col-md-6">
+			<p class="texto-introduccion">{{ 'WELCOME' | translate }} </p>
+			<ul class="listado-con-iconos">
+				<li>
+					<span class="icono consumo text-hide">{{ 'login_consumo' | translate }}</span>
+					<p href="#" class="texto">{{ 'login_energetico' | translate }}</p>
+				</li>
+				<li>
+					<span class="icono eficiencia text-hide">{ 'login_eficiencia' | translate }}</span><p href="#" class="texto">{{ 'login_eficienciaenergetica' | translate }}</p>
+				</li>
+				<li>
+					<span class="icono ahorro text-hide">{{ 'login_ahorro' | translate }}</span>
+					<p href="#" class="texto">{{ 'login_recomendaciones' | translate }}</p>
+				</li>
+			</ul>
+			<div class="text-right">
+	            <div class="btn-group mt20 mb20" ui-sref="registro">
+	                <button class=" btn btn-lg btn-guardar botons" >Registrarse
+	                    <div class="btn-lg btn-guardar dropdown-toggle">
+	                        <span class="icon continuar">&gt;</span>
+	                    </div>
+	                </button>
+	            </div>
+	        </div>
+		</div>
+		<div class="col-md-6">
+
+			<form name="loginForm" ng-submit="login()" ed-form novalidate autocomplete="off">
+
+				<h3 class="titulo-seccion-formulario">Entra ahora...</h3>
+				
+				<div ng-class="{ 'has-error' : loginForm.username.$invalid && !loginForm.username.$pristine }">
+					<input type="text" name="username" id="j_username" class="form-control input-lg campo-formulario" placeholder="Usuario*" ng-model="credentials.j_username" ed-validation required>
+				</div>
+				
+				<div ng-class="{ 'has-error' : loginForm.password.$invalid && !loginForm.password.$pristine }">
+					<input type="password" name="password" id="j_password" class="form-control input-lg campo-formulario" placeholder="Contraseña*" ng-model="credentials.j_password" ng-minlength="6" ed-validation required>
+				</div>
+
+				<div class="row">
+			        <div class="col-xs-7">
+			        	<a href ui-sref="recuperar-contrasenia" class="texto-con-icono"><span class="icono ayuda text-hide">?</span>¿Olvidaste tu contraseña?</a>
+			        </div>
+					<div class="col-xs-5 text-right">
+				        <div class="btn-group">
+				            <button class="  btn btn-lg btn-continuar botons" ng-click="guardarYContinuarLuego()" ng-disabled="loginForm.$invalid">ENTRAR
+				                <div class="btn-lg btn-continuar dropdown-toggle">
+				                    <span class="icon continuar">&gt;</span>
+				                </div>
+				            </button>
+				        </div>
+			        </div>
+			    </div>
+			</form>
+		</div>
+	</div>
+</div>

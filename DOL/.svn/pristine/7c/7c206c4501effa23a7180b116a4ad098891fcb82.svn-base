@@ -1,0 +1,34 @@
+// Fonts
+//------------------------------------------------------------------------------
+
+$fontFamilySansserif:       "Open Sans Regular", Arial, Helvetica, sans-serif;
+$fontFamilySerif:           Georgia, "Times New Roman", Times, serif;
+$fontFamilyMonospace:       Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$fontWeb01Light:            "Open Sans Light";
+$fontWeb01Regular:          "Open Sans Regular";
+// $fontWeb01Medium:           "Open Sans Medium";
+$fontWeb01Bold:             "Open Sans Bold";
+$fontWeb01Semibold:         "Open Sans Semibold";
+$fontWeb01Italic:           "Open Sans Italic";
+
+$fontGeneral:               $fontFamilySansserif;
+$fontbase:                  14px;
+
+// @include font-face($fontWeb01Bold, font-files("/fonts/opensansstd-bold.woff", "/fonts/opensansstd-bold.ttf", "/fonts/opensansstd-bold.svg"), "/fonts/opensansstd-bold.eot");
+// @include font-face($fontWeb01Medium, font-files("/fonts/opensansstd-medium.woff", "/fonts/opensansstd-medium.ttf", "/fonts/opensansstd-medium.svg"), "/fonts/opensansstd-medium.eot");
+// @include font-face($fontWeb01Regular, font-files("/fonts/opensansstd-regular.woff", "/fonts/opensansstd-regular.ttf", "/fonts/opensansstd-regular.svg"), "/fonts/opensansstd-regular.eot");
+// @include font-face($fontWeb01Light, font-files("/fonts/opensansstd-light.woff", "/fonts/opensansstd-light.ttf", "/fonts/opensansstd-light.svg"), "opensansstd-light.eot");
+
+
+@include font-face($fontWeb01Light, font-files("OpenSans-Light.woff", "OpenSans-Light.ttf", "OpenSans-Light.svg", "OpenSans-Light.eot"));
+@include font-face($fontWeb01Regular, font-files("OpenSans-Regular.woff", "OpenSans-Regular.ttf", "OpenSans-Regular.svg", "OpenSans-Regular.eot"));
+// @include font-face($fontWeb01Medium, font-files("/opensansstd-medium.ttf"));
+@include font-face($fontWeb01Bold, font-files("OpenSans-Bold.woff", "OpenSans-Bold.ttf", "OpenSans-Bold.svg", "OpenSans-Bold.eot"));
+@include font-face($fontWeb01Semibold, font-files("OpenSans-Semibold.woff", "OpenSans-Semibold.ttf", "OpenSans-Semibold.svg", "OpenSans-Semibold.eot"));
+@include font-face($fontWeb01Italic, font-files("OpenSans-Italic.woff", "OpenSans-Italic.ttf", "OpenSans-Italic.svg", "OpenSans-Italic.eot"));
+
+// SVG para IE
+//------------------------------------------------------------------------------
+
+$experimental-support-for-svg: true;

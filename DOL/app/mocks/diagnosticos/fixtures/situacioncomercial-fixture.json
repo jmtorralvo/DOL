@@ -1,0 +1,37 @@
+[{
+    "de_descripcion": "Pendiente de Asignar PdS",
+    "id": 1
+}, {
+    "de_descripcion": "Asignada a PdS",
+    "id": 2
+}, {
+    "de_descripcion": "Llamada realizada",
+    "id": 3
+}, {
+    "de_descripcion": "Visita Rechazada",
+    "id": 4
+}, {
+    "de_descripcion": "Visita Realizada",
+    "id": 5
+}, {
+    "de_descripcion": "Rechaza recibir Presupuestos",
+    "id": 6
+}, {
+    "de_descripcion": "Presupuesto Entregado",
+    "id": 7
+}, {
+    "de_descripcion": "Presupuesto Caducado",
+    "id": 8
+}, {
+    "de_descripcion": "Presupuesto Aceptado",
+    "id": 9
+}, {
+    "de_descripcion": "Presupuesto Rechazado",
+    "id": 10
+}, {
+    "de_descripcion": "No puedo realizar",
+    "id": 11
+}, {
+    "de_descripcion": "No asignado",
+    "id": 12
+}]

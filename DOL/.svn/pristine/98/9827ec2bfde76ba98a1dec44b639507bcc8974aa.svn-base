@@ -1,0 +1,62 @@
+<!--Modal Eliminar Cuenta-->
+
+<div class="confirmacion">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-12 text-right">
+                    <a href="" class="glyphicon glyphicon-remove-circle" ng-click="cerrar()"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-11">
+                    <h3>VA A ELIMINAR SU CUENTA DE USUARIO</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-11">
+                    <div class="row">
+                        <div class="col-xs-1 mb15-xs col-sm-1 col-md-1 col-lg-1">
+                            <img src="/dol/static/images/help-user-ico.png" />
+                        </div>
+                        <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11 ">
+                            <p>Una vez que confirme la eliminación de su cuenta no podrá volver a acceder a la aplicación. ¿Desea continuar?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <form name="eliminarCuentaForm" novalidate ng-submit="registro()">
+                <div ed-captcha name="captcha" ng-model="eliminarCuenta.captcha"></div>
+                
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-11">
+                        <div class="row mb20">
+                            <div class="col-xs-11 col-xs-offset-1 text-left">
+                                <div class="form-group">
+                                    <input type="checkbox" class="check mr7" ng-model="eliminarCuentaFormModel.lodp" ng-true-value="1" ng-false-value="0">Deseo aplicación de la LODP
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-11">
+                        <div class="row mb20">
+                            <div class="col-xs-12 col-sm-12 mb15-sm col-md-6 col-lg-6 text-right">
+                                <button class="btn btn-primary info" ng-click="ok()" ng-disabled="eliminarCuentaForm.captcha.$invalid">Sí, QUIERO ELIMINARLA</button>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right">
+                                <button class="btn btn-primary finalizar" ng-click="cerrar()">CANCELAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

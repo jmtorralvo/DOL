@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@import "compass/css3";
+
+//fuentes
+@import "fonts";
+
+//sprites
+$spr-spacing: 10px;
+$spr-layout:smart;
+@import "spr/*.png";
+
+//helpers
+@import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/utils";
+
+// ruta para las fuentes de boostrap. Estan han sido copiadas con grunt desde la carpeta de boostrap a la carpeta static/fonts ya que es necesario llevarlas a dist y de esta forma van junto con la aplicacion
+$icon-font-path: "../static/fonts/";
+// bower:scss
+@import "bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
+// endbower
+
+//main
+@import "endesa-dol";
+
+//pages
+@import "layout/header";
+@import "layout/footers";
+
+
+//modulos
+@import "pages/formulario-diagnostico/elementos_formulario";
+@import "pages/login/login";
+@import "pages/mis-diagnosticos/mis_diagnosticos";
+@import "pages/nuevo-diagnostico/nuevo_diagnostico";
+@import "pages/formulario-diagnostico/formularioDiagnosticoPaso1";
+@import "pages/formulario-diagnostico/formularioDiagnosticoPaso2";
+@import "pages/formulario-diagnostico/formularioDiagnosticoPaso3";
+@import "pages/formulario-diagnostico/formularioDiagnosticoPaso4";
+@import "pages/formulario-diagnostico/formularioDiagnosticoPaso5";
+@import "pages/registro/registro";
+@import "pages/modales/modales";
+@import "pages/pantallas-estaticas/terminos-condiciones";
+@import "pages/pantallas-estaticas/aviso-legal";
+@import "modules/acordeons/acordeons";
+@import "modules/botones/botones";
+@import "modules/graficas/graficas";
+@import "modules/sliders/sliders";
+@import "modules/tablas/tablas";
+@import "modules/tooltips/tooltips";
+@import "modules/checks/checks";
+@import "modules/combos/ahorrorating";
+
+
+
+@import "fixie";
+

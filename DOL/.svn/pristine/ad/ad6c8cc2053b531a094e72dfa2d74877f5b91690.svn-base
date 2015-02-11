@@ -1,0 +1,482 @@
+<div class="paso-formulario">
+    <span class="numero-paso">3</span>
+    <h3 class="titulo-seccion-formulario con-numero col-xs-offset-1">{{ 'fd3_hotwater_airconditioning_lighting' | translate }}</h3>
+</div>
+<ng-form name="acsCalForm" ed-form ng-switch on="diagnostico.segmento.id">
+    <div class="wrapper-desplegables col-sm-offset-1">
+        <div class="row">
+            <div accordion close-others="true">
+                <div accordion-group is-open="calefaccion.open">
+                    <div accordion-heading>
+                        <div class="titulo-acordeon" ng-class="{'abierto': calefaccion.open}"> 
+                            <span class="texto-icono calefaccion">{{ 'fd3_heating' | translate }}</span>
+                            <span class="pull-right ico-acordeon">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="row">        
+
+                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                                <p class="titulo-componente pl mt28">{{ 'fd3_heating?' | translate }}
+                                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_DISPONE_CLIMA' | translate }}">i</span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
+                                        <div class="mt28 mt_xs" ed-check ng-model="diagnostico.climatizacion.disponeCalef.id" checked-value="1" unchecked-value="2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                            <div ng-show = "diagnostico.climatizacion.disponeCalef.id == 1">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5" ng-class="{ 'has-error' : diagnosticoForm.acsCalForm.tipoDeCalefaccion.$invalid && !diagnosticoForm.acsCalForm.tipoDeCalefaccion.$pristine }">  
+                                        <p class="titulo-componente pt_xs">{{ 'fd3_type' | translate }}</p>          
+                                        <select class="form-control input-lg" tooltip = "{{ 'TOOLTIP_TIPO_CLIMA' | translate }}" name="tipoDeCalefaccion" ng-model="diagnostico.climatizacion.de_descripcion.id" ng-options="tipoDeCalefaccion.id as tipoDeCalefaccion.descripcion for tipoDeCalefaccion in tiposDeCalefaccion" ed-validation required>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-class="{ 'has-error' : diagnosticoForm.acsCalForm.antiguedad.$invalid && !diagnosticoForm.acsCalForm.antiguedad.$pristine }">
+                                        <p class="titulo-componente pt_xs">{{ 'fd3_old' | translate }}</p>  
+                                        <select class="form-control input-lg" name="antiguedad" ng-model="diagnostico.climatizacion.antiguedad.id" ng-options="antiguedad.id as antiguedad.descripcion for antiguedad in antiguedades" ed-validation required>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                        <p class="titulo-componente pt_xs pt_sm">{{ 'fd3_useheating' | translate }}
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_USO_CALEFACCION' | translate }}">i</span>
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                                <div class="btn-group">
+                                                    <label class="btn radio-input" ng-repeat="usoSistema in usosSistema" ng-model="diagnostico.climatizacion.usoSistemaClimatizacion.id" btn-radio="usoSistema.id">{{usoSistema.descripcion}}
+                                                        <!--<span class="" tooltip-placement="right" tooltip="Más del 30% en días de verano"></span>-->
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                                    <p class="titulo-componente pl mt28">{{ 'fd3_preventivemaintenance' | translate }}
+                                        <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_MANTENIMIENTO_CLIMA' | translate }}">i</span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
+                                            <div class="mt28 mt_xs" ed-check ng-model="diagnostico.climatizacion.disponePrevencion.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-if="calefaccion.open" class="col-xs-12 col-sm-5 col-md-4 col-lg-3 mb60">
+                                    <p class="linea-texto resaltado mt20">{{ 'fd3_temperature' | translate }}
+                                        <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_TEMPERATURA_CLIMA' | translate }}">i</span>
+                                    </p>
+                                    <div ed-slider ng-model="diagnostico.climatizacion.temperaturaConsigna" formater-text-after="º" min="17" max="32" tooltip-behaviour="always" has-controls="true" slider-id="temperaturaConsigna"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div accordion-group is-open="aire.open">
+                    <div accordion-heading>
+                        <div class="titulo-acordeon" ng-class="{'abierto': aire.open}">
+                            <span class="texto-icono aire">{{ 'fd3_airconditioning' | translate }}</span>
+                            <span class="pull-right ico-acordeon">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                                <p class="titulo-componente pl mt28">{{ 'fd3_airconditioning?' | translate }}</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
+                                        <div class="mt28 mt_xs" ed-check ng-model="diagnostico.climatizacion.disponeAireAcondicionado.id" checked-value="1" unchecked-value="2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show = "diagnostico.climatizacion.disponeAireAcondicionado.id == 1">                        
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-5 col-lg-5" ng-class="{ 'has-error' : diagnosticoForm.acsCalForm.tipoAA.$invalid && !diagnosticoForm.acsCalForm.tipoAA.$pristine }">
+                                    <p class="titulo-componente pt_xs">{{ 'fd3_type' | translate }}</p>  
+                                    <select class="form-control input-lg" name ="tipoAA" tooltip = "{{ 'TOOLTIP_TIPO_CLIMA' | translate }}" ng-model="diagnostico.climatizacion.tipoAireAcondicionado.id" ng-options="tipoDeClimatizacion.id as tipoDeClimatizacion.descripcion for tipoDeClimatizacion in tiposDeClimatizacion" ed-validation required>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4" ng-class="{ 'has-error' : diagnosticoForm.acsCalForm.antiguedadAire.$invalid && !diagnosticoForm.acsCalForm.antiguedadAire.$pristine }">
+                                    <p class="titulo-componente pt_xs">{{ 'fd3_old' | translate }}</p>  
+                                    <select class="form-control input-lg" name="antiguedadAire" ng-model="diagnostico.climatizacion.antiguedadAire.id" ng-options="antiguedad.id as antiguedad.descripcion for antiguedad in antiguedades" ed-validation required>
+                                    </select>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                                    <p class="titulo-componente pt_xs pt_sm">{{ 'fd3_useair' | translate }}
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_USO_AIRE' | translate }}">i</span>
+                                        </p>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="btn-group">
+                                                <label class="btn radio-input" ng-repeat="usoSistema in usosSistema" ng-model="diagnostico.climatizacion.usoSistemaAire.id" btn-radio="usoSistema.id">{{usoSistema.descripcion}}
+                                                    <!--<span class="" tooltip-placement="right" tooltip="Más del 30% en días de verano"></span>-->
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                                    <p class="titulo-componente pl mt28">{{ 'fd3_preventivemaintenance' | translate }}
+                                        <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_MANTENIMIENTO_CLIMA' | translate }}">i</span>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
+                                            <div class="mt28 mt_xs" ed-check ng-model="diagnostico.climatizacion.prevencionAireAcond.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div ng-if="aire.open" class="col-xs-12 col-sm-5 col-md-4 col-lg-3 mb60">
+                                    <p class="linea-texto resaltado mt20">{{ 'fd3_temperature' | translate }}
+                                        <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_TEMPERATURA_CLIMA' | translate }}">i</span>
+                                    </p>
+                                    <div ed-slider ng-model="diagnostico.climatizacion.temperaturaConsignaAire" formater-text-after="º" min="14" max="27" tooltip-behaviour="always" has-controls="true" slider-id="temperaturaConsignaAire"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div accordion-group is-open="agua.open">
+                    <div accordion-heading>
+                        <div class="titulo-acordeon" ng-class="{'abierto': agua.open}">
+                            <span class="texto-icono agua">{{ 'fd3_hotwater' | translate }}</span>
+                            <span class="pull-right ico-acordeon">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="contenido-acordeon">
+
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3">
+                                <p class="titulo-componente pl mt28">{{ 'fd3_hotwater?' | translate }}
+                                    <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_DISPONE_ACS' | translate }}">i</span>
+                                </p>
+                            </div>
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-12 col-sm-offset-0 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
+                                        <div class="mt28 mt_xs" ed-check ng-model="diagnostico.acs.disponeACS.id" checked-value="1" unchecked-value="2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ng-show = "diagnostico.acs.disponeACS.id == 1">
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-5" ng-class="{ 'has-error' : diagnosticoForm.acsCalForm.produccionACS.$invalid && !diagnosticoForm.acsCalForm.produccionACS.$pristine }">
+                                    <p class="titulo-componente pt_xs">{{ 'fd3_productionsystem' | translate }}</p>  
+                                    <select class="form-control input-lg" ng-model="diagnostico.acs.sistemaProduccion.id" name = "produccionACS" ng-options="sistemaProduccion.id as sistemaProduccion.descripcion for sistemaProduccion in sistemasProduccion" ed-validation required>
+                                    </select>
+                                </div> 
+                                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                    <p class="titulo-componente pt_xs">{{ 'fd3_handdetection' | translate }}</p>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-8">
+                                            <div class="mt_xs mt_sm" ed-check ng-model="diagnostico.acs.grifoDeteccion.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-7 col-md-7 col-lg-3">
+                                    <p class="titulo-componente pt_xs pt_sm pt_md">{{ 'fd3_aerators' | translate }}
+                                        <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_PERLIZADORES' | translate }}">i</span>
+                                    </p>
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-8">
+                                            <div class="mt_xs mt_sm" ed-check ng-model="diagnostico.acs.disponePerlizador.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div accordion-group is-open="iluminacion.open">
+                    <div accordion-heading>
+                        <div class="titulo-acordeon" ng-class="{'abierto': iluminacion.open}">
+                            <span class="texto-icono iluminacion">{{ 'fd3_lighting' | translate }}</span>
+                            <span class="pull-right ico-acordeon">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="row">
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numBombillaIncand" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/bombilla-incandescente.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_incandescentlightbulbs' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoBombillaIncand" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasBombillasIncandescentes"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numHalogenoBajoCons" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/halogeno-bajo-consumo.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_halogenlowconsumption' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoHalogenoBajoCons" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasHalogenosBajoConsumo"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numFluorescente06" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/fluorescente-05.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_fluorescent06' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoFluorescente06" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasFluorescentes06"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numBombillaBajoCons" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/bombilla-bajo-consumo.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_lowenergylightbulbs' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoBombillaBajoCons" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasBombillasBajoConsumo"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numFluorescente12" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/fluorescente-08.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_fluorescent12' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoFluorescente12" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasFluorescentes12"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numLed" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/led.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_led' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoLed" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasLed"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numFluorescente15" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/fluorescente-12.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_fluorescent15' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoFluorescente15" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasFluorescentes15"></div>
+                            </div>
+                            <div class="mb20 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numHalogenuroMetal" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/halogenuro-metalico.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_metalhalide' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="mb20 col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoHalogenuroMetal" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasHalogenurosMetalicos"></div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-4 col-lg-3">
+                                <div class="stepper-with-image">
+                                    <div class="stepper-wrapper">
+                                        <div ed-stepper ng-model="diagnostico.iluminacionTotal.numHalogeno" min="0" max="100"></div>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="/dol/static/images/halogeno.png" />
+                                        <p class="descripcion fixed-height">{{ 'fd3_halogen' | translate }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div ng-if="iluminacion.open" class="col-xs-6 col-sm-6 col-md-2 col-lg-2">
+                                <div ed-slider ng-model="diagnostico.iluminacionUso.usoHalogeno" min="0" max="24" orientation="vertical" selection="after" reversed="true" tooltip-behaviour="always" has-controls="true" formater-text-after="h" slider-id="horasHalogenos"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div accordion-group is-open="gestion.open">
+                    <div accordion-heading>
+                        <div class="titulo-acordeon" ng-class="{'abierto': gestion.open}">
+                            <span class="texto-icono gestion">{{ 'fd3_management' | translate }}</span>
+                            <span class="pull-right ico-acordeon">&gt;</span>
+                        </div>
+                    </div>
+                    <div class="contenido-acordeon">
+                        <div class="row"> 
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 borde_f3">
+                                <p class="linea-texto resaltado mt0">{{ 'fd3_lightingsystem?' | translate }}</p>
+                                <div class="row mt20">
+                                    <div class="row con-separacion">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeDetecPresIlum.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 ">
+                                            <span class="label-check">{{ 'fd3_presencedetector' | translate }}</span>
+                                        </div>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 mt9_xs_sm_md">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeSectorIlum.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 mt9_xs_sm_md">
+                                            <span class="label-check">{{ 'fd3_section' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_SECTORIZACION' | translate }}">i</span>
+                                        </div>
+                                    </div>
+                                    <div class="row con-separacion">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeTemporIlum.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4">
+                                            <span class="label-check">{{ 'fd3_timer' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_TEMPORIZADOR' | translate }}">i</span>
+                                        </div>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 mt9_xs_sm_md">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeRegulFlujoIlum.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 mt9_xs_sm_md">
+                                            <span class="label-check">{{ 'fd3_flowregulator' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_REG_FLUJO' | translate }}">i</span>
+                                        </div>
+                                    </div>
+                                    <div class="row con-separacion">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 ">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeProgrmIlum.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 ">
+                                            <span class="label-check">{{ 'fd3_programmer' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_PROGRAMADOR2' | translate }}">i</span>
+                                        </div>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 ">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeLlaveTarjIlum.id" checked-value="1" unchecked-value="2" ng-show = "diagnostico.segmento.id==5"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 ">
+                                            <span class="label-check" ng-show = "diagnostico.segmento.id==5">{{ 'fd3_key' | translate }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <p class="linea-texto resaltado mt0">{{ 'fd3_managementsystems' | translate }}</p>
+                                <div class="row mt20">
+                                    <div class="row con-separacion">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeTemporClim.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4">
+                                            <span class="label-check">{{ 'fd3_timer' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_TEMPORIZADOR' | translate }}">i</span>
+                                        </div>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 mt9_xs_sm_md">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeProgClim.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 mt9_xs_sm_md">
+                                            <span class="label-check">{{ 'fd3_programmer' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_PROGRAMADOR' | translate }}">i</span>
+                                        </div>
+                                    </div>
+                                    <div class="row con-separacion">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeTermosClim.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4">
+                                            <span class="label-check">{{ 'fd3_thermostat' | translate }}</span>
+                                        </div>
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2 mt9_xs_sm_md">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeSectorClim.id" checked-value="1" unchecked-value="2"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4 mt9_xs_sm_md">
+                                            <span class="label-check">{{ 'fd3_section' | translate }}</span>
+                                            <span class="tooltip-info ml10" tooltip-placement="right" tooltip="{{ 'TOOLTIP_GESTION_SECTORIZACION2' | translate }}">i</span>
+                                        </div>
+                                    </div>
+                                    <div class="row con-separacion">
+                                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-2">
+                                            <div ed-check ng-model="diagnostico.gestion.disponeLlaveTarj.id" checked-value="1" unchecked-value="2" ng-show = "diagnostico.segmento.id==5"></div>
+                                        </div>
+                                        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-4">
+                                            <span class="label-check" ng-show = "diagnostico.segmento.id==5">{{ 'fd3_key' | translate }}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row wrapper-botonera">
+        <div class="col-sm-12 col-md-5 col-lg-6 text-left text-center-sm">
+            <div class="btn-group">
+
+                <button class=" btn btn-lg btn-guardar botons" ng-click="guardarYContinuarLuego(true)" ng-disabled="diagnosticoForm.acsCalForm.$invalid">{{ 'fd3_saveandaftercontinue' | translate }}
+
+                    <div class="btn-lg btn-guardar dropdown-toggle">
+                        <span class="icon guardar">x</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-7 col-lg-6 text-right text-center-sm">
+            <div class="btn-group">
+
+                <button class="  btn btn-lg btn-continuar botons" ng-click="guardarYContinuarLuego(false)" ng-disabled="diagnosticoForm.acsCalForm.$invalid">{{ 'fd3_energycontract' | translate }}
+
+                    <div class="btn-lg btn-continuar dropdown-toggle">
+                        <span class="icon continuar">&gt;</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+</ng-form>

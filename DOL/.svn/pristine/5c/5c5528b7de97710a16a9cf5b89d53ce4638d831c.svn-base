@@ -1,0 +1,435 @@
+/* global app */
+/*jshint camelcase: false */
+'use strict';
+
+(function(app) {
+
+    app.controller('MisDiagnosticosComercialCtrl', ['$scope', 'diagnosticos', 'MisDiagnosticosListadoSrv', '$state', '$modal', 'situacionComercial', 'motivoRechazo', 'rutaBaseTemplates', 'i18n', 'NgGridPluginsSrv', '$filter', '$upload','urlSubidaArchivos', 'urlDescargaArchivos',
+        function($scope, diagnosticos, MisDiagnosticosListadoSrv, $state, $modal, situacionComercial, motivoRechazo, rutaBaseTemplates, i18n, NgGridPluginsSrv, $filter, $upload, urlSubidaArchivos, urlDescargaArchivos) {
+
+            $scope.combos = {
+                situacionesComerciales: situacionComercial.data,
+                motivosRechazo: motivoRechazo.data
+            };
+
+            $scope.filtro = '';
+
+            var headerWithFilter = '<div class="ngHeaderSortColumn {{col.headerClass}}" ng-style="{cursor: col.cursor}" ng-class="{ ngSorted: !noSortVisible }">'+
+                                        '<div ng-click="col.sort($event)"ng-class="colt + col.index" class="ngHeaderText" style="vertical-align: top; padding-top: 10px; width: 100%">{{col.displayName}}</div>'+
+                                        '<div class="ngSortButtonDown" ng-show="col.showSortButtonDown()"></div>'+
+                                        '<div class="ngSortButtonUp" ng-show="col.showSortButtonUp()"></div>'+
+                                        '<div class="ngSortPriority">{{col.sortPriority}}</div>'+
+                                        '<div ng-class="{ ngPinnedIcon: col.pinned, ngUnPinnedIcon: !col.pinned }" ng-click="togglePin(col)" ng-show="col.pinnable"></div>'+
+                                    '</div>'+
+                                    '<input type="text" class="column-filter" name="{{col.field}}" ng-click="stopClickProp($event)" placeholder="filtro" ng-model="col.filterText" ng-style="{ width : col.width - 10 + px }" style="position: absolute; left: 5px; bottom:10px;"/>'+
+                                    '<div ng-show="col.resizable" class="ngHeaderGrip" ng-click="col.gripClick($event)" ng-mousedown="col.gripOnMouseDown($event)"></div>';
+
+            $scope.startDate = {valor: null, opened: false};
+            $scope.endDate = {valor: null, opened: false};
+            $scope.misdiagnosticos = diagnosticos.data; 
+            $scope.misdiagnosticosOriginal = angular.copy($scope.misdiagnosticos);
+            $scope.pagina = 0;
+            $scope.tablaDiagnosticosComercial = {
+                data: 'misdiagnosticos',
+                enableSorting: true,
+                enableRowSelection: false,
+                enableCellSelection: false,
+                enableColumnResize: true,
+                rowHeight: 70,
+                headerRowHeight: 100,
+                columnDefs: [{
+                    field: 'id',
+                    displayName: i18n.COMERCIAL_NUMERO_DIAGNOSTICO,
+                    cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><span ng-cell-text class="text-center"><a href="/services/dol/pdf/download/{{row.getProperty(col.field)}}">{{row.getProperty(col.field)}}</a></span></div>',
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'fechaCreacion',
+                    cellFilter: 'date : "d/MM/yyyy"',
+                    displayName: i18n.COMERCIAL_FECHA
+                }, {
+                    field: 'segmento.descNegocio',
+                    displayName: i18n.COMERCIAL_SEGMENTO,
+                    headerCellTemplate: headerWithFilter
+                },  {
+                    field: 'titular',
+                    displayName: i18n.COMERCIAL_TITULAR,
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'direccion',
+                    displayName: i18n.COMERCIAL_DIRECCION,
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'codigo_postal',
+                    displayName: i18n.COMERCIAL_COD_POSTAL,
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'tlfContacto',
+                    displayName: i18n.COMERCIAL_TELEFONO,
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'situacionComercial.de_descripcion',
+                    displayName: i18n.COMERCIAL_ESTADO,
+                    visible: $scope.user.userInfo.perfilUsuario === 'USR-06',
+                    cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><div class="centrado-vertical"><div ng-if = "row.getProperty(\'situacionComercial.id\') != 1  && row.getProperty(\'situacionComercial.id\') != 12 && row.getProperty(\'situacionComercial.id\') != 11"><a ng-click="openAsignarEstado(row.entity)" href="">{{row.getProperty(col.field)}}</a></div>' +
+                        '<div ng-if = "row.getProperty(\'situacionComercial.id\') == 1  || row.getProperty(\'situacionComercial.id\') == 12 || row.getProperty(\'situacionComercial.id\') == 11"><span>{{row.getProperty("situacionComercial.de_descripcion")}}</span></div></div></div>',
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'situacionComercial.de_descripcion',
+                    displayName: i18n.COMERCIAL_ESTADO,
+                    visible: $scope.user.userInfo.perfilUsuario === 'USR-05' || $scope.user.userInfo.perfilUsuario === 'USR-04' || $scope.user.userInfo.perfilUsuario === 'USR-03',
+                    cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><div class="centrado-vertical"><a ng-click="openAsignarPDS(row.entity)" href="">{{row.getProperty(col.field)}}</a></div></div>',                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'pds.tx_nombre',
+                    displayName: i18n.COMERCIAL_PDS,
+                    visible: $scope.user.userInfo.perfilUsuario === 'USR-05' || $scope.user.userInfo.perfilUsuario === 'USR-04' || $scope.user.userInfo.perfilUsuario === 'USR-03',
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'gestorComercial.tx_nombre',
+                    displayName: i18n.COMERCIAL_GESTOR_COMERCIAL,
+                    visible: $scope.user.userInfo.perfilUsuario === 'USR-04' || $scope.user.userInfo.perfilUsuario === 'USR-03',
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'delegadoComercial.tx_nombre',
+                    displayName: i18n.COMERCIAL_DELEGADO_COMERCIAL,
+                    visible: $scope.user.userInfo.perfilUsuario === 'USR-03',
+                    headerCellTemplate: headerWithFilter
+                }, {
+                    field: 'fileAttached',
+                    displayName: i18n.DOCUMENTACION_DIAGNOSTICO,
+                    cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><a href=\'{{row.getProperty(col.field)}}\'>Descargar</a></div>'
+                },{
+                    field: 'fileAttachedUrl',
+                    displayName: i18n.ADJUNTAR_DOCUMENTACION,
+                    cellTemplate:'<div class="ngCellText" ng-class="col.colIndex()"><input type="file" ng-file-select="onFileSelect($files, {{row.getProperty(\'id\')}})"></div>'
+                }],
+                plugins: [new NgGridPluginsSrv.ngGridCsvExportPlugin(), new NgGridPluginsSrv.ngGridPdfExportPlugin(), new NgGridPluginsSrv.filterBarPlugin()]
+            };
+
+            $scope.fileAttached = false;
+
+
+            $scope.onFileSelect = function(file, id)
+            {
+                console.log("select file");
+                console.log(file);
+                console.log(id);
+             
+
+             $upload.upload({
+                url : urlSubidaArchivos + '/' + id,
+                file : file
+             }).success(function(data, status, headers, config) {
+                    // file is uploaded successfully
+                    console.log(data);
+              });
+            }
+
+
+            $scope.openCalendar = function($event, calendar){
+                $event.preventDefault();
+                $event.stopPropagation();
+
+                calendar.opened = true;
+            }
+
+            var obtenerFiltros = function(){
+
+                var filtro = {};
+
+                angular.element('.column-filter').each(function(){
+                    var columna = angular.element(this).attr('name');
+                    if(angular.element(this).val())
+                    {
+                        filtro[columna] = angular.element(this).val();
+                    }
+                });
+
+                if($scope.startDate.valor !== null)
+                    //filtro.fechaCreacion_desde = $scope.startDate.valor.getTime();
+                    filtro.fechaCreacion_desde = $filter('date')($scope.startDate.valor, "d/MM/yyyy");
+
+                if($scope.endDate.valor !== null)
+                    //filtro.fechaCreacion_hasta = $scope.endDate.valor.getTime();
+                    filtro.fechaCreacion_hasta = $filter('date')($scope.endDate.valor, "d/MM/yyyy");
+
+                return filtro;
+            };
+
+            var filtrarPorFechaCreacion = function(){
+                var fechaIni = $scope.startDate.valor;
+                var fechaFin = $scope.endDate.valor;
+
+                $scope.misdiagnosticos = $filter('filter')($scope.misdiagnosticosOriginal, 
+                    function(entry)
+                    {
+                        var fechaCreacion = new Date(entry.fechaCreacion);
+                        fechaCreacion.setHours(0);
+                        fechaCreacion.setMinutes(0);
+                        fechaCreacion.setSeconds(0);
+                        fechaCreacion.setMilliseconds(0);
+                        fechaCreacion = fechaCreacion.getTime();
+
+                        if(fechaIni !== null && fechaFin !== null)
+                        {
+                            if(fechaIni !== null && fechaCreacion >= fechaIni.getTime()
+                                && fechaFin !== null && fechaCreacion <= fechaFin.getTime())
+                                return true;
+                        }
+                        else if(fechaIni === null && fechaFin === null)
+                            return true;
+                        else if(fechaIni !== null && fechaCreacion >= fechaIni.getTime())
+                            return true;
+                        else if(fechaFin !== null && fechaCreacion <= fechaFin.getTime())
+                            return true;
+
+                        return false;
+                    });
+            };
+
+            $scope.$watch('startDate.valor + endDate.valor', filtrarPorFechaCreacion);
+
+            $scope.esUltimaPagina = false;
+
+            $scope.paginaSiguiente = function(){
+                MisDiagnosticosListadoSrv.obtenerListado($scope.pagina+1).then(function(data) {
+                    if(data.data !== null && data.data.length > 0){
+                        $scope.pagina++;
+                        $scope.misdiagnosticos = data.data;
+                    }
+                    else{
+                        $scope.esUltimaPagina = true;
+                    }
+                });
+            };
+
+            $scope.paginaAnterior = function(){
+                $scope.pagina = ($scope.pagina > 0) ? $scope.pagina-1 : 0;
+                MisDiagnosticosListadoSrv.obtenerListado($scope.pagina).then(function(data) {
+                    if(data.data !== null && data.data.length > 0){
+                        $scope.misdiagnosticos = data.data;
+                    }
+                });
+            };
+
+            $scope.xls = function(){
+                MisDiagnosticosListadoSrv.exportarXls(obtenerFiltros());
+            };
+
+            $scope.pdf = function(){
+                MisDiagnosticosListadoSrv.exportarPdf(obtenerFiltros());
+            };
+
+            $scope.openAsignarEstado = function(diagnostico) {
+
+                var modalInstance = $modal.open({
+                    templateUrl: rutaBaseTemplates + '/asignarEstado.html',
+                    controller: ModalInstanceAsignarEstadoCtrl,
+                    size: 'lg',
+                    resolve: {
+                        diagnostico: function() {
+                            return diagnostico;
+                        },
+                        situacionesComerciales: function() {
+                            return $scope.combos.situacionesComerciales;
+                        },
+                        motivosRechazo: function() {
+                            return $scope.combos.motivosRechazo;
+                        },
+                        perfilUsuario: function(){
+                            return $scope.user.userInfo.perfilUsuario;
+                        },
+                        i18n: function(){
+                            return i18n;
+                        }
+                    }
+                });
+
+                modalInstance.result.then(function(data) {
+                    $scope.misdiagnosticos = data;
+                })['finally'](function() {
+                    MisDiagnosticosListadoSrv.obtenerListado().then(function(data) {
+                            $scope.misdiagnosticos = data.data;
+                        },
+                        function(data) {
+                            $scope.misdiagnosticos = data.data;
+                        });
+                });
+
+            };
+
+            $scope.openAsignarPDS = function(diagnostico) {
+
+                if ($scope.user.userInfo.perfilUsuario === 'USR-05' || $scope.user.userInfo.perfilUsuario === 'USR-04' || $scope.user.userInfo.perfilUsuario === 'USR-03') {
+
+                    var modalInstance = $modal.open({
+                        templateUrl: rutaBaseTemplates + '/asignarPDS.html',
+                        controller: ModalInstanceAsignarPDSCtrl,
+                        size: 'lg',
+                        resolve: {
+                            diagnostico: function() {
+                                return diagnostico;
+                            },
+                            i18n: function(){
+                                return i18n;
+                            }
+                        }
+                    });
+
+                    modalInstance.result.then(function(data) {
+                        $scope.misdiagnosticos = data;
+                    });
+
+                    modalInstance.result.finally(function() {
+                        MisDiagnosticosListadoSrv.obtenerListado().then(function(data) {
+                                $scope.misdiagnosticos = data.data;
+                            },
+                            function(data) {
+                                $scope.misdiagnosticos = data.data;
+                            });
+                    });
+
+                }
+
+            };
+
+
+
+            var ModalInstanceAsignarEstadoCtrl = ['$scope', '$modalInstance', 'diagnostico', 'situacionesComerciales', 'motivosRechazo', 'perfilUsuario', 'i18n',
+                function($scope, $modalInstance, diagnostico, situacionesComerciales, motivosRechazo,perfilUsuario, i18n) {
+
+                    MisDiagnosticosListadoSrv.obtenerHistoricoEstados(diagnostico.id).then(function(data) {
+                        $scope.historicoEstados = data.data;
+                    });
+                    $scope.situacionesComerciales = situacionesComerciales;
+                    $scope.motivosRechazo = motivosRechazo;
+                    $scope.perfilUsuario = perfilUsuario;
+                    $scope.tablaHistorico = {
+                        data: 'historicoEstados',
+                        enableSorting: true,
+                        enableRowSelection: false,
+                        enableCellSelection: false,
+                        rowHeight: 45,
+                        headerRowHeight: 45,
+                        enableCellEdit: true,
+                        columnDefs: [{
+                            field: 'situacionComercial.id',
+                            displayName: i18n.COMERCIAL_ESTADO,
+                            enableCellEdit: false,
+                            cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><div class="centrado-vertical"><div ng-if = "row.getProperty(\'situacionComercial.de_descripcion\') == undefined"><select class="form-control" name="situacionComercial" ng-model="COL_FIELD" ng-options="situacion.id as situacion.de_descripcion for situacion in situacionesComerciales"><option value="">Estado</option></select></div>' +
+                                '<div ng-if = "row.getProperty(\'situacionComercial.de_descripcion\') != undefined"><span>{{row.getProperty("situacionComercial.de_descripcion")}}</span></div></div></div>'
+                        }, {
+                            field: 'fechaModificacion',
+                            enableCellEdit: false,
+                            cellFilter: 'date : "d/MM/yyyy"',
+                            displayName: i18n.COMERCIAL_FECHA_ACTUACION
+                        }, {
+                            field: 'motivoRechazo.id',
+                            displayName: i18n.COMERCIAL_MOTIVO_RECHAZO,
+                            enableCellEdit: false,
+                            cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><div class="centrado-vertical"><div ng-if = "row.getProperty(\'motivoRechazo.descripcion\') != undefined"><span>{{row.getProperty("motivoRechazo.descripcion")}}</span></div>' +
+                                '<div ng-if = "((row.getProperty(\'motivoRechazo.descripcion\') == undefined) && ((row.getProperty(\'situacionComercial.id\') == 4)' +
+                                ' || (row.getProperty(\'situacionComercial.id\') == 6)' +
+                                ' || (row.getProperty(\'situacionComercial.id\') == 10)))">' +
+                                '<select class="form-control" name="motivoRechazo" ng-model="COL_FIELD" ng-options="motivo.id as motivo.descripcion for motivo in motivosRechazo"><option value="">Motivo</option></select></div></div></div>'
+                        }, {
+                            field: 'comentario',
+                            displayName: i18n.COMERCIAL_COMENTARIO
+                        }]
+                    };
+
+
+
+
+                    $scope.ok = function() {
+                        var i = 0;
+                        for (i = 0; i < $scope.historicoEstados.length; i++) {
+                            $scope.historicoEstados[i].fechaModificacion = null;
+                        }
+                        MisDiagnosticosListadoSrv.asignarEstados(diagnostico.id, $scope.historicoEstados).then(function(data) {
+                                $modalInstance.close(data.data);
+                            },
+                            function(error, data) {
+                                $modalInstance.close(data.data);
+                            });
+                    };
+
+                    $scope.nuevoEstado = function() {
+
+                        var fechaActual = new Date();
+                        $scope.historicoEstados.push({
+                            situacionComercial: {
+                                id: 0
+                            },
+                            motivoRechazo: null,
+                            comentario: '',
+                            fechaModificacion: fechaActual
+                        });
+                    };
+
+                    $scope.cerrar = function() {
+                        MisDiagnosticosListadoSrv.obtenerListado().then(function(data) {
+                                $modalInstance.close(data.data);
+                            },
+                            function(data) {
+                                $modalInstance.close(data.data);
+                            });
+
+                    };
+
+                }
+            ];
+
+
+            var ModalInstanceAsignarPDSCtrl = ['$scope', '$modalInstance', 'diagnostico', 'i18n',
+                function($scope, $modalInstance, diagnostico, i18n) {
+
+                    MisDiagnosticosListadoSrv.obtenerHistoricoPDS(diagnostico.id).then(function(data) {
+                        $scope.infPDS = data.data;
+                    });
+
+                    $scope.tablaHistorico2 = {
+                        data: 'infPDS',
+                        enableSorting: true,
+                        enableRowSelection: false,
+                        enableCellSelection: false,
+                        rowHeight: 45,
+                        headerRowHeight: 45,
+                        enableCellEdit: true,
+                        columnDefs: [{
+                            field: 'id',
+                            displayName: i18n.COMERCIAL_PDS,
+                            enableCellEdit: false,
+                            cellTemplate: '<div class="ngCellText" ng-class="col.colIndex()"><div class="centrado-vertical text-center"><a ng-click="ok(row.getProperty(\'id\'),row.getProperty(\'comentario\'))" href="">{{row.getProperty(\'tx_nombre\')}}</a></div></div>'
+                        }, {
+                            field: 'comentario',
+                            displayName: i18n.COMERCIAL_COMENTARIO
+                        }]
+                    };
+
+
+                    $scope.ok = function(pds, comentario) {
+                        MisDiagnosticosListadoSrv.asignarPDS(diagnostico.id, pds, comentario).then(function(data) {
+                                $modalInstance.close(data.data);
+                            },
+                            function(data) {
+                                $modalInstance.close(data.data);
+                            });
+                    };
+
+                    $scope.cerrar = function() {
+                        MisDiagnosticosListadoSrv.obtenerListado().then(function(data) {
+                                $modalInstance.close(data.data);
+                            },
+                            function(data) {
+                                $modalInstance.close(data.data);
+                            });
+
+                    };
+
+                }
+            ];
+
+        }
+    ]);
+
+}(app));

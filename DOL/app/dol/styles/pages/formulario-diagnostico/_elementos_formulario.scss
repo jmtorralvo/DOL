@@ -1,0 +1,141 @@
+.radio-input {
+  color: #333;
+  background-color: $colorSinResaltar;
+  border-color: $colorSinResaltar;
+  @include box-shadow(none);
+  font-size: 13px;
+  font-family: $fontWeb01Regular;
+  &:hover, &:focus, &:active, &.active{
+    color: white;
+    background-color: $colorResaltado;
+    border-color: $colorResaltado;
+    @include box-shadow(none);
+    font-family: $fontWeb01Bold;
+  }
+} 
+
+@-moz-document url-prefix() { 
+  .slider.slider-horizontal .tooltip.tooltip-main {
+        margin-left: -17px;
+    }
+    .slider.slider-vertical .tooltip.tooltip-main {
+        margin-top: -19px;
+    }
+} 
+
+div.items-tienda-cont
+{
+   //padding-left:0;
+}
+div[ed-stepper], .slider-stepper{
+  .stepper-button {
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    display: inline-block;
+    @include border-radius(50%);
+    padding: 0;
+    background: $colorBotonClaro;
+    color: #fff;
+    font-size: 24px;
+    font-family: $fontWeb01Semibold;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 100%;
+    border: none;
+    &.menos{padding-bottom: 2px;}
+    &[disabled]{background: $colorSinResaltar;}
+  }
+  .stepper-value{
+    color: #333;
+    font-size: 14px;
+    font-family: $fontWeb01Semibold;
+    margin: 0 6px;
+  }
+}
+
+.stepper-with-image {
+  margin: 10px 0;
+  display: table;
+  width: 100%;
+  height: 95px;
+  .stepper-wrapper-oven
+  {
+    display: table-cell;
+    vertical-align: middle;
+    .leyenda_a{
+      font-family: $fontWeb01Regular;
+      font-size: 10px;
+      color: #333;
+      margin-bottom: 0;
+      padding-left:30px;}
+    div[ed-stepper]:first-child{
+      margin-bottom: 15px;
+    }
+  }
+  .stepper-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    width: 45%;
+    .leyenda_a{
+      font-family: $fontWeb01Regular;
+      font-size: 10px;
+      color: #333;
+      margin-bottom: 0;
+      padding-left:30px;}
+    div[ed-stepper]:first-child{
+      margin-bottom: 15px;
+    }
+  }
+  .image-wrapper-oven {
+    display: table-cell;
+    vertical-align: middle;
+    //text-align: center;
+    .descripcion{
+      font-family: $fontWeb01Regular;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 0;
+      &.fixed-height{
+        height: 36px;
+      }
+    }
+  }
+  .image-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 55%;
+    .descripcion{
+      font-family: $fontWeb01Regular;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 0;
+      &.fixed-height{
+        height: 36px;
+      }
+    }
+  }
+} 
+
+
+.large{
+  .form-control-feedback{
+    padding-right:34px;
+  }
+  .form-control{
+    padding-right:45px !important;
+  }
+}
+
+
+.form-horizontal {
+  .has-feedback {
+    .form-control-feedback{
+      right:0px !important;
+    }
+  }
+
+} 
+
+

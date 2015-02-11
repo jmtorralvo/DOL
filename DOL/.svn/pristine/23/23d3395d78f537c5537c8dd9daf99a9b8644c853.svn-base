@@ -1,0 +1,25 @@
+.aviso-legal{
+    margin-top: 45px;
+    margin-bottom: 45px;
+    text-align:justify;
+    .titulo_aviso{
+    font-family: "Open Sans Bold";
+    font-size:24px;
+    }
+    .indice_aviso{
+        margin:20px 0 20px 30px;
+    }
+    .lista_aviso{
+        font-family: "Open Sans Bold";
+    }
+    .lista_aviso2{
+        font-family: "Open Sans Italic";
+    }
+    .subdivisiones-aviso1{
+        margin-left:15px;
+    }
+    .subdivisiones-aviso2{
+        margin-left:25px;
+
+    }
+}

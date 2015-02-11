@@ -1,0 +1,538 @@
+[{
+    "de_poblacion": "Acebeda (La)",
+    "id": 38
+}, {
+    "de_poblacion": "Ajalvir",
+    "id": 116
+}, {
+    "de_poblacion": "Alameda del Valle",
+    "id": 130
+}, {
+    "de_poblacion": "Álamo (El)",
+    "id": 135
+}, {
+    "de_poblacion": "Alcalá de Henares",
+    "id": 222
+}, {
+    "de_poblacion": "Alcobendas",
+    "id": 257
+}, {
+    "de_poblacion": "Alcorcón",
+    "id": 281
+}, {
+    "de_poblacion": "Aldea del Fresno",
+    "id": 303
+}, {
+    "de_poblacion": "Algete",
+    "id": 404
+}, {
+    "de_poblacion": "Alpedrete",
+    "id": 530
+}, {
+    "de_poblacion": "Ambite",
+    "id": 559
+}, {
+    "de_poblacion": "Anchuelo",
+    "id": 581
+}, {
+    "de_poblacion": "Aranjuez",
+    "id": 646
+}, {
+    "de_poblacion": "Arganda del Rey",
+    "id": 715
+}, {
+    "de_poblacion": "Arroyomolinos",
+    "id": 782
+}, {
+    "de_poblacion": "Atazar (El)",
+    "id": 824
+}, {
+    "de_poblacion": "Batres",
+    "id": 1020
+}, {
+    "de_poblacion": "Becerril de la Sierra",
+    "id": 1042
+}, {
+    "de_poblacion": "Belmonte de Tajo",
+    "id": 1087
+}, {
+    "de_poblacion": "Berrueco (El)",
+    "id": 1227
+}, {
+    "de_poblacion": "Berzosa del Lozoya",
+    "id": 1231
+}, {
+    "de_poblacion": "Boadilla del Monte",
+    "id": 1290
+}, {
+    "de_poblacion": "Boalo (El)",
+    "id": 1292
+}, {
+    "de_poblacion": "Braojos",
+    "id": 1368
+}, {
+    "de_poblacion": "Brea de Tajo",
+    "id": 1373
+}, {
+    "de_poblacion": "Brunete",
+    "id": 1395
+}, {
+    "de_poblacion": "Buitrago del Lozoya",
+    "id": 1417
+}, {
+    "de_poblacion": "Bustarviejo",
+    "id": 1449
+}, {
+    "de_poblacion": "Cabanillas de la Sierra",
+    "id": 1469
+}, {
+    "de_poblacion": "Cabrera (La)",
+    "id": 1514
+}, {
+    "de_poblacion": "Cadalso de los Vidrios",
+    "id": 1530
+}, {
+    "de_poblacion": "Camarma de Esteruelas",
+    "id": 1602
+}, {
+    "de_poblacion": "Campo Real",
+    "id": 1647
+}, {
+    "de_poblacion": "Canencia",
+    "id": 1678
+}, {
+    "de_poblacion": "Carabaña",
+    "id": 1753
+}, {
+    "de_poblacion": "Casarrubuelos",
+    "id": 1856
+}, {
+    "de_poblacion": "Cenicientos",
+    "id": 2097
+}, {
+    "de_poblacion": "Cercedilla",
+    "id": 2107
+}, {
+    "de_poblacion": "Cervera de Buitrago",
+    "id": 2132
+}, {
+    "de_poblacion": "Chapinería",
+    "id": 2157
+}, {
+    "de_poblacion": "Chinchón",
+    "id": 2180
+}, {
+    "de_poblacion": "Ciempozuelos",
+    "id": 2198
+}, {
+    "de_poblacion": "Cobeña",
+    "id": 2251
+}, {
+    "de_poblacion": "Collado Mediano",
+    "id": 2285
+}, {
+    "de_poblacion": "Collado Villalba",
+    "id": 2286
+}, {
+    "de_poblacion": "Colmenar de Oreja",
+    "id": 2293
+}, {
+    "de_poblacion": "Colmenar del Arroyo",
+    "id": 2294
+}, {
+    "de_poblacion": "Colmenar Viejo",
+    "id": 2295
+}, {
+    "de_poblacion": "Colmenarejo",
+    "id": 2296
+}, {
+    "de_poblacion": "Corpa",
+    "id": 2357
+}, {
+    "de_poblacion": "Coslada",
+    "id": 2387
+}, {
+    "de_poblacion": "Cubas de la Sagra",
+    "id": 2419
+}, {
+    "de_poblacion": "Daganzo de Arriba",
+    "id": 2477
+}, {
+    "de_poblacion": "Escorial (El)",
+    "id": 2625
+}, {
+    "de_poblacion": "Estremera",
+    "id": 2697
+}, {
+    "de_poblacion": "Fresnedillas de la Oliva",
+    "id": 2848
+}, {
+    "de_poblacion": "Fresno de Torote",
+    "id": 2864
+}, {
+    "de_poblacion": "Fuenlabrada",
+    "id": 2885
+}, {
+    "de_poblacion": "Fuente el Saz de Jarama",
+    "id": 2905
+}, {
+    "de_poblacion": "Fuentidueña de Tajo",
+    "id": 2972
+}, {
+    "de_poblacion": "Galapagar",
+    "id": 2990
+}, {
+    "de_poblacion": "Garganta de los Montes",
+    "id": 3046
+}, {
+    "de_poblacion": "Gargantilla del Lozoya y Pinilla de Buitrago",
+    "id": 3050
+}, {
+    "de_poblacion": "Gascones",
+    "id": 3067
+}, {
+    "de_poblacion": "Getafe",
+    "id": 3102
+}, {
+    "de_poblacion": "Griñón",
+    "id": 3192
+}, {
+    "de_poblacion": "Guadalix de la Sierra",
+    "id": 3202
+}, {
+    "de_poblacion": "Guadarrama",
+    "id": 3206
+}, {
+    "de_poblacion": "Hiruela (La)",
+    "id": 3339
+}, {
+    "de_poblacion": "Horcajo de la Sierra",
+    "id": 3361
+}, {
+    "de_poblacion": "Horcajuelo de la Sierra",
+    "id": 3367
+}, {
+    "de_poblacion": "Hoyo de Manzanares",
+    "id": 3394
+}, {
+    "de_poblacion": "Humanes de Madrid",
+    "id": 3443
+}, {
+    "de_poblacion": "Leganés",
+    "id": 3702
+}, {
+    "de_poblacion": "Loeches",
+    "id": 3816
+}, {
+    "de_poblacion": "Lozoya",
+    "id": 3848
+}, {
+    "de_poblacion": "Lozoyuela-Navas-Sieteiglesias",
+    "id": 3849
+}, {
+    "de_poblacion": "Madarcos",
+    "id": 3893
+}, {
+    "de_poblacion": "Madrid",
+    "id": 3897
+}, {
+    "de_poblacion": "Majadahonda",
+    "id": 3929
+}, {
+    "de_poblacion": "Manzanares el Real",
+    "id": 3990
+}, {
+    "de_poblacion": "Meco",
+    "id": 4116
+}, {
+    "de_poblacion": "Mejorada del Campo",
+    "id": 4136
+}, {
+    "de_poblacion": "Miraflores de la Sierra",
+    "id": 4229
+}, {
+    "de_poblacion": "Molar (El)",
+    "id": 4266
+}, {
+    "de_poblacion": "Molinos (Los)",
+    "id": 4276
+}, {
+    "de_poblacion": "Montejo de la Sierra",
+    "id": 4358
+}, {
+    "de_poblacion": "Moraleja de Enmedio",
+    "id": 4423
+}, {
+    "de_poblacion": "Moralzarzal",
+    "id": 4434
+}, {
+    "de_poblacion": "Morata de Tajuña",
+    "id": 4439
+}, {
+    "de_poblacion": "Móstoles",
+    "id": 4468
+}, {
+    "de_poblacion": "Navacerrada",
+    "id": 4575
+}, {
+    "de_poblacion": "Navalafuente",
+    "id": 4586
+}, {
+    "de_poblacion": "Navalagamella",
+    "id": 4587
+}, {
+    "de_poblacion": "Navalcarnero",
+    "id": 4589
+}, {
+    "de_poblacion": "Navarredonda y San Mamés",
+    "id": 4619
+}, {
+    "de_poblacion": "Navas del Rey",
+    "id": 4636
+}, {
+    "de_poblacion": "Nuevo Baztán",
+    "id": 4705
+}, {
+    "de_poblacion": "Olmeda de las Fuentes",
+    "id": 4772
+}, {
+    "de_poblacion": "Orusco de Tajuña",
+    "id": 4865
+}, {
+    "de_poblacion": "Paracuellos de Jarama",
+    "id": 4978
+}, {
+    "de_poblacion": "Parla",
+    "id": 5001
+}, {
+    "de_poblacion": "Patones",
+    "id": 5026
+}, {
+    "de_poblacion": "Pedrezuela",
+    "id": 5050
+}, {
+    "de_poblacion": "Pelayos de la Presa",
+    "id": 5081
+}, {
+    "de_poblacion": "Perales de Tajuña",
+    "id": 5132
+}, {
+    "de_poblacion": "Pezuela de las Torres",
+    "id": 5170
+}, {
+    "de_poblacion": "Pinilla del Valle",
+    "id": 5212
+}, {
+    "de_poblacion": "Pinto",
+    "id": 5226
+}, {
+    "de_poblacion": "Piñuécar-Gandullas",
+    "id": 5234
+}, {
+    "de_poblacion": "Pozuelo de Alarcón",
+    "id": 5389
+}, {
+    "de_poblacion": "Pozuelo del Rey",
+    "id": 5396
+}, {
+    "de_poblacion": "Prádena del Rincón",
+    "id": 5405
+}, {
+    "de_poblacion": "Puebla de la Sierra",
+    "id": 5456
+}, {
+    "de_poblacion": "Puentes Viejas",
+    "id": 5489
+}, {
+    "de_poblacion": "Quijorna",
+    "id": 5550
+}, {
+    "de_poblacion": "Rascafría",
+    "id": 5615
+}, {
+    "de_poblacion": "Redueña",
+    "id": 5640
+}, {
+    "de_poblacion": "Ribatejada",
+    "id": 5706
+}, {
+    "de_poblacion": "Rivas-Vaciamadrid",
+    "id": 5763
+}, {
+    "de_poblacion": "Robledillo de la Jara",
+    "id": 5773
+}, {
+    "de_poblacion": "Robledo de Chavela",
+    "id": 5779
+}, {
+    "de_poblacion": "Robregordo",
+    "id": 5784
+}, {
+    "de_poblacion": "Rozas de Madrid (Las)",
+    "id": 5837
+}, {
+    "de_poblacion": "Rozas de Puerto Real",
+    "id": 5838
+}, {
+    "de_poblacion": "San Agustín del Guadalix",
+    "id": 5956
+}, {
+    "de_poblacion": "San Fernando de Henares",
+    "id": 6001
+}, {
+    "de_poblacion": "San Lorenzo de El Escorial",
+    "id": 6023
+}, {
+    "de_poblacion": "San Martín de la Vega",
+    "id": 6029
+}, {
+    "de_poblacion": "San Martín de Valdeiglesias",
+    "id": 6038
+}, {
+    "de_poblacion": "San Sebastián de los Reyes",
+    "id": 6098
+}, {
+    "de_poblacion": "Santa María de la Alameda",
+    "id": 6308
+}, {
+    "de_poblacion": "Santorcaz",
+    "id": 6401
+}, {
+    "de_poblacion": "Santos de la Humosa (Los)",
+    "id": 6403
+}, {
+    "de_poblacion": "Serna del Monte (La)",
+    "id": 6494
+}, {
+    "de_poblacion": "Serranillos del Valle",
+    "id": 6506
+}, {
+    "de_poblacion": "Sevilla la Nueva",
+    "id": 6520
+}, {
+    "de_poblacion": "Somosierra",
+    "id": 6584
+}, {
+    "de_poblacion": "Soto del Real",
+    "id": 6621
+}, {
+    "de_poblacion": "Talamanca de Jarama",
+    "id": 6666
+}, {
+    "de_poblacion": "Tielmes",
+    "id": 6760
+}, {
+    "de_poblacion": "Titulcia",
+    "id": 6777
+}, {
+    "de_poblacion": "Torrejón de Ardoz",
+    "id": 6907
+}, {
+    "de_poblacion": "Torrejón de la Calzada",
+    "id": 6908
+}, {
+    "de_poblacion": "Torrejón de Velasco",
+    "id": 6909
+}, {
+    "de_poblacion": "Torrelaguna",
+    "id": 6915
+}, {
+    "de_poblacion": "Torrelodones",
+    "id": 6926
+}, {
+    "de_poblacion": "Torremocha de Jarama",
+    "id": 6933
+}, {
+    "de_poblacion": "Torres de la Alameda",
+    "id": 6957
+}, {
+    "de_poblacion": "Tres Cantos",
+    "id": 7018
+}, {
+    "de_poblacion": "Valdaracete",
+    "id": 7142
+}, {
+    "de_poblacion": "Valdeavero",
+    "id": 7151
+}, {
+    "de_poblacion": "Valdelaguna",
+    "id": 7177
+}, {
+    "de_poblacion": "Valdemanco",
+    "id": 7186
+}, {
+    "de_poblacion": "Valdemaqueda",
+    "id": 7188
+}, {
+    "de_poblacion": "Valdemorillo",
+    "id": 7193
+}, {
+    "de_poblacion": "Valdemoro",
+    "id": 7195
+}, {
+    "de_poblacion": "Valdeolmos-Alalpardo",
+    "id": 7204
+}, {
+    "de_poblacion": "Valdepiélagos",
+    "id": 7209
+}, {
+    "de_poblacion": "Valdetorres de Jarama",
+    "id": 7229
+}, {
+    "de_poblacion": "Valdilecha",
+    "id": 7237
+}, {
+    "de_poblacion": "Valverde de Alcalá",
+    "id": 7351
+}, {
+    "de_poblacion": "Velilla de San Antonio",
+    "id": 7415
+}, {
+    "de_poblacion": "Vellón (El)",
+    "id": 7420
+}, {
+    "de_poblacion": "Venturada",
+    "id": 7436
+}, {
+    "de_poblacion": "Villa del Prado",
+    "id": 7549
+}, {
+    "de_poblacion": "Villaconejos",
+    "id": 7573
+}, {
+    "de_poblacion": "Villalbilla",
+    "id": 7645
+}, {
+    "de_poblacion": "Villamanrique de Tajo",
+    "id": 7674
+}, {
+    "de_poblacion": "Villamanta",
+    "id": 7675
+}, {
+    "de_poblacion": "Villamantilla",
+    "id": 7676
+}, {
+    "de_poblacion": "Villanueva de la Cañada",
+    "id": 7737
+}, {
+    "de_poblacion": "Villanueva de Perales",
+    "id": 7755
+}, {
+    "de_poblacion": "Villanueva del Pardillo",
+    "id": 7771
+}, {
+    "de_poblacion": "Villar del Olmo",
+    "id": 7813
+}, {
+    "de_poblacion": "Villarejo de Salvanés",
+    "id": 7834
+}, {
+    "de_poblacion": "Villaviciosa de Odón",
+    "id": 7923
+}, {
+    "de_poblacion": "Villavieja del Lozoya",
+    "id": 7925
+}, {
+    "de_poblacion": "Zarzalejo",
+    "id": 8074
+}]

@@ -1,0 +1,47 @@
+.ed-check {
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  span{
+    float: left;
+    padding: 8px;
+    color: #fff;
+    text-align: center;
+    @include border-radius(4px);
+    font-size: 16px;
+    @include transition(width 300ms linear);
+    &.check-true {
+      width: 37%;
+      background-color: $colorBotonClaro;
+      @include border-top-right-radius(0);
+      @include border-bottom-right-radius(0);
+      text-indent: -9999px;
+    }
+    &.check-false {
+      width: 63%;
+      background-color: $colorSinResaltar;
+      @include border-top-left-radius(0);
+      @include border-bottom-left-radius(0);
+      text-indent: 0;
+    }
+  }
+  &.checked span{
+    &.check-true {
+      width: 63%;
+      background-color: $colorResaltado;
+      text-indent: 0;
+    }
+    &.check-false {
+      width: 37%;
+      background-color: #4f83b1;
+      text-indent: -9999px;
+    }
+  }
+}
+
+.label-check{
+  line-height: 32px;
+  font-size: 13px;
+  font-family: $fontWeb01Regular;
+  color: #333;
+}

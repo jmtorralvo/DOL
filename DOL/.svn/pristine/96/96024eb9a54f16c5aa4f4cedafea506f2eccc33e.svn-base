@@ -1,0 +1,73 @@
+'use strict';
+
+(function (app, _) {
+
+
+    app.controller('FormularioDiagnosticoPaso1Ctrl', ['$scope', '$state', 'provincias', 'FormularioDiagnosticoPaso1Srv', 'MisDiagnosticosSrv',
+        function($scope, $state, provincias, FormularioDiagnosticoPaso1Srv, MisDiagnosticosSrv) {
+
+            $scope.diagnostico.nombreDiagnostico = null;
+            $scope.estadoInforme.accesoInforme = false;
+
+
+            var scrollToElement = function($element) {
+                angular.element('html, body').animate({
+                    scrollTop: $element.offset().top + 'px'
+                }, 'fast');
+            };
+
+            $scope.seleccionar = function($event) {
+                $event.preventDefault();
+                $scope.desmarcarTodos();
+
+                angular.element('.type-business').removeClass('seleccionado');
+                var target = $event.target;
+                angular.element(target).closest('.type-business').addClass('seleccionado');
+
+                var $datosTitular = angular.element('.wrapper-datos-titular');
+                $datosTitular.removeClass('hidden');
+                angular.element('.wrapper-botonera').removeClass('hidden');
+
+                scrollToElement($datosTitular);
+            };
+
+            $scope.marcar = function($event) {
+                angular.element('.type-business').addClass('desmarcado');
+                var target = $event.target;
+                angular.element(target).closest('.type-business').removeClass('desmarcado');
+            };
+
+            $scope.desmarcarTodos = function() {
+                angular.element('.type-business').removeClass('desmarcado');
+            };
+
+
+            $scope.cargarPoblaciones = function () {
+                var promesa = FormularioDiagnosticoPaso1Srv.obtenerPoblaciones($scope.diagnostico.provincia);
+
+                promesa.then( function (respuesta) {
+                    $scope.poblaciones = respuesta.data;
+                });
+            };
+            
+            $scope.guardarYContinuarLuego = function (guardar) {
+                FormularioDiagnosticoPaso1Srv.enviarDiagnosticoPaso1($scope.diagnostico, guardar)
+                    .then (function (respuesta) {
+                        if(guardar){
+                            MisDiagnosticosSrv.navegarAMisDiagnosticos();
+                        }
+                        else{
+                            _.extend($scope.diagnostico, respuesta.data);
+                            $state.go('crearDiagnostico.paso2');
+                        }
+                    },
+                    function (error) {
+
+                    });
+            };
+
+            $scope.provincias = provincias.data;
+        }
+    ]);
+
+}(app, _));

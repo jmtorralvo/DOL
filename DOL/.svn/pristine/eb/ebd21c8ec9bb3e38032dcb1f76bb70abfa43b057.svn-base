@@ -1,0 +1,140 @@
+<div class="paso-formulario">
+    <span class="numero-paso">4</span>
+    <h3 class="titulo-seccion-formulario con-numero col-xs-offset-1">{{ 'fd4_energycontract' | translate }}</h3>
+</div>
+<div class="wrapper-energia-electrica">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-energia-electrica.png" />
+        </div>
+        <div class="col-xs-11 col-md-11 col-lg-11 ">
+            <p class="linea-texto resaltado posic mt0" ng-model="diagnostico.contratoEnergia.consumoAnualEE">{{ 'fd4_electricity' | translate }}</p>
+        </div>
+    </div>
+
+   
+
+
+    <div class="row">
+            <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3 col-lg-offset-1 col-lg-4 mt9">
+                <p class="titulo-componente ">{{ 'fd4_contractedpower' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="right" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('potenciaContratada')">i</span></p>
+                
+                <div class="has-feedback">
+                    <input ng-model="diagnostico.contratoEnergia.potenciaContratada" class="form-control  text-right " type="text" advanced-number thousands unit="kW" unit-class="form-control-feedback" placeholder="{{ 'fd4_potenciacontratada' | translate }}">
+                </div>
+            </div>
+             <script>
+
+    </script>
+            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt9">
+                <form role="form">
+                    <p class="titulo-componente">{{ 'fd4_annualconsumption' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="right" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('consumoAnualElectrica')">i</span></p>
+                    
+                    <div class="has-feedback large">
+                        <input ng-model="diagnostico.contratoEnergia.consumoAnualEE" class="form-control text-right " type="text" advanced-number thousands unit="kWh" unit-class="form-control-feedback" placeholder="{{ 'fd4_consumoanual' | translate }}">
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-3 mt9">
+                <p class="titulo-componente ">{{ 'fd4_energypricespoint' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="left" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('precioDelTerminoEnergiaPunta')">i</span></p>
+                <div class="has-feedback">
+                    <input ng-model="diagnostico.contratoEnergia.precioTerminoPuntaEE" class="form-control text-right" type="text" advanced-number thousands unit="€" unit-class="form-control-feedback">
+                </div>
+            </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3 col-lg-offset-1 col-lg-4 mt9">
+            <p class="titulo-componente ">{{ 'fd4_pricepowercharge' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="right" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('precioDelTerminoPotencia')">i</span></p>
+            
+            <div class="has-feedback">
+                <input ng-model="diagnostico.contratoEnergia.precioTerminoPotenciaEE" class="form-control text-right " type="text" advanced-number thousands unit="€" unit-class="form-control-feedback" placeholder = "{{'fd4_terminopotencia' | translate}}">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt9">
+           <p class="titulo-componente">{{ 'fd4_reactivesurcharge' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="right" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('recargoDeReactiva')">i</span></p>
+           
+            <div class="has-feedback">
+                <input ng-model="diagnostico.contratoEnergia.recargoReactivaEE" class="form-control text-right " type="text" advanced-number thousands unit="€" unit-class="form-control-feedback">
+            </div>
+        </div>
+
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-3 mt9">
+           <p class="titulo-componente ">{{ 'fd4_energypricesplain' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="left" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('precioDelTerminoEnergiaLlano')">i</span></p>
+           
+            <div class="has-feedback">
+                <input ng-model="diagnostico.contratoEnergia.precioTerminoLlanoEE" class="form-control text-right " type="text" advanced-number thousands unit="€" unit-class="form-control-feedback">
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-8 col-md-4 col-lg-offset-9 col-lg-3 mt9">
+          
+            <p class="titulo-componente ">{{ 'fd4_energypricesvalley' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="left" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('precioDelTerminoEnergiaValle')">i</span></p>
+            
+            <div class="has-feedback">
+                <input ng-model="diagnostico.contratoEnergia.precioTerminoValleEE" class="form-control text-right " type="text" advanced-number thousands unit="€" unit-class="form-control-feedback">
+            </div>
+        </div>
+    </div>
+        
+    </div>
+
+<div class="wrapper-gas-natural mt20 mb20">
+    <div class="row">
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <img src="/dol/static/images/ico-gas-natural.png" />
+        </div>
+        <div class="col-xs-11 col-md-11 col-lg-11">
+            <p class="linea-texto resaltado posic mt0">{{ 'fd4_naturalgas' | translate }}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-1 col-md-3 col-lg-offset-1 col-lg-4 mt9">
+            <p class="titulo-componente">{{ 'fd4_annualconsumption' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="right" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('precioTerminoFijoYEnergia')">i</span></p>
+            
+            <div class="has-feedback large">
+                <input ng-model="diagnostico.contratoEnergia.consumoAnualGas" class="form-control  text-right " type="text" advanced-number thousands unit="kWh" unit-class="form-control-feedback" placeholder="{{ 'fd4_consumoanual' | translate }}">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 mt9">
+            <form role="form">
+                <p class="titulo-componente ">{{ 'fd4_fixedpricessure' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="right" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('cosumoAnualGasFijo')">i</span></p>
+                
+                <div class="has-feedback ">
+                    <input ng-model="diagnostico.contratoEnergia.precioTerminoPotGas" class="form-control  text-right " type="text" advanced-number thousands unit="€" unit-class="form-control-feedback">
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-offset-0 col-xs-12 col-sm-offset-0 col-sm-12 col-md-offset-0 col-md-4 col-lg-offset-0 col-lg-3 mt9">
+            <p class="titulo-componente ">{{ 'fd4_energyprices' | translate }} <span class="tooltip-info ml10 ng-scope" tooltip-placement="left" tooltip="{{ 'fd4_ejemplo' | translate }}" ng-click="showInfoModal('cosumoAnualGas')">i</span></p>
+            
+            <div class="has-feedback">
+                <input ng-model="diagnostico.contratoEnergia.precioTerminoEnergia" class="form-control text-right " type="text" advanced-number thousands unit="€" unit-class="form-control-feedback">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row wrapper-botonera">
+    <div class="col-sm-12 col-md-5 col-lg-6 text-left text-center-sm">
+        <div class="btn-group">
+            <button class=" btn btn-lg btn-guardar botons" ng-click="guardarYContinuarLuego(true)">{{ 'fd4_saveandaftercontinue' | translate }}
+                <div class="btn-lg btn-guardar dropdown-toggle">
+                    <span class="icon guardar">x</span>
+                </div>
+            </button>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-7 col-lg-6 text-right text-center-sm">
+        <div class="btn-group">
+            <button class="  btn btn-lg btn-continuar botons" ng-click="guardarYContinuarLuego(false)">{{ 'fd4_showreportmeasuresimprovement' | translate }}
+                <div class="btn-lg btn-continuar dropdown-toggle">
+                    <span class="icon continuar">&gt;</span>
+                </div>
+            </button>
+        </div>
+    </div>
+</div>
+
+

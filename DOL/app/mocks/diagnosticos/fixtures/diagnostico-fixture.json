@@ -1,0 +1,607 @@
+{
+    "acs":
+    {
+        "disponeACS":
+        {
+            "id": 1
+        },
+        "disponePerlizador":
+        {
+            "id": 2
+        },
+        "grifoDeteccion":
+        {
+            "id": 2
+        },
+        "id": 2227,
+        "sistemaProduccion":
+        {
+            "descripcion": "Caldera/calentador de gas",
+            "id": 2
+        }
+    },
+    "activo": 0,
+    "caracterizacion":
+    {
+        "anoConstruccion":
+        {
+            "descripcion": "Entre 1979 y 2006",
+            "id": 2
+        },
+        "disponeDe":
+        {
+            "id": 2
+        },
+        "disponeMejoras":
+        {
+            "descripcion": "No lo sé",
+            "id": 3
+        },
+        "disponeProtSolar":
+        {
+            "id": 2
+        },
+        "id": 2226,
+        "incidenciaSolar":
+        {
+            "id": 1,
+            "incidencia": "Nunca"
+        },
+        "longitudFachada": 0,
+        "numeroPlantas":
+        {
+            "id": 1
+        },
+        "segmento":
+        {
+            "descNegocio": "Otros",
+            "id": 9
+        },
+        "supAlmacen": 0,
+        "supBano": 0,
+        "supCocina": 0,
+        "supComedor": 0,
+        "supHabitaciones": 0,
+        "supMostrador": 0,
+        "supPasillos": 0,
+        "supTotal": 0,
+        "superficieAcristalada":
+        {
+            "de_porcentaje": "menos 60%",
+            "id": 1,
+            "idioma": "ES"
+        },
+        "tipoConstruccion":
+        {
+            "id": 1,
+            "nombre_tipo": "Piso en planta"
+        },
+        "tipoProtSolar":
+        {
+            "id": 2,
+            "tipo_proteccion": "Toldo"
+        }
+    },
+    "cif": null,
+    "climatizacion":
+    {
+        "antiguedad":
+        {
+            "descripcion": "5-10 años",
+            "id": 3
+        },
+        "antiguedadAire":
+        {
+            "descripcion": "más de 15 años",
+            "id": 5
+        },
+        "de_descripcion":
+        {
+            "descripcion": "Bomba de Calor",
+            "id": 5
+        },
+        "disponeAireAcondicionado":
+        {
+            "id": 1
+        },
+        "disponeCalef":
+        {
+            "id": 1
+        },
+        "disponePrevencion":
+        {
+            "id": 2
+        },
+        "id": 2207,
+        "prevencionAireAcond":
+        {
+            "id": 2
+        },
+        "temperaturaConsigna": 22,
+        "temperaturaConsignaAire": 26,
+        "tipoAireAcondicionado":
+        {
+            "descripcion": "Convencional",
+            "id": 1
+        },
+        "usoSistemaAire":
+        {
+            "descripcion": "Intensivo",
+            "id": 1
+        },
+        "usoSistemaClimatizacion":
+        {
+            "descripcion": "Intensivo",
+            "id": 1
+        }
+    },
+    "codigo_postal": "12345",
+    "contratoEnergia":
+    {
+        "consumoAnualEE": null,
+        "consumoAnualGas": null,
+        "id": 2226,
+        "potenciaContratada": null,
+        "precioTerminoEnergia": 0,
+        "precioTerminoLlanoEE": 0,
+        "precioTerminoPotGas": 0,
+        "precioTerminoPotenciaEE": null,
+        "precioTerminoPuntaEE": 0,
+        "precioTerminoValleEE": 0,
+        "recargoReactivaEE": 0
+    },
+    "delegadoComercial": null,
+    "descripcionNegocio":
+    {
+        "descActividad":
+        {
+            "descripcion": "Actividades Médicas",
+            "id": 1
+        },
+        "descripcion_actividad": null,
+        "horarioD": 10,
+        "horarioEntManD": 9,
+        "horarioEntManLV": 9,
+        "horarioEntManS": 9,
+        "horarioEntTarD": 15,
+        "horarioEntTarLV": 15,
+        "horarioEntTarS": 15,
+        "horarioLV": 10,
+        "horarioS": 10,
+        "horarioSalManD": 15,
+        "horarioSalManLV": 15,
+        "horarioSalManS": 15,
+        "horarioSalTarD": 19,
+        "horarioSalTarLV": 19,
+        "horarioSalTarS": 19,
+        "id": 2205,
+        "usoElectrodomestico":
+        {
+            "equipos": [],
+            "horasDiponibilidadEquipo1": 0,
+            "horasDiponibilidadEquipo2": 0,
+            "horasDiponibilidadEquipo3": 0,
+            "horasDiponibilidadEquipo4": 0,
+            "horasDiponibilidadEquipo5": 0,
+            "horasDiponibilidadEquipo6": 0,
+            "horasDiponibilidadEquipo7": 0,
+            "horasDiponibilidadEquipo8": 0,
+            "horasDiponibilidadEquipo9": 0,
+            "id": 1714,
+            "nombreEquipo1": null,
+            "nombreEquipo2": null,
+            "nombreEquipo3": null,
+            "nombreEquipo4": null,
+            "nombreEquipo5": null,
+            "nombreEquipo6": null,
+            "nombreEquipo7": null,
+            "nombreEquipo8": null,
+            "nombreEquipo9": null,
+            "numEquipos1": 0,
+            "numEquipos2": 0,
+            "numEquipos3": 0,
+            "numEquipos4": 0,
+            "numEquipos5": 0,
+            "numEquipos6": 0,
+            "numEquipos7": 0,
+            "numEquipos8": 0,
+            "numEquipos9": 0,
+            "potenciaEquipos1": 0,
+            "potenciaEquipos2": 0,
+            "potenciaEquipos3": 0,
+            "potenciaEquipos4": 0,
+            "potenciaEquipos5": 0,
+            "potenciaEquipos6": 0,
+            "potenciaEquipos7": 0,
+            "potenciaEquipos8": 0,
+            "potenciaEquipos9": 0
+        }
+    },
+    "direccion": "asasas",
+    "favorito": 0,
+    "fechaCreacion": 1413280729930,
+    "fechaPaso1": 1413280729930,
+    "fechaPaso2": null,
+    "fechaPaso3": null,
+    "fechaPaso4": null,
+    "fechaPaso5": null,
+    "gestion":
+    {
+        "disponeDetecPresIlum":
+        {
+            "id": 2
+        },
+        "disponeLlaveTarj":
+        {
+            "id": 2
+        },
+        "disponeLlaveTarjIlum":
+        {
+            "id": 2
+        },
+        "disponeProgClim":
+        {
+            "id": 2
+        },
+        "disponeProgrmIlum":
+        {
+            "id": 2
+        },
+        "disponeRegulFlujoIlum":
+        {
+            "id": 2
+        },
+        "disponeSectorClim":
+        {
+            "id": 2
+        },
+        "disponeSectorIlum":
+        {
+            "id": 2
+        },
+        "disponeTemporClim":
+        {
+            "id": 2
+        },
+        "disponeTemporIlum":
+        {
+            "id": 2
+        },
+        "disponeTermosClim":
+        {
+            "id": 2
+        },
+        "id": 2226
+    },
+    "gestorComercial": null,
+    "id": 2245,
+    "iluminacionTotal":
+    {
+        "id": 2225,
+        "numBombillaBajoCons": 0,
+        "numBombillaIncand": 0,
+        "numFluorescente06": 0,
+        "numFluorescente12": 0,
+        "numFluorescente15": 0,
+        "numHalogeno": 0,
+        "numHalogenoBajoCons": 0,
+        "numHalogenuroMetal": 0,
+        "numLed": 0
+    },
+    "iluminacionUso":
+    {
+        "id": 2225,
+        "usoBombillaBajoCons": 0,
+        "usoBombillaIncand": 0,
+        "usoFluorescente06": 0,
+        "usoFluorescente12": 0,
+        "usoFluorescente15": 0,
+        "usoHalogeno": 0,
+        "usoHalogenoBajoCons": 0,
+        "usoHalogenuroMetal": 0,
+        "usoLed": 0
+    },
+    "nombreDiagnostico": "asasas",
+    "nuevo_pds": 1,
+    "pds": null,
+    "poblacion":
+    {
+        "de_poblacion": "Albánchez",
+        "id": 168
+    },
+    "provincia": "Almería",
+    "reasignado": 0,
+    "responsableComercial": null,
+    "resultadoDiagnostico":
+    {
+        "acs_emision": 0,
+        "acs_euros": 0,
+        "acs_kwh": 0,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 0,
+        "cal_euros": 0,
+        "cal_kwh": 0,
+        "clasificacion": " ",
+        "clasificacion_futura": " ",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 0,
+        "ee_consumo_kwn": 0,
+        "ee_emision": 0,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 0,
+        "facturacion_kwh": 0,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 0,
+        "gn_consumo_kwh": 0,
+        "gn_emision": 0,
+        "gn_kwh_entrada": 0,
+        "id": 2287,
+        "ilu_emision": 0,
+        "ilu_euros": 0,
+        "ilu_kwh": 0,
+        "inversion": 0,
+        "ma1": 0,
+        "ma1_ahorro_economico": 0,
+        "ma1_ahorro_energetico": 0,
+        "ma1_inversion": 0,
+        "ma1_retorno": null,
+        "ma2": 0,
+        "ma2_ahorro_economico": 0,
+        "ma2_ahorro_energetico": 0,
+        "ma2_inversion": 0,
+        "ma2_retorno": null,
+        "mac1": 0,
+        "mac1_ahorro_economico": 0,
+        "mac1_ahorro_energetico": 0,
+        "mac1_inversion": 0,
+        "mac1_retorno": null,
+        "mac2": 0,
+        "mac2_ahorro_economico": 0,
+        "mac2_ahorro_energetico": 0,
+        "mac2_inversion": 0,
+        "mac2_retorno": null,
+        "mac3": 0,
+        "mac3_ahorro_economico": 0,
+        "mac3_ahorro_energetico": 0,
+        "mac3_inversion": 0,
+        "mac3_retorno": null,
+        "mac4": null,
+        "mac4_ahorro_economico": 0,
+        "mac4_ahorro_energetico": 0,
+        "mac4_inversion": 0,
+        "mac4_retorno": null,
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 0,
+        "mc1_retorno": null,
+        "mc2": 0,
+        "mc2_ahorro_economico": 0,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 0,
+        "mc2_retorno": null,
+        "mc3": 0,
+        "mc4": 0,
+        "mg1": 0,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 0,
+        "mg1_retorno": null,
+        "mi1": 0,
+        "mi1_ahorro_economico": 0,
+        "mi1_ahorro_energetico": 0,
+        "mi1_inversion": 0,
+        "mi1_retorno": null,
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": null,
+        "mi3": 0,
+        "mi3_ahorro_economico": 0,
+        "mi3_ahorro_energetico": 0,
+        "mi3_inversion": 0,
+        "mi3_retorno": null,
+        "mi4": 0,
+        "mi4_ahorro_economico": 0,
+        "mi4_ahorro_energetico": 0,
+        "mi4_inversion": 0,
+        "mi4_retorno": null,
+        "mi5": 0,
+        "mi5_ahorro_economico": 0,
+        "mi5_ahorro_energetico": 0,
+        "mi5_inversion": 0,
+        "mi5_retorno": null,
+        "precalculo_consumo_ee": 0,
+        "precalculo_consumo_gn": 0,
+        "ratio_establecimiento": 0,
+        "ratio_sector": 0,
+        "rc1": 0,
+        "rc2": 0,
+        "rc3": 0,
+        "re3": 0,
+        "ref_emision": 0,
+        "ref_euros": 0,
+        "ref_kwh": 0,
+        "res_emision": 0,
+        "res_euros": 0,
+        "res_kwh": 0,
+        "resultadoAngular":
+        {
+            "ahorro":
+            {
+                "ahorroEconomico": 0,
+                "ahorroEnergetico": 0,
+                "inversion": 0,
+                "recomendaciones": []
+            },
+            "ahorroEconomico": 0,
+            "ahorroEnergetico": 0,
+            "codigoPostal": "12345",
+            "comparativaConsumo":
+            {
+                "actual":
+                {
+                    "desc": "Actual",
+                    "euros": 0
+                },
+                "previsto":
+                {
+                    "desc": "Previsto",
+                    "euros": 0
+                }
+            },
+            "comparativaConsumoAnio":
+            {
+                "actual":
+                {
+                    "desc": "Actual",
+                    "euros": 0
+                },
+                "previsto":
+                {
+                    "desc": "Previsto",
+                    "euros": 0
+                }
+            },
+            "comparativaSector":
+            {
+                "establecimiento":
+                {
+                    "desc": "Tu establecimiento",
+                    "euros": 0
+                },
+                "sector":
+                {
+                    "desc": "Sector",
+                    "euros": 0
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 1,
+            "direccion": "asasas",
+            "energiasEmpleadas":
+            {
+                "energiaElectrica":
+                {
+                    "desc": "Energía eléctrica",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "gasNatural":
+                {
+                    "desc": "Gas Natural",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 2245,
+            "inversion": 0,
+            "nombreDiagnostico": "asasas",
+            "poblacion": "Albánchez",
+            "provincia": "Almería",
+            "recomendaciones":
+            {
+                "tipos": []
+            },
+            "superficie": null,
+            "titular": "asasa",
+            "usos":
+            {
+                "aguaCaliente":
+                {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "aireAcondicionado":
+                {
+                    "desc": "Aire acondicionado",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "calefaccion":
+                {
+                    "desc": "Calefacción",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "iluminacion":
+                {
+                    "desc": "Iluminación",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "resto":
+                {
+                    "desc": "Resto",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            }
+        },
+        "rg1": 0,
+        "rg2": 0,
+        "rg3": 0,
+        "rg4": 0,
+        "rg5": 0,
+        "rg6": 0,
+        "rg7": 0,
+        "ri1": 0,
+        "ri2": 0,
+        "ri3": 0,
+        "ri4": 0,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 0,
+        "ro5": 0,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 0,
+        "rv8": 0,
+        "severidad": null,
+        "supTotal": null
+    },
+    "segmento":
+    {
+        "descNegocio": "Otros",
+        "id": 9
+    },
+    "situacionComercial":
+    {
+        "de_descripcion": "Pendiente de Asignar PdS",
+        "id": 1
+    },
+    "situacionDiagnostico":
+    {
+        "de_descripcion": "Diagnóstico Abierto",
+        "de_paso_diag": 2,
+        "id": 2,
+        "porcentaje": 20
+    },
+    "solicitaPresupuesto": null,
+    "titular": "asasa",
+    "tlfContacto": null,
+    "usuarioExterno":
+    {
+        "id": 1,
+        "tx_email": "avicente@indra.es"
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr" class="ie8"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es" dir="ltr"><!--<![endif]-->
+    <head>
+        <!-- T&iacute;tulo p&aacute;gina -->
+        <title>Endesa - P&aacute;gina en mantenimiento </title>
+
+        <!-- Etiquetas META -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+        <meta name="Author" content="mantenimiento"/>
+        <meta name="Description" content="Endesa Hogares"/>
+        <!-- PALABRAS CLAVES -->
+        <meta name="Keywords" content="palabras, claves"/>
+
+        <!-- Fav icon -->
+       <link rel="icon" href="/dol/static/images-error/favicon.ico" type="image/x-icon">
+       <link rel="shortcut icon" href="images-error/favicon.ico">   
+         
+         
+         <style>
+             body{margin:0;}
+             .content{position:relative;margin:0 auto; width: 60em;}
+             .hide{left: -1000000px;position: absolute;}
+             .hideDesktop{left: -1000000px;position: absolute;}
+             .hideMobile{left: 0px;position: relative;}
+             .mod_mantenimiento{position:relative;padding-top:7.3em;padding-right:0; padding-left:0;width:100%;font-family: arial;}
+             .boxDecoMsgMantenimiento{padding: 0.5em 0;border-bottom:1px solid #bdcdde; border-top:1px solid #bdcdde; }
+             .boxMsgMantenimiento{background:#e6f3fe;}
+             .boxText{display:inline-block;vertical-align:top;width:27em;z-index:10;}
+             .imgMantenimientoDesktop{display:inline-block;position:absolute; bottom:0; right:0;margin:0;z-index:0;}
+             .imgMantenimientoDesktop .img{  vertical-align: bottom;}
+             .imgMantenimientoMobile{left: -1000000px;position: absolute;}
+             .textMantenimiento{margin:1em 0 0 0;font-family: arial;}
+             .textMantenimiento.titulo{font-size:2.5em;font-weight:300;color:#333333;}
+             .textMantenimiento.descripcion{font-size:1.188em;color:#666C70;}
+             .logoM{margin:0;left: -1000000px;position: absolute;}
+             .logoD{margin:0;padding:1.5em 1.5em 1.5em 0;display:inline-block;}
+             @media only screen and (max-width: 767px){
+                 .logoM{margin:0;left:auto;position: relative;}
+                 .hideMobile{left: -1000000px;position: absolute;}
+                 .hideDesktop{left: 0px;position: relative;}
+                 .content{width:100%; overflow:hidden;} 
+                 .boxText{width:100%; overflow:hidden;}                 
+                 .header{border-bottom: 1px solid #DDE3E9;}
+                 .mod_mantenimiento{position:relative;padding-right:0;padding-left:0;margin-top:1.5em;width:100%;}
+                 .imgMantenimientoMobile{position:absolute;top:0;right:0;margin:0;width:90%;left:1.5em;text-align:left;}
+                 .imgMantenimientoDesktop{right:-1000000px;position: absolute;}
+                 .boxMsgMantenimiento{padding:6em 1.5em 2em 1.5em;}   
+                 .textMantenimiento.titulo{font-size:1.25em;font-weight:300;}
+                 .textMantenimiento.descripcion{font-size:0.813em;}
+             }            
+
+         </style>
+    </head>
+    <body>
+        <div class="contenedor_general">
+            
+            <!-- CABECERA -->
+            <div class="header hideDesktop">  
+                <h1 class="hide">Error 500</h1>
+                <h2 class="logoM"><img src="/dol/static/images-error/bg_logo_responsive.png" alt="Luz, gas y tranquilidad"></h2>              
+            </div>
+            <!-- FIN CABECERA -->    
+            
+            <!-- CONTENEDOR PRINCIPAL -->
+            <div class="mod_mantenimiento ">                
+                <div class="boxDecoMsgMantenimiento">                   
+                    <div class="boxMsgMantenimiento">                          
+                        <div class="content">
+                            <div class="logoD hideMobile"><img src="/dol/static/images-error/bg_logo.png" alt="Luz, gas y tranquilidad"></div> 
+                            <div class="boxText">
+                                <h2 class="textMantenimiento titulo">Web en mantenimiento</h2>
+                                <span class="textMantenimiento descripcion">Estamos realizando tareas de mantenimiento. Vuelve a intentarlo m&aacute;s tarde.</span>
+                            </div>
+                            <div class="imgMantenimientoDesktop">
+                                <img alt="Mantenimiento" src="/dol/static/images-error/mantenimiento.png" class="img"/>
+                            </div>
+                        </div> 
+                        <div class="imgMantenimientoMobile hideDesktop">
+                            <img alt="Mantenimiento" src="/dol/static/images-error/mantenimiento.png" class="hideDesktop"/>
+                        </div>                       
+                    </div>
+                </div> 
+            </div>
+        </div>
+        <!-- FIN CONTENEDOR PRINCIPAL -->
+    </body>
+</html>

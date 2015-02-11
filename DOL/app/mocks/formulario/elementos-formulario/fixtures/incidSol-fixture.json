@@ -1,0 +1,13 @@
+[{
+    "id": 1,
+    "incidencia": "Nunca"
+}, {
+    "id": 2,
+    "incidencia": "Siempre"
+}, {
+    "id": 3,
+    "incidencia": "Mañana"
+}, {
+    "id": 4,
+    "incidencia": "Tarde"
+}]

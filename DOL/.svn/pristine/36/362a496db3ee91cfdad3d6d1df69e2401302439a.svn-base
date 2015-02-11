@@ -1,0 +1,166 @@
+//pies de página
+
+.wrapperFooterHome{
+  .wrapperSeccionEnlaces{
+    border-left: 1px solid #dde3e9;
+    &:first-child{
+      border-left: none;
+    }
+  }
+}
+.seccionEnlaces {
+  margin-bottom: 22px;
+  .tituloSeccion{
+    color: #333;
+    padding-bottom: 10px;
+    font-family: $fontWeb01Semibold;
+    font-size: 14px;
+  }
+  .dropdown .tituloSeccion{
+    color: $colorEnlace;
+  }
+  .textSmaller{
+    font-size: 13px;
+  }
+  .listado {
+    padding-left: 0;
+    list-style: none;
+    >li{
+      padding-bottom: 11px;
+    }
+  }
+}
+
+.footerDrops, .footer_lnk_block, .footer_lnk_block .dropdown_container{
+  padding-left: 0;
+  list-style: none;
+
+  .ban{margin-top: 50px;}
+}
+
+.extra-footer{
+  border-top: 1px solid #bfd6eb;
+  padding-top: 15px;
+  padding-bottom: 30px;
+
+  .dropdown {
+    cursor: pointer;
+    position: relative;
+    background: url($rutaImagenes+"ico-desplegable.png") no-repeat 95% 30%;
+    &:hover .dropdown_container {
+      display: inline-block;
+    }
+    .dropdown_container {
+      left: 0;
+      display: none;
+      position: absolute;
+      background: white;
+      border-style: solid;
+      border-width: 1px 1px 4px;
+      border-color: #62a0d6;
+      border-radius: 0 0 4px 4px;
+      z-index: 9999;
+      width: 100%;
+      top: 100%;
+      padding: 11px;
+      padding-bottom: 0;
+      .enlace{
+        display: inline-block;
+        width: 100%;
+        color: #333;
+        &:hover{
+          color: $colorEnlaceHover;
+        }
+      }
+    }
+  }
+}
+
+// Small Screens
+@media (max-width: 767px) {
+    .wrapperFooterHome{
+      .wrapperSeccionEnlaces{
+      border-left: none;
+    }
+  }
+  .extra-footer{
+    .dropdown{
+      margin-top: 22px;
+      .dropdown_container{
+        position: relative;
+        display: block;
+        border: none;
+        padding: 0;
+        .enlace{
+          color: $colorEnlace;
+        }
+      }
+      .tituloSeccion{
+        color: #333;
+      }
+    }
+  }
+
+  .seccionEnlaces {
+    .dropdown .tituloSeccion{
+      color: #333;
+    }
+    .listado {
+      >li{
+        padding-bottom: 11px;
+        padding-top: 11px;
+        border-bottom: 1px solid #bfd6eb;
+      }
+    }
+  }
+}
+
+//pie inferior fijo
+
+.site-footer{
+  background-color: $bgFooter;
+  padding: 12px 0 9px;
+  p{
+    font-size: 13px;
+    color:#333;
+    margin:0;
+    padding:0;
+    line-height: 36px;
+  }
+  .subpienel{
+    text-align: right;
+    margin:0;
+    padding: 0;
+    li{
+      display:inline-block;
+      position:relative;
+      padding: 0 4px 0 12px;
+      &:before{
+        content:"-";
+        color:#333;
+        font-size:16px;
+        position:absolute;
+        left:0;
+        top:0;
+        line-height: 36px;
+      }
+      &:first-child:before,&:last-child:before{
+        display:none;
+      }
+    }
+    a{
+      display:block;
+      vertical-align: baseline;
+      font-size:13px;
+      line-height:36px;
+      color: #428bca;
+      &.grupoEnel{
+        background: url($rutaImagenes+"logo_enel_footer.png") no-repeat left center transparent;
+        width:74px;
+        height: 36px;
+        color: transparent;
+      }
+    }
+  }
+}
+

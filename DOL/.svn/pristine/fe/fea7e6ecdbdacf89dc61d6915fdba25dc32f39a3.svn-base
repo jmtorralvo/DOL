@@ -1,0 +1,45 @@
+<section class="homejumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>{{ "disfruta_de" | translate }} <span class="resaltado">{{ "diag_online" | translate }}</span></h2>
+        
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="text-left">
+                            <div class="btn-group" ui-sref="crearDiagnostico.paso1">
+                                <button class="  btn btn-lg btn-continuar botons" >{{ "MIS_DIAGNOSTICOS_NUEVO_DIAGNOSTICO" | translate }}
+                                    <div class="btn-lg btn-continuar dropdown-toggle">
+                                        <span class="icon continuar">&gt;</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>             
+                </div> 
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-blocks features-blocks-home">
+    <div class="container">
+        <div class="col-sm-4">
+            <div class="feature-block">
+                <h3><i class="entypo-use"></i><span class="text-hide">{{ "login_consumo" | translate }}</span></h3>
+                <p>{{ "Averigua_tu_consumo" | translate }}</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="feature-block">
+                <h3><i class="entypo-efficiency"></i><span class="text-hide">{{ "login_eficiencia" | translate }}</span></h3>
+                <p>{{ "Eval_la_eficacia" | translate }}</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="feature-block"> 
+                <h3><i class="entypo-saving"></i><span class="text-hide">{{ "login_ahorro" | translate }}</span></h3>
+                <p>{{ "Obten_recomendaciones" | translate }}</p>
+            </div>
+        </div>
+    </div>
+</section>

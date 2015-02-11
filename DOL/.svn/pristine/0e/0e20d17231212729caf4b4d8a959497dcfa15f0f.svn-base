@@ -1,0 +1,5 @@
+<div class="slider-stepper">
+	<div class="button-wrapper button-less"><button type="button" class="stepper-button menos" ng-disabled="isOverMin()" ng-click="decrement()"><span class="glyphicon"></span></button></div>
+	<input type="text" class="hidden"/>
+	<div class="button-wrapper button-more"><button type="button" class="stepper-button mas" ng-disabled="isOverMax()" ng-click="increment()"><span class="glyphicon"></span></button></div>
+</div>

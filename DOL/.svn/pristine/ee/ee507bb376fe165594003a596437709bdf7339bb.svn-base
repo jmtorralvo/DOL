@@ -1,0 +1,14 @@
+[{
+    "request": {
+        "url": "^/services/dol/usuario/cambiarcontrasena$",
+        "method": "PUT"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/cambio-contrasenia-fixture.json"
+    }
+}]

@@ -1,0 +1,49 @@
+<div class="contacto_telefonico">
+    <div class="modal-content">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-xs-12 text-right">
+                    <a href="" ng-click="cerrar()" class="glyphicon glyphicon-remove-circle"></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-11">
+                    <h3>{{ 'fd5_beingsaving' | translate }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="modal-body">
+            <form name="contactoForm" ed-form>
+                <div class="row">
+                    <div class="col-xs-offset-1 col-xs-11">
+                        <div class="row mb30">
+                            <div class="col-xs-12 mb15-xs col-sm-2 col-md-2 col-lg-2">
+                                <img src="/dol/static/images/icon-callcenter.png" />
+                            </div>
+                            <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9 ">
+                                <p class="mb30">{{ 'fd5_outcomesreport' | translate }}</p>
+                                <div class="campo-formulario" ng-class="{ 'has-error' : contactoForm.movil.$invalid && !contactoForm.movil.$pristine }">
+                                    <input type="text" name="movil" ng-model="diagnostico.tlfContacto" class="form-control input-lg" placeholder="{{ 'MIS_DIAGNOSTICOS_LISTADO_MOVIL' | translate }}" advanced-number advanced-number-maxlength="9"  ed-validation required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-11">
+                    <div class="row mb20">
+                        <div class="col-xs-12 col-sm-12 mb15-sm col-md-6 col-lg-6 text-right">
+                            <button ng-click="datosCorrectos(diagnostico.id, diagnostico.tlfContacto)" class="btn btn-primary info" ng-disabled="contactoForm.$invalid">{{ 'fd5_callme' | translate }}</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-right">
+                            <button ng-click="finalizarDiagnostico()" class="btn btn-primary finalizar" ng-disabled="!contactoForm.$invalid">{{ 'fd5_endingdiagnostic' | translate }}</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

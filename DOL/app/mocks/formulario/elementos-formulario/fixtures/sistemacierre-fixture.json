@@ -1,0 +1,10 @@
+[{
+    "id": 1,
+    "tipo_cierre": "Puerta"
+}, {
+    "id": 2,
+    "tipo_cierre": "Cortina"
+}, {
+    "id": 3,
+    "tipo_cierre": "Otros"
+}]

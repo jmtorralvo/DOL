@@ -1,0 +1,61 @@
+<div class="paso-formulario">
+    <span class="numero-paso">2</span>
+    <h3 class="titulo-seccion-formulario con-numero col-xs-offset-1">{{ 'fd2_databusiness' | translate }}</h3>
+</div>
+
+<ng-form name="caracterizacionForm" ed-form ng-switch on="diagnostico.segmento.id">
+    <div ng-switch-when="1">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoPeluqueria.html'">
+        </div>
+    </div>
+    <div ng-switch-when="2">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoTiendaAlim.html'">
+        </div>
+    </div>
+    <div ng-switch-when="4">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoOficina.html'">
+        </div>
+    </div>
+    <div ng-switch-when="5">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoHotel.html'">
+        </div>
+    </div>
+    <div ng-switch-when="6">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoBar.html'">
+        </div>
+    </div>
+    <div ng-switch-when="7">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoRestaurante.html'">
+        </div>
+    </div>
+    <div ng-switch-when="8">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoTintoreria.html'">
+        </div>
+    </div>
+    <div ng-switch-when="9">
+        <div ng-include src="'/dol/modulos/formulario-diagnostico/views/includes-paso2/formularioPaso2IdSegmentoOtros.html'">
+        </div>
+    </div>
+
+    <div class="row wrapper-botonera">
+        <div class="col-sm-12 col-md-5 col-lg-6 text-left text-center-sm">
+            <div class="btn-group">
+                <button class=" btn btn-lg btn-guardar botons" ng-click="guardarYContinuarLuego(true)" ng-disabled="diagnosticoForm.caracterizacionForm.$invalid">{{ 'fd2_saveandaftercontinue' | translate }}
+                    <div class="btn-lg btn-guardar dropdown-toggle">
+                        <span class="icon guardar">x</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-7 col-lg-6 text-right text-center-sm">
+            <div class="btn-group">
+                <button class="  btn btn-lg btn-continuar botons" ng-click="guardarYContinuarLuego(false)" ng-disabled="diagnosticoForm.caracterizacionForm.$invalid">{{ 'fd2_hotwater_airconditioning_lighting' | translate }}
+                    <div class="btn-lg btn-continuar dropdown-toggle">
+                        <span class="icon continuar">&gt;</span>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</ng-form>

@@ -1,0 +1,45 @@
+<section class="homejumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Disfruta de las ventajas de tu <span class="resaltado">diagnóstico online</span></h2>            
+        
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="text-left">
+                            <div class="btn-group" ui-sref="crearDiagnostico.paso1">
+                                <button class="  btn btn-lg btn-continuar botons" >NUEVO DIAGNÓSTICO
+                                    <div class="btn-lg btn-continuar dropdown-toggle">
+                                        <span class="icon continuar">&gt;</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>             
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="features-blocks features-blocks-home">
+    <div class="container">
+        <div class="col-sm-4">
+            <div class="feature-block">
+                <h3><i class="entypo-use"></i><span class="text-hide">Consumo</span></h3>
+                <p>Averigua tu consumo energético y cómo optimizarlo</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="feature-block">
+                <h3><i class="entypo-efficiency"></i><span class="text-hide">Eficiencia</span></h3>
+                <p>Evalúa la eficiencia energética de tu negocio</p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="feature-block">
+                <h3><i class="entypo-saving"></i><span class="text-hide">Ahorro</span></h3>
+                <p>Obtén recomendaciones de mejora y ahorra desde el primer momento</p>
+            </div>
+        </div>
+    </div>
+</section>

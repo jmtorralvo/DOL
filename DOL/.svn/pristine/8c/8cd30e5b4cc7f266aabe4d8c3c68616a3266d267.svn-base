@@ -1,0 +1,33 @@
+<div>
+    <div class="row">
+        <div class="col-xs-offset-1 col-xs-11">
+            <div class="row">
+                <div class="col-xs-offset-1 col-xs-2 text-center">
+                    <div class="captcha">
+                        <span>{{captcha.numCapOne}} + {{captcha.numCapTwo}}</span>
+                    </div>
+                </div>
+
+                <div class="col-xs-3 text-left mt7">
+                    <div>
+                        <input type="text" class="mb10" ng-model="captcha.valor                 " name="captcha" required>
+                    </div>
+                </div>
+                <div class="col-xs-6 text-left mt2">
+                    <div>
+                        <button class="btn btn-success" ng-click="comprobarCaptcha()">{{ 'CAPTCHA_COMPROBAR' | translate }}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-offset-2 col-xs-10 text-left mt9 mb10 captcha_error">
+            <div>
+                <div ng-show="captchaError == 1">
+                    {{ 'CAPTCHA_INVALIDO' | translate }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

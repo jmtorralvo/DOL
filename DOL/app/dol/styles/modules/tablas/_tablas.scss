@@ -1,0 +1,89 @@
+.gridStyle{
+  .ngHeaderCell{
+    background:#f7f8f8;
+    .ngHeaderText{
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      white-space: normal;
+      font-family: $fontWeb01Bold;
+      font-size: 13px;
+      color: #333;
+    }
+    .ngHeaderSortColumn{
+      height: 100%;
+      display: table;
+    }
+    .resaltada{
+      background: #d2e2f0;
+    }
+    .nobg{
+      background: #fff;
+    }
+  }
+  .ngViewport{
+    overflow-x:hidden;
+  }
+  .ngCell{
+    overflow:visible;
+  }
+
+  .ngVerticalBar{
+    &.ngVerticalBarVisible{
+      background:none;
+    }
+  }
+  .ngCellText{
+    background:white;
+    border-bottom: 1px solid #dedfdf;
+    display: table;
+    font-family: $fontWeb01Regular;
+    font-size: 13px;
+    color: #333;
+    text-align: center;
+    white-space: normal;
+    padding: 0 12px;
+    a{font-family: $fontWeb01Semibold;}
+    span[ng-cell-text], .centrado-vertical {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+  .tooltip{
+    .tooltip-inner{
+      width:350px;
+      }
+    }
+  .colt0.ngCellText{
+    text-align: left;
+  }
+  &.avanzada{
+    .ngCellText{
+      color: #666;
+      &.colt0{
+        color: #333;
+      }
+      .texto-icono{
+        display: inline-block;
+        padding-left: 23px;
+        width: 75%;
+        &.ico-bombilla{
+          @include spr-insert(ico-bombilla-peque, 14px, 18px, 0 ,0);}
+        &.ico-agua{
+          @include spr-insert(ico-agua, 12px, 17px, 0 ,0);}
+        &.ico-aislamiento{
+          @include spr-insert(ico-aislamiento, 16px, 16px, 0 ,0);}
+        &.ico-gestion-mini{
+          @include spr-insert(ico-gestion-mini, 16px, 16px, 0 ,0);}
+        &.ico-contratacion{
+          @include spr-insert(ico-contratacion, 16px, 16px, 0 ,0);}
+      }
+      .tooltip-info{vertical-align: top;}
+    }
+  }
+  &.fixed-rows-height .ngRow{overflow: hidden;}
+  &.ultra-large{height:440px;}
+  &.x-large{height:350px;}
+  &.large{height:250px;}
+  &.short{height:160px;}
+}

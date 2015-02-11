@@ -1,0 +1,511 @@
+{
+    "acs": {
+        "disponeACS": {
+            "id": 1
+        },
+        "disponePerlizador": {
+            "id": 2
+        },
+        "grifoDeteccion": {
+            "id": 2
+        },
+        "id": 598,
+        "sistemaProduccion": {
+            "descripcion": "Caldera/calentador de gas",
+            "id": 2
+        }
+    },
+    "activo": 0,
+    "caracterizacion": {
+        "anoConstruccion": {
+            "descripcion": "Entre 1979 y 2006",
+            "id": 2
+        },
+        "disponeDe": {
+            "id": 2
+        },
+        "disponeMejoras": {
+            "descripcion": "No lo sé",
+            "id": 3
+        },
+        "disponeProtSolar": {
+            "id": 2
+        },
+        "id": 558,
+        "incidenciaSolar": {
+            "id": 1,
+            "incidencia": "Nunca"
+        },
+        "longitudFachada": 1,
+        "numeroPlantas": {
+            "id": 1
+        },
+        "segmento": {
+            "descNegocio": "Bar-Cafetería",
+            "id": 6
+        },
+        "supAlmacen": 0,
+        "supBano": 0,
+        "supCocina": 0,
+        "supComedor": 0,
+        "supHabitaciones": 0,
+        "supMostrador": 0,
+        "supPasillos": 0,
+        "supTotal": 0,
+        "superficieAcristalada": {
+            "de_porcentaje": "menos 60%",
+            "id": 1
+        },
+        "tipoConstruccion": {
+            "id": 1,
+            "nombre_tipo": "Piso en planta"
+        },
+        "tipoProtSolar": {
+            "id": 1,
+            "tipo_proteccion": "Persiana"
+        }
+    },
+    "cif": null,
+    "climatizacion": {
+        "antiguedad": {
+            "descripcion": "5-10 años",
+            "id": 3
+        },
+        "antiguedadAire": {
+            "descripcion": "más de 15 años",
+            "id": 5
+        },
+        "de_descripcion": {
+            "descripcion": "Bomba de calor",
+            "id": 1
+        },
+        "disponeAireAcondicionado": {
+            "id": 1
+        },
+        "disponeCalef": {
+            "id": 1
+        },
+        "disponePrevencion": {
+            "id": 2
+        },
+        "id": 538,
+        "prevencionAireAcond": {
+            "id": 2
+        },
+        "temperaturaConsigna": 22,
+        "temperaturaConsignaAire": 26,
+        "tipoAireAcondicionado": {
+            "descripcion": "Bomba de calor",
+            "id": 1
+        },
+        "usoSistemaAire": {
+            "descripcion": "Intensivo",
+            "id": 1
+        },
+        "usoSistemaClimatizacion": {
+            "descripcion": "Intensivo",
+            "id": 1
+        }
+    },
+    "codigo_postal": "12345",
+    "contratoEnergia": {
+        "consumoAnualEE": 0,
+        "consumoAnualGas": 0,
+        "id": 558,
+        "potenciaContratada": 413,
+        "precioTerminoEnergia": 2134,
+        "precioTerminoLlanoEE": 4231,
+        "precioTerminoPotGas": 0,
+        "precioTerminoPotenciaEE": 1534,
+        "precioTerminoPuntaEE": 9642,
+        "precioTerminoValleEE": 0,
+        "recargoReactivaEE": 0
+    },
+    "delegadoComercial": null,
+    "descripcionNegocio": {
+        "descActividad":
+        {
+            "descripcion": "Actividades Médicas",
+            "id": 1
+        },
+        "almuerzosDiarios": 0,
+        "horarioEntManD": 9,
+        "horarioEntManLV": 9,
+        "horarioEntManS": 9,
+        "horarioEntTarD": 16,
+        "horarioEntTarLV": 16,
+        "horarioEntTarS": 16,
+        "horarioSalManD": 14,
+        "horarioSalManLV": 14,
+        "horarioSalManS": 14,
+        "horarioSalTarD": 19,
+        "horarioSalTarLV": 19,
+        "horarioSalTarS": 19,
+        "id": 558,
+        "sistemaCocina": {
+            "id": 2,
+            "tipo_cocina": "Plancha Eléctrica"
+        },
+        "usoElectrodomestico": {
+            "botelleroMas8a": 0,
+            "botelleroMenos8a": 0,
+            "cafeteraMas8a": 0,
+            "cafeteraMenos8a": 0,
+            "campanaMas8a": 0,
+            "campanaMenos8a": 0,
+            "congeladorMas8a": 0,
+            "congeladorMenos8a": 0,
+            "frigorificoMas8a": 0,
+            "frigorificoMenos8a": 0,
+            "hornoMas8a": 0,
+            "hornoMenos8a": 0,
+            "id": 434,
+            "lavavajillasMas8a": 0,
+            "lavavajillasMenos8a": 0,
+            "microondasMas8a": 0,
+            "microondasMenos8a": 0,
+            "recreativasMas8a": 0,
+            "recreativasMenos8a": 0,
+            "televisorMas8a": 0,
+            "televisorMenos8a": 0
+        }
+    },
+    "direccion": "diagnostico de prueba",
+    "favorito": 0,
+    "fechaCreacion": 1409050283814,
+    "ficheroAsociado": {
+        "id": 598
+    },
+    "gestion": {
+        "disponeDetecPresIlum": {
+            "id": 1
+        },
+        "disponeLlaveTarj": {
+            "id": 2
+        },
+        "disponeLlaveTarjIlum": {
+            "id": 1
+        },
+        "disponeProgClim": {
+            "id": 1
+        },
+        "disponeProgrmIlum": {
+            "id": 2
+        },
+        "disponeRegulFlujoIlum": {
+            "id": 2
+        },
+        "disponeSectorClim": {
+            "id": 2
+        },
+        "disponeSectorIlum": {
+            "id": 1
+        },
+        "disponeTemporClim": {
+            "id": 2
+        },
+        "disponeTemporIlum": {
+            "id": 2
+        },
+        "disponeTermosClim": {
+            "id": 1
+        },
+        "id": 558
+    },
+    "gestorComercial": null,
+    "id": 578,
+    "iluminacionTotal": {
+        "id": 558,
+        "numBombillaBajoCons": 0,
+        "numBombillaIncand": 0,
+        "numFluorescente06": 0,
+        "numFluorescente12": 0,
+        "numFluorescente15": 0,
+        "numHalogeno": 0,
+        "numHalogenoBajoCons": 0,
+        "numHalogenuroMetal": 0,
+        "numLed": 0
+    },
+    "iluminacionUso": {
+        "id": 558,
+        "usoBombillaBajoCons": 0,
+        "usoBombillaIncand": 0,
+        "usoFluorescente06": 0,
+        "usoFluorescente12": 0,
+        "usoFluorescente15": 0,
+        "usoHalogeno": 0,
+        "usoHalogenoBajoCons": 0,
+        "usoHalogenuroMetal": 0,
+        "usoLed": 0
+    },
+    "nombreDiagnostico": "diagnostico de prueba",
+    "nuevo_pds": 1,
+    "pds": null,
+    "poblacion": {
+        "de_poblacion": "Amurrio",
+        "id": 575
+    },
+    "reasignado": 0,
+    "responsableComercial": null,
+    "resultadoDiagnostico": {
+        "acs_emision": 0,
+        "acs_euros": 0,
+        "acs_kwh": 0,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 0,
+        "cal_euros": 0,
+        "cal_kwh": 0,
+        "clasificacion": " ",
+        "clasificacion_futura": " ",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 0,
+        "ee_consumo_kwn": 0,
+        "ee_emision": 0,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 0,
+        "facturacion_kwh": 0,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 0,
+        "gn_consumo_kwh": 0,
+        "gn_emision": 0,
+        "gn_kwh_entrada": 0,
+        "id": 650,
+        "ilu_emision": 0,
+        "ilu_euros": 0,
+        "ilu_kwh": 0,
+        "inversion": 0,
+        "ma1": 0,
+        "ma1_ahorro_economico": 0,
+        "ma1_ahorro_energetico": 0,
+        "ma1_inversion": 0,
+        "ma1_retorno": null,
+        "ma2": 0,
+        "ma2_ahorro_economico": 0,
+        "ma2_ahorro_energetico": 0,
+        "ma2_inversion": 0,
+        "ma2_retorno": null,
+        "mac1": 0,
+        "mac1_ahorro_economico": 0,
+        "mac1_ahorro_energetico": 0,
+        "mac1_inversion": 0,
+        "mac1_retorno": null,
+        "mac2": 0,
+        "mac2_ahorro_economico": 0,
+        "mac2_ahorro_energetico": 0,
+        "mac2_inversion": 0,
+        "mac2_retorno": null,
+        "mac3": 0,
+        "mac3_ahorro_economico": 0,
+        "mac3_ahorro_energetico": 0,
+        "mac3_inversion": 0,
+        "mac3_retorno": null,
+        "mac4": null,
+        "mac4_ahorro_economico": 0,
+        "mac4_ahorro_energetico": 0,
+        "mac4_inversion": 0,
+        "mac4_retorno": null,
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 0,
+        "mc1_retorno": null,
+        "mc2": 0,
+        "mc2_ahorro_economico": 0,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 0,
+        "mc2_retorno": null,
+        "mc3": 0,
+        "mc4": 0,
+        "mg1": 0,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 0,
+        "mg1_retorno": null,
+        "mi1": 0,
+        "mi1_ahorro_economico": 0,
+        "mi1_ahorro_energetico": 0,
+        "mi1_inversion": 0,
+        "mi1_retorno": null,
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": null,
+        "mi3": 0,
+        "mi3_ahorro_economico": 0,
+        "mi3_ahorro_energetico": 0,
+        "mi3_inversion": 0,
+        "mi3_retorno": null,
+        "mi4": 0,
+        "mi4_ahorro_economico": 0,
+        "mi4_ahorro_energetico": 0,
+        "mi4_inversion": 0,
+        "mi4_retorno": null,
+        "mi5": 0,
+        "mi5_ahorro_economico": 0,
+        "mi5_ahorro_energetico": 0,
+        "mi5_inversion": 0,
+        "mi5_retorno": null,
+        "precalculo_consumo_ee": 0,
+        "precalculo_consumo_gn": 0,
+        "ratio_establecimiento": 0,
+        "ratio_sector": 0,
+        "rc1": 0,
+        "rc2": 0,
+        "rc3": 0,
+        "re3": 0,
+        "ref_emision": 0,
+        "ref_euros": 0,
+        "ref_kwh": 0,
+        "res_emision": 0,
+        "res_euros": 0,
+        "res_kwh": 0,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 0,
+                "ahorroEnergetico": 0,
+                "inversion": 0
+            },
+            "ahorroEconomico": 0,
+            "ahorroEnergetico": 0,
+            "codigoPostal": "12345",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 0
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 0
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 0
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 0
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 0
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 0
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 1,
+            "direccion": "diagnostico de prueba",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 578,
+            "inversion": 0,
+            "poblacion": "Amurrio",
+            "provincia": "Álava",
+            "recomendaciones": {},
+            "superficie": null,
+            "titular": "diagnostico de prueba",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            }
+        },
+        "rg1": 0,
+        "rg2": 0,
+        "rg3": 0,
+        "rg4": 0,
+        "rg5": 0,
+        "rg6": 0,
+        "rg7": 0,
+        "ri1": 0,
+        "ri2": 0,
+        "ri3": 0,
+        "ri4": 0,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 0,
+        "ro5": 0,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 0,
+        "rv8": 0,
+        "severidad": null,
+        "supTotal": null
+    },
+    "segmento": {
+        "descNegocio": "Bar-Cafetería",
+        "id": 9
+    },
+    "situacionComercial": {
+        "de_descripcion": "Pendiente de Asignar PdS",
+        "id": 1
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Abierto",
+        "de_paso_diag": 2,
+        "id": 2,
+        "porcentaje": 20
+    },
+    "solicitaPresupuesto": null,
+    "titular": "diagnostico de prueba",
+    "tlfContacto": null,
+    "usuarioExterno": {
+        "id": 2
+    }
+}

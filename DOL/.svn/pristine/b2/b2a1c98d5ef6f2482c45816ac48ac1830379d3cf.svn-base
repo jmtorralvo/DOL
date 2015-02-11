@@ -1,0 +1,50 @@
+//css para ie8 
+.ie8 {
+    .container {
+       display:table;
+    }
+
+    .slider .slider-track .slider-handle {
+        filter: progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=3, Direction=0), 
+        progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=3, Direction=90),
+        progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=3, Direction=180),
+        progid:DXImageTransform.Microsoft.Shadow(Color=#cccccc, Strength=3, Direction=270);
+    }
+    .slider.slider-horizontal .slider-track .slider-handle {
+        margin-left: -13px;
+        margin-top: -8px;
+    }
+    .slider.slider-vertical .slider-track .slider-handle {
+        margin-left: -8px; 
+        margin-top: -13px;
+    }
+
+    // .row {
+    //     height: 100%;
+    //     display: table-row;
+    // }
+
+    // .col-sm-4 {
+    //     display: table-cell;
+    // }
+}
+
+.ie, html[data-useragent*='MSIE 10.0']{
+    .btn-lg, .btn-group-lg > .btn{
+        padding-right:0px;
+ 
+
+    }
+    .btn-group{
+        .continuar{
+            margin-right:16px;
+        }
+        .guardar{
+            margin-right:16px;
+        }
+
+    }
+    .utl--modify, .utl--duplicate, .utl--delete, .utl--fav, .utl--file {
+        cursor:pointer;
+    }
+}

@@ -1,0 +1,1788 @@
+[{
+    "codigo_postal": "23421",
+    "delegadoComercial": null,
+    "direccion": "hotel de zamora",
+    "favorito": 1,
+    "fechaCreacion": 1410334103868,
+    "gestorComercial": null,
+    "id": 865,
+    "nombreDiagnostico": "Copia de hotel de zamora",
+    "nuevo_pds": 0,
+    "pds": null,
+    "poblacion": {
+        "de_poblacion": "Altarejos",
+        "id": 546
+    },
+    "reasignado": 0,
+    "responsableComercial": {
+        "codigo": "DESRES",
+        "control": "1",
+        "id": 137,
+        "tx_mail": "endapp-des-pmuwebudr@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Responsable Comercial"
+    },
+    "resultadoDiagnostico": null,
+    "segmento": {
+        "descNegocio": "Hotel/Hostal",
+        "id": 5
+    },
+    "situacionComercial": {
+        "de_descripcion": "Pendiente de Asignar PdS",
+        "id": 1
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Abierto",
+        "de_paso_diag": 4,
+        "id": 4,
+        "porcentaje": 80
+    },
+    "solicitaPresupuesto": null,
+    "titular": "hotel de zamora",
+    "tlfContacto": "954321441"
+}, {
+    "codigo_postal": "23421",
+    "delegadoComercial": null,
+    "direccion": "hotel de zamora",
+    "favorito": 1,
+    "fechaCreacion": 1407920462000,
+    "gestorComercial": {
+        "codigo": "DESGC",
+        "control": "1",
+        "id": 134,
+        "tx_mail": "endapp-des-pmuwebudg@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Gestor Comercial"
+    },
+    "id": 405,
+    "nombreDiagnostico": "hotel de zamora",
+    "nuevo_pds": 0,
+    "pds": {
+        "codigo": "DESPDS",
+        "control": "1",
+        "id": 133,
+        "tx_mail": "endapp-des-pmuwebudp@esp.e-corpnet.org",
+        "tx_nombre": "Prueba PdS"
+    },
+    "poblacion": {
+        "de_poblacion": "Altarejos",
+        "id": 546
+    },
+    "reasignado": 0,
+    "responsableComercial": {
+        "codigo": "DESRES",
+        "control": "1",
+        "id": 137,
+        "tx_mail": "endapp-des-pmuwebudr@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Responsable Comercial"
+    },
+    "resultadoDiagnostico": {
+        "acs_emision": 845703.0660355198,
+        "acs_euros": 210553.98759830836,
+        "acs_kwh": 4145603.264879999,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 308707.7993922551,
+        "cal_euros": 80432.0721050471,
+        "cal_kwh": 791558.4599801413,
+        "clasificacion": "*",
+        "clasificacion_futura": "*******",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 395408.45683700556,
+        "ee_consumo_kwn": 2617296.4368948834,
+        "ee_emision": 1020745.6103890045,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 606065.4044353139,
+        "facturacion_kwh": 6762899.701774882,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 210656.94759830835,
+        "gn_consumo_kwh": 4145603.264879999,
+        "gn_emision": 845703.0660355198,
+        "gn_kwh_entrada": 0,
+        "id": 526,
+        "ilu_emision": 4600.9713125376,
+        "ilu_euros": 1198.7570676601497,
+        "ilu_kwh": 11797.36233984,
+        "inversion": 0,
+        "ma1": 0,
+        "ma1_ahorro_economico": 34926.95602671546,
+        "ma1_ahorro_energetico": 343727.6549110087,
+        "ma1_inversion": 14340,
+        "ma1_retorno": "5 meses",
+        "ma2": 0,
+        "ma2_ahorro_economico": 37681.08321141208,
+        "ma2_ahorro_energetico": 370831.92582996096,
+        "ma2_inversion": 4500,
+        "ma2_retorno": "1 meses",
+        "mac1": 0,
+        "mac1_ahorro_economico": 8040.6049260875925,
+        "mac1_ahorro_energetico": 158311.69199602818,
+        "mac1_inversion": 1800,
+        "mac1_retorno": "3 meses",
+        "mac2": 1,
+        "mac2_ahorro_economico": 65941.89561997112,
+        "mac2_ahorro_energetico": 648955.8702024316,
+        "mac2_inversion": 1800,
+        "mac2_retorno": "0 meses",
+        "mac3": 0,
+        "mac3_ahorro_economico": 17463.47801335773,
+        "mac3_ahorro_energetico": 171863.82745550436,
+        "mac3_inversion": 75,
+        "mac3_retorno": "0 meses",
+        "mac4": 0,
+        "mac4_ahorro_economico": 210622.13189415736,
+        "mac4_ahorro_energetico": 2072801.6324399996,
+        "mac4_inversion": 3936576,
+        "mac4_retorno": "Superior a 5 años",
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 15.15,
+        "mc1_retorno": "0 meses",
+        "mc2": 1,
+        "mc2_ahorro_economico": 73973.3,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 9.04,
+        "mc2_retorno": "0 meses",
+        "mc3": 1,
+        "mc4": 1,
+        "mg1": 2,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 750,
+        "mg1_retorno": "0 meses",
+        "mi1": 2,
+        "mi1_ahorro_economico": 147.4922790981818,
+        "mi1_ahorro_energetico": 1451.52,
+        "mi1_inversion": 90,
+        "mi1_retorno": "7 meses",
+        "mi2": 1,
+        "mi2_ahorro_economico": 286.7905426909091,
+        "mi2_ahorro_energetico": 2822.4,
+        "mi2_inversion": 210,
+        "mi2_retorno": "1 meses",
+        "mi3": 0,
+        "mi3_ahorro_economico": 179.81356014902246,
+        "mi3_ahorro_energetico": 1769.604350976,
+        "mi3_inversion": 500,
+        "mi3_retorno": "2.8 años",
+        "mi4": 1,
+        "mi4_ahorro_economico": 13.427756086010112,
+        "mi4_ahorro_energetico": 132.146961408,
+        "mi4_inversion": 54,
+        "mi4_retorno": "4 años",
+        "mi5": 2,
+        "mi5_ahorro_economico": 119.87570676601496,
+        "mi5_ahorro_energetico": 1179.736233984,
+        "mi5_inversion": 375,
+        "mi5_retorno": "3.1 años",
+        "precalculo_consumo_ee": 2617296.4368948834,
+        "precalculo_consumo_gn": 4145603.264879999,
+        "ratio_establecimiento": 28296.651471861434,
+        "ratio_sector": 0,
+        "rc1": 1,
+        "rc2": 1,
+        "rc3": 1,
+        "re3": 1,
+        "ref_emision": 361561.1276842119,
+        "ref_euros": 94202.70802853018,
+        "ref_kwh": 927079.8145749023,
+        "res_emision": 345875.712,
+        "res_euros": 90115.96163665454,
+        "res_kwh": 886860.7999999999,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 140213,
+                "ahorroEnergetico": 651909,
+                "inversion": 2073
+            },
+            "ahorroEconomico": 140213,
+            "ahorroEnergetico": 651909,
+            "codigoPostal": "23421",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 6762899
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 6110990
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 606065
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 465852
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 28296
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 0
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 7,
+            "direccion": "hotel de zamora",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 395408,
+                    "kgco2": 1020745,
+                    "kwh": 2617296
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 210656,
+                    "kgco2": 845703,
+                    "kwh": 4145603
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 405,
+            "inversion": 2073,
+            "nombreDiagnostico": "hotel de zamora",
+            "poblacion": "Altarejos",
+            "provincia": "Cuenca",
+            "superficie": 239,
+            "titular": "hotel de zamora",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 210553,
+                    "kgco2": 845703,
+                    "kwh": 4145603
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 94202,
+                    "kgco2": 361561,
+                    "kwh": 927079
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 80432,
+                    "kgco2": 308707,
+                    "kwh": 791558
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 1198,
+                    "kgco2": 4600,
+                    "kwh": 11797
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 90115,
+                    "kgco2": 345875,
+                    "kwh": 886860
+                }
+            }
+        },
+        "rg1": 1,
+        "rg2": 1,
+        "rg3": 1,
+        "rg4": 1,
+        "rg5": 1,
+        "rg6": 1,
+        "rg7": 1,
+        "ri1": 1,
+        "ri2": 1,
+        "ri3": 1,
+        "ri4": 1,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 1,
+        "ro5": 1,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 1,
+        "rv8": 1,
+        "severidad": "Severidad Verano:Media; Severidad Invierno:Media",
+        "supTotal": 239
+    },
+    "segmento": {
+        "descNegocio": "Hotel/Hostal",
+        "id": 5
+    },
+    "situacionComercial": {
+        "de_descripcion": "Presupuesto Rechazado",
+        "id": 10
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Cerrado",
+        "de_paso_diag": 5,
+        "id": 5,
+        "porcentaje": 100
+    },
+    "solicitaPresupuesto": null,
+    "titular": "hotel de zamora",
+    "tlfContacto": "954321441"
+}, {
+    "codigo_postal": "12345",
+    "delegadoComercial": null,
+    "direccion": "adf",
+    "favorito": 0,
+    "fechaCreacion": 1410278440221,
+    "gestorComercial": null,
+    "id": 834,
+    "nombreDiagnostico": "12345",
+    "nuevo_pds": 1,
+    "pds": null,
+    "poblacion": {
+        "de_poblacion": "Besalú",
+        "id": 1233
+    },
+    "reasignado": 0,
+    "responsableComercial": null,
+    "resultadoDiagnostico": {
+        "acs_emision": 0,
+        "acs_euros": 0,
+        "acs_kwh": 0,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 0,
+        "cal_euros": 0,
+        "cal_kwh": 0,
+        "clasificacion": " ",
+        "clasificacion_futura": " ",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 0,
+        "ee_consumo_kwn": 0,
+        "ee_emision": 0,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 0,
+        "facturacion_kwh": 0,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 0,
+        "gn_consumo_kwh": 0,
+        "gn_emision": 0,
+        "gn_kwh_entrada": 0,
+        "id": 896,
+        "ilu_emision": 0,
+        "ilu_euros": 0,
+        "ilu_kwh": 0,
+        "inversion": 0,
+        "ma1": 0,
+        "ma1_ahorro_economico": 0,
+        "ma1_ahorro_energetico": 0,
+        "ma1_inversion": 0,
+        "ma1_retorno": null,
+        "ma2": 0,
+        "ma2_ahorro_economico": 0,
+        "ma2_ahorro_energetico": 0,
+        "ma2_inversion": 0,
+        "ma2_retorno": null,
+        "mac1": 0,
+        "mac1_ahorro_economico": 0,
+        "mac1_ahorro_energetico": 0,
+        "mac1_inversion": 0,
+        "mac1_retorno": null,
+        "mac2": 0,
+        "mac2_ahorro_economico": 0,
+        "mac2_ahorro_energetico": 0,
+        "mac2_inversion": 0,
+        "mac2_retorno": null,
+        "mac3": 0,
+        "mac3_ahorro_economico": 0,
+        "mac3_ahorro_energetico": 0,
+        "mac3_inversion": 0,
+        "mac3_retorno": null,
+        "mac4": null,
+        "mac4_ahorro_economico": 0,
+        "mac4_ahorro_energetico": 0,
+        "mac4_inversion": 0,
+        "mac4_retorno": null,
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 0,
+        "mc1_retorno": null,
+        "mc2": 0,
+        "mc2_ahorro_economico": 0,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 0,
+        "mc2_retorno": null,
+        "mc3": 0,
+        "mc4": 0,
+        "mg1": 0,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 0,
+        "mg1_retorno": null,
+        "mi1": 0,
+        "mi1_ahorro_economico": 0,
+        "mi1_ahorro_energetico": 0,
+        "mi1_inversion": 0,
+        "mi1_retorno": null,
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": null,
+        "mi3": 0,
+        "mi3_ahorro_economico": 0,
+        "mi3_ahorro_energetico": 0,
+        "mi3_inversion": 0,
+        "mi3_retorno": null,
+        "mi4": 0,
+        "mi4_ahorro_economico": 0,
+        "mi4_ahorro_energetico": 0,
+        "mi4_inversion": 0,
+        "mi4_retorno": null,
+        "mi5": 0,
+        "mi5_ahorro_economico": 0,
+        "mi5_ahorro_energetico": 0,
+        "mi5_inversion": 0,
+        "mi5_retorno": null,
+        "precalculo_consumo_ee": 0,
+        "precalculo_consumo_gn": 0,
+        "ratio_establecimiento": 0,
+        "ratio_sector": 0,
+        "rc1": 0,
+        "rc2": 0,
+        "rc3": 0,
+        "re3": 0,
+        "ref_emision": 0,
+        "ref_euros": 0,
+        "ref_kwh": 0,
+        "res_emision": 0,
+        "res_euros": 0,
+        "res_kwh": 0,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 0,
+                "ahorroEnergetico": 0,
+                "inversion": 0
+            },
+            "ahorroEconomico": 0,
+            "ahorroEnergetico": 0,
+            "codigoPostal": "12345",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 0
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 0
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 0
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 0
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 0
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 0
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 1,
+            "direccion": "adf",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 834,
+            "inversion": 0,
+            "nombreDiagnostico": "12345",
+            "poblacion": "Besalú",
+            "provincia": "Girona",
+            "superficie": null,
+            "titular": "adf",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            }
+        },
+        "rg1": 0,
+        "rg2": 0,
+        "rg3": 0,
+        "rg4": 0,
+        "rg5": 0,
+        "rg6": 0,
+        "rg7": 0,
+        "ri1": 0,
+        "ri2": 0,
+        "ri3": 0,
+        "ri4": 0,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 0,
+        "ro5": 0,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 0,
+        "rv8": 0,
+        "severidad": null,
+        "supTotal": null
+    },
+    "segmento": {
+        "descNegocio": "Bar-Cafetería",
+        "id": 6
+    },
+    "situacionComercial": {
+        "de_descripcion": "Pendiente de Asignar PdS",
+        "id": 1
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Abierto",
+        "de_paso_diag": 2,
+        "id": 2,
+        "porcentaje": 20
+    },
+    "solicitaPresupuesto": null,
+    "titular": "adf",
+    "tlfContacto": null
+}, {
+    "codigo_postal": "12345",
+    "delegadoComercial": {
+        "codigo": "DESGES",
+        "control": "1",
+        "id": 136,
+        "tx_mail": "endapp-des-pmuwebudd@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Delegado Comercial"
+    },
+    "direccion": "tintorería de zamora",
+    "favorito": 0,
+    "fechaCreacion": 1408523276140,
+    "gestorComercial": {
+        "codigo": "DESGC",
+        "control": "1",
+        "id": 134,
+        "tx_mail": "endapp-des-pmuwebudg@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Gestor Comercial"
+    },
+    "id": 481,
+    "nombreDiagnostico": "tintorería de zamora",
+    "nuevo_pds": 0,
+    "pds": {
+        "codigo": "DESPDS",
+        "control": "1",
+        "id": 133,
+        "tx_mail": "endapp-des-pmuwebudp@esp.e-corpnet.org",
+        "tx_nombre": "Prueba PdS"
+    },
+    "poblacion": {
+        "de_poblacion": "Camargo",
+        "id": 1598
+    },
+    "reasignado": 0,
+    "responsableComercial": null,
+    "resultadoDiagnostico": {
+        "acs_emision": 8.270819699999999,
+        "acs_euros": 2.7207975392128163,
+        "acs_kwh": 21.207229999999996,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 187.00824309114319,
+        "cal_euros": 61.518880361386024,
+        "cal_kwh": 479.50831561831586,
+        "clasificacion": "*",
+        "clasificacion_futura": "*******",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 4598.489708175,
+        "ee_consumo_kwn": 25183.27554561832,
+        "ee_emision": 9821.477462791143,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 4598.489708175,
+        "facturacion_kwh": 25183.27554561832,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 0,
+        "gn_consumo_kwh": 0,
+        "gn_emision": 0,
+        "gn_kwh_entrada": 0,
+        "id": 581,
+        "ilu_emision": 188.6976,
+        "ilu_euros": 62.07461707034484,
+        "ilu_kwh": 483.84,
+        "inversion": 0,
+        "ma1": 2,
+        "ma1_ahorro_economico": 12.303776072277207,
+        "ma1_ahorro_energetico": 95.90166312366318,
+        "ma1_inversion": 2280,
+        "ma1_retorno": "Superior a 5 años",
+        "ma2": 1,
+        "ma2_ahorro_economico": 0,
+        "ma2_ahorro_energetico": 0,
+        "ma2_inversion": 300,
+        "ma2_retorno": "0 meses",
+        "mac1": 2,
+        "mac1_ahorro_economico": 5.5151809330964365,
+        "mac1_ahorro_energetico": 95.90166312366313,
+        "mac1_inversion": 1800,
+        "mac1_retorno": "Superior a 5 años",
+        "mac2": 0,
+        "mac2_ahorro_economico": 0,
+        "mac2_ahorro_energetico": 0,
+        "mac2_inversion": 340,
+        "mac2_retorno": "0 meses",
+        "mac3": 0,
+        "mac3_ahorro_economico": 6.151888036138604,
+        "mac3_ahorro_energetico": 47.95083156183159,
+        "mac3_inversion": 75,
+        "mac3_retorno": "Superior a 5 años",
+        "mac4": 0,
+        "mac4_ahorro_economico": 1.3603987696064082,
+        "mac4_ahorro_energetico": 10.603614999999998,
+        "mac4_inversion": 29.2,
+        "mac4_retorno": "Superior a 5 años",
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 15.15,
+        "mc1_retorno": "0 meses",
+        "mc2": 0,
+        "mc2_ahorro_economico": 0,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 9.04,
+        "mc2_retorno": "0 meses",
+        "mc3": 1,
+        "mc4": 0,
+        "mg1": 2,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 750,
+        "mg1_retorno": "0 meses",
+        "mi1": 0,
+        "mi1_ahorro_economico": 0,
+        "mi1_ahorro_energetico": 0,
+        "mi1_inversion": 0,
+        "mi1_retorno": "0.0",
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": "0.0",
+        "mi3": 1,
+        "mi3_ahorro_economico": 9.311192560551726,
+        "mi3_ahorro_energetico": 72.576,
+        "mi3_inversion": 0,
+        "mi3_retorno": "0 meses",
+        "mi4": 1,
+        "mi4_ahorro_economico": 12.41492341406897,
+        "mi4_ahorro_energetico": 96.768,
+        "mi4_inversion": 10,
+        "mi4_retorno": "10 meses",
+        "mi5": 1,
+        "mi5_ahorro_economico": 6.207461707034485,
+        "mi5_ahorro_energetico": 48.384,
+        "mi5_inversion": 0,
+        "mi5_retorno": "0 meses",
+        "precalculo_consumo_ee": 25183.27554561832,
+        "precalculo_consumo_gn": 0,
+        "ratio_establecimiento": 662.7177775162716,
+        "ratio_sector": 394.9474165523548,
+        "rc1": 1,
+        "rc2": 1,
+        "rc3": 0,
+        "re3": 1,
+        "ref_emision": 0,
+        "ref_euros": 0,
+        "ref_kwh": 0,
+        "res_emision": 9437.500800000002,
+        "res_euros": 3104.593000976553,
+        "res_kwh": 24198.72,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 27,
+                "ahorroEnergetico": 216,
+                "inversion": 310
+            },
+            "ahorroEconomico": 27,
+            "ahorroEnergetico": 216,
+            "codigoPostal": "12345",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 25183
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 24967
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 4598
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 4571
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 662
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 394
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 7,
+            "direccion": "tintorería de zamora",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 4598,
+                    "kgco2": 9821,
+                    "kwh": 25183
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 481,
+            "inversion": 310,
+            "nombreDiagnostico": "tintorería de zamora",
+            "poblacion": "Camargo",
+            "provincia": "Santander",
+            "superficie": 38,
+            "titular": "tintorería de zamora",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 2,
+                    "kgco2": 8,
+                    "kwh": 21
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 61,
+                    "kgco2": 187,
+                    "kwh": 479
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 62,
+                    "kgco2": 188,
+                    "kwh": 483
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 3104,
+                    "kgco2": 9437,
+                    "kwh": 24198
+                }
+            }
+        },
+        "rg1": 1,
+        "rg2": 1,
+        "rg3": 1,
+        "rg4": 1,
+        "rg5": 1,
+        "rg6": 1,
+        "rg7": 1,
+        "ri1": 1,
+        "ri2": 1,
+        "ri3": 1,
+        "ri4": 1,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 1,
+        "ro5": 1,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 1,
+        "rv8": 1,
+        "severidad": "Severidad Verano:Moderada; Severidad Invierno:Media",
+        "supTotal": 38
+    },
+    "segmento": {
+        "descNegocio": "Tintorería",
+        "id": 8
+    },
+    "situacionComercial": {
+        "de_descripcion": "Asignada a PdS",
+        "id": 2
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Cerrado",
+        "de_paso_diag": 5,
+        "id": 5,
+        "porcentaje": 100
+    },
+    "solicitaPresupuesto": null,
+    "titular": "tintorería de zamora",
+    "tlfContacto": null
+}, {
+    "codigo_postal": "34222",
+    "delegadoComercial": null,
+    "direccion": "tienda de zamora",
+    "favorito": 0,
+    "fechaCreacion": 1407941886000,
+    "gestorComercial": {
+        "codigo": "DESGC",
+        "control": "1",
+        "id": 134,
+        "tx_mail": "endapp-des-pmuwebudg@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Gestor Comercial"
+    },
+    "id": 418,
+    "nombreDiagnostico": "tienda de zamora",
+    "nuevo_pds": 0,
+    "pds": {
+        "codigo": "DESPDS",
+        "control": "1",
+        "id": 133,
+        "tx_mail": "endapp-des-pmuwebudp@esp.e-corpnet.org",
+        "tx_nombre": "Prueba PdS"
+    },
+    "poblacion": {
+        "de_poblacion": "Burgos",
+        "id": 1437
+    },
+    "reasignado": 0,
+    "responsableComercial": {
+        "codigo": "DESRES",
+        "control": "1",
+        "id": 137,
+        "tx_mail": "endapp-des-pmuwebudr@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Responsable Comercial"
+    },
+    "resultadoDiagnostico": {
+        "acs_emision": 0,
+        "acs_euros": 0,
+        "acs_kwh": 0,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 0,
+        "cal_euros": 0,
+        "cal_kwh": 0,
+        "clasificacion": "*",
+        "clasificacion_futura": "*******",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 5012.168541610246,
+        "ee_consumo_kwn": 22907.07456,
+        "ee_emision": 8933.759078400002,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 5012.168541610246,
+        "facturacion_kwh": 22907.07456,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 0,
+        "gn_consumo_kwh": 0,
+        "gn_emision": 0,
+        "gn_kwh_entrada": 0,
+        "id": 539,
+        "ilu_emision": 532.4102784,
+        "ilu_euros": 175.14353206397797,
+        "ilu_kwh": 1365.15456,
+        "inversion": 0,
+        "ma1": 0,
+        "ma1_ahorro_economico": 0,
+        "ma1_ahorro_energetico": 0,
+        "ma1_inversion": 1740,
+        "ma1_retorno": "0 meses",
+        "ma2": 0,
+        "ma2_ahorro_economico": 0,
+        "ma2_ahorro_energetico": 0,
+        "ma2_inversion": 300,
+        "ma2_retorno": "0 meses",
+        "mac1": 0,
+        "mac1_ahorro_economico": 0,
+        "mac1_ahorro_energetico": 0,
+        "mac1_inversion": 1800,
+        "mac1_retorno": "0 meses",
+        "mac2": 0,
+        "mac2_ahorro_economico": 0,
+        "mac2_ahorro_energetico": 0,
+        "mac2_inversion": 320,
+        "mac2_retorno": "0 meses",
+        "mac3": 0,
+        "mac3_ahorro_economico": 0,
+        "mac3_ahorro_energetico": 0,
+        "mac3_inversion": 75,
+        "mac3_retorno": "0 meses",
+        "mac4": 0,
+        "mac4_ahorro_economico": 0,
+        "mac4_ahorro_energetico": 0,
+        "mac4_inversion": 29.2,
+        "mac4_retorno": "0 meses",
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 15.15,
+        "mc1_retorno": "0 meses",
+        "mc2": 0,
+        "mc2_ahorro_economico": 0,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 9.04,
+        "mc2_retorno": "0 meses",
+        "mc3": 0,
+        "mc4": 0,
+        "mg1": 2,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 750,
+        "mg1_retorno": "0 meses",
+        "mi1": 1,
+        "mi1_ahorro_economico": 155.1865426758621,
+        "mi1_ahorro_energetico": 1209.6,
+        "mi1_inversion": 37.5,
+        "mi1_retorno": "3 meses",
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": "0.0",
+        "mi3": 0,
+        "mi3_ahorro_economico": 26.271529809596696,
+        "mi3_ahorro_energetico": 204.773184,
+        "mi3_inversion": 0,
+        "mi3_retorno": "0 meses",
+        "mi4": 0,
+        "mi4_ahorro_economico": 0,
+        "mi4_ahorro_energetico": 0,
+        "mi4_inversion": 0,
+        "mi4_retorno": "0.0",
+        "mi5": 1,
+        "mi5_ahorro_economico": 17.5143532063978,
+        "mi5_ahorro_energetico": 136.515456,
+        "mi5_inversion": 0,
+        "mi5_retorno": "0 meses",
+        "precalculo_consumo_ee": 22907.07456,
+        "precalculo_consumo_gn": 0,
+        "ratio_establecimiento": 789.8991227586207,
+        "ratio_sector": 571.8518518518518,
+        "rc1": 1,
+        "rc2": 1,
+        "rc3": 0,
+        "re3": 1,
+        "ref_emision": 0,
+        "ref_euros": 0,
+        "ref_kwh": 0,
+        "res_emision": 8401.348800000002,
+        "res_euros": 2763.73684474207,
+        "res_kwh": 21541.920000000002,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 172,
+                "ahorroEnergetico": 1345,
+                "inversion": 37
+            },
+            "ahorroEconomico": 172,
+            "ahorroEnergetico": 1345,
+            "codigoPostal": "34222",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 22907
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 21562
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 5012
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 4840
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 789
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 571
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 7,
+            "direccion": "tienda de zamora",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 5012,
+                    "kgco2": 8933,
+                    "kwh": 22907
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 418,
+            "inversion": 37,
+            "nombreDiagnostico": "tienda de zamora",
+            "poblacion": "Burgos",
+            "provincia": "Burgos",
+            "superficie": 29,
+            "titular": "tienda de zamora",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 175,
+                    "kgco2": 532,
+                    "kwh": 1365
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 2763,
+                    "kgco2": 8401,
+                    "kwh": 21541
+                }
+            }
+        },
+        "rg1": 1,
+        "rg2": 1,
+        "rg3": 1,
+        "rg4": 1,
+        "rg5": 1,
+        "rg6": 1,
+        "rg7": 1,
+        "ri1": 1,
+        "ri2": 1,
+        "ri3": 1,
+        "ri4": 1,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 1,
+        "ro5": 1,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 1,
+        "rv8": 1,
+        "severidad": "Severidad Verano:Media; Severidad Invierno:Alta",
+        "supTotal": 29
+    },
+    "segmento": {
+        "descNegocio": "Tienda Alimentación",
+        "id": 2
+    },
+    "situacionComercial": {
+        "de_descripcion": "No puedo realizar / Reasignación",
+        "id": 11
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Cerrado",
+        "de_paso_diag": 5,
+        "id": 5,
+        "porcentaje": 100
+    },
+    "solicitaPresupuesto": null,
+    "titular": "tienda de zamora",
+    "tlfContacto": null
+}, {
+    "codigo_postal": "28056",
+    "delegadoComercial": {
+        "codigo": "DESGES",
+        "control": "1",
+        "id": 136,
+        "tx_mail": "endapp-des-pmuwebudd@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Delegado Comercial"
+    },
+    "direccion": "oficina de zamora",
+    "favorito": 0,
+    "fechaCreacion": 1407941409000,
+    "gestorComercial": {
+        "codigo": "DESGC",
+        "control": "1",
+        "id": 134,
+        "tx_mail": "endapp-des-pmuwebudg@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Gestor Comercial"
+    },
+    "id": 417,
+    "nombreDiagnostico": "oficina de zamora",
+    "nuevo_pds": 0,
+    "pds": {
+        "codigo": "DESPDS",
+        "control": "1",
+        "id": 133,
+        "tx_mail": "endapp-des-pmuwebudp@esp.e-corpnet.org",
+        "tx_nombre": "Prueba PdS"
+    },
+    "poblacion": {
+        "de_poblacion": "Alcobendas",
+        "id": 257
+    },
+    "reasignado": 0,
+    "responsableComercial": {
+        "codigo": "DESRES",
+        "control": "1",
+        "id": 137,
+        "tx_mail": "endapp-des-pmuwebudr@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Responsable Comercial"
+    },
+    "resultadoDiagnostico": {
+        "acs_emision": 334.96819784999997,
+        "acs_euros": 115.19091426708947,
+        "acs_kwh": 858.8928149999998,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 287.5410546376768,
+        "cal_euros": 98.88137795059974,
+        "cal_kwh": 737.2847554812225,
+        "clasificacion": "*",
+        "clasificacion_futura": "*******",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 6023.171535839718,
+        "ee_consumo_kwn": 22318.081956687147,
+        "ee_emision": 8704.051963107988,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 6023.171535839718,
+        "facturacion_kwh": 22318.081956687147,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 0,
+        "gn_consumo_kwh": 0,
+        "gn_emision": 0,
+        "gn_kwh_entrada": 0,
+        "id": 538,
+        "ilu_emision": 576.576,
+        "ilu_euros": 198.27648418791944,
+        "ilu_kwh": 1478.4,
+        "inversion": 0,
+        "ma1": 0,
+        "ma1_ahorro_economico": 28.719220599554824,
+        "ma1_ahorro_energetico": 214.13782833743005,
+        "ma1_inversion": 6120,
+        "ma1_retorno": "Superior a 5 años",
+        "ma2": 0,
+        "ma2_ahorro_economico": 17.88589001886975,
+        "ma2_ahorro_energetico": 133.36175448237105,
+        "ma2_inversion": 1500,
+        "ma2_retorno": "Superior a 5 años",
+        "mac1": 2,
+        "mac1_ahorro_economico": 8.480059038078103,
+        "mac1_ahorro_energetico": 147.45695109624444,
+        "mac1_inversion": 1800,
+        "mac1_retorno": "Superior a 5 años",
+        "mac2": 2,
+        "mac2_ahorro_economico": 31.300307533022053,
+        "mac2_ahorro_energetico": 233.3830703441493,
+        "mac2_inversion": 2040,
+        "mac2_retorno": "Superior a 5 años",
+        "mac3": 0,
+        "mac3_ahorro_economico": 14.359610299777412,
+        "mac3_ahorro_energetico": 107.06891416871503,
+        "mac3_inversion": 75,
+        "mac3_retorno": "Superior a 5 años",
+        "mac4": 0,
+        "mac4_ahorro_economico": 57.595457133544734,
+        "mac4_ahorro_energetico": 429.4464074999999,
+        "mac4_inversion": 1095,
+        "mac4_retorno": "Superior a 5 años",
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 15.15,
+        "mc1_retorno": "0 meses",
+        "mc2": 0,
+        "mc2_ahorro_economico": 0,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 9.04,
+        "mc2_retorno": "0 meses",
+        "mc3": 1,
+        "mc4": 1,
+        "mg1": 1,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 750,
+        "mg1_retorno": "0 meses",
+        "mi1": 0,
+        "mi1_ahorro_economico": 0,
+        "mi1_ahorro_energetico": 0,
+        "mi1_inversion": 0,
+        "mi1_retorno": "0.0",
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": "0.0",
+        "mi3": 1,
+        "mi3_ahorro_economico": 29.741472628187918,
+        "mi3_ahorro_energetico": 221.76000000000002,
+        "mi3_inversion": 0,
+        "mi3_retorno": "0 meses",
+        "mi4": 1,
+        "mi4_ahorro_economico": 25.492690824161073,
+        "mi4_ahorro_energetico": 190.08000000000004,
+        "mi4_inversion": 40,
+        "mi4_retorno": "1.6 años",
+        "mi5": 1,
+        "mi5_ahorro_economico": 19.82764841879194,
+        "mi5_ahorro_energetico": 147.84,
+        "mi5_inversion": 0,
+        "mi5_retorno": "0 meses",
+        "precalculo_consumo_ee": 22318.081956687147,
+        "precalculo_consumo_gn": 0,
+        "ratio_establecimiento": 218.80472506556026,
+        "ratio_sector": 61.31687242798353,
+        "rc1": 1,
+        "rc2": 1,
+        "rc3": 1,
+        "re3": 1,
+        "ref_emision": 130.02771062031178,
+        "ref_euros": 44.71472504717437,
+        "ref_kwh": 333.4043862059276,
+        "res_emision": 7374.938999999999,
+        "res_euros": 2536.139166424496,
+        "res_kwh": 18910.1,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 73,
+                "ahorroEnergetico": 558,
+                "inversion": 790
+            },
+            "ahorroEconomico": 73,
+            "ahorroEnergetico": 558,
+            "codigoPostal": "28056",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 22318
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 21760
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 6023
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 5950
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 218
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 61
+                }
+            },
+            "comportamientoEnergetico": 1,
+            "comportamientoEnergeticoActual": 1,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 7,
+            "direccion": "oficina de zamora",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 6023,
+                    "kgco2": 8704,
+                    "kwh": 22318
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 0,
+                    "kgco2": 0,
+                    "kwh": 0
+                }
+            },
+            "horarioApertura": 5,
+            "idDiagnostico": 417,
+            "inversion": 790,
+            "nombreDiagnostico": "oficina de zamora",
+            "poblacion": "Alcobendas",
+            "provincia": "Madrid",
+            "superficie": 102,
+            "titular": "oficina de zamora",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 115,
+                    "kgco2": 334,
+                    "kwh": 858
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 44,
+                    "kgco2": 130,
+                    "kwh": 333
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 98,
+                    "kgco2": 287,
+                    "kwh": 737
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 198,
+                    "kgco2": 576,
+                    "kwh": 1478
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 2536,
+                    "kgco2": 7374,
+                    "kwh": 18910
+                }
+            }
+        },
+        "rg1": 1,
+        "rg2": 1,
+        "rg3": 1,
+        "rg4": 1,
+        "rg5": 1,
+        "rg6": 1,
+        "rg7": 1,
+        "ri1": 1,
+        "ri2": 1,
+        "ri3": 1,
+        "ri4": 1,
+        "ro1": 1,
+        "ro2": 1,
+        "ro3": 1,
+        "ro4": 1,
+        "ro5": 1,
+        "rv1": 0,
+        "rv2": 0,
+        "rv3": 0,
+        "rv4": 0,
+        "rv5": 0,
+        "rv6": 0,
+        "rv7": 1,
+        "rv8": 1,
+        "severidad": "Severidad Verano:Media; Severidad Invierno:Media",
+        "supTotal": 102
+    },
+    "segmento": {
+        "descNegocio": "Oficina",
+        "id": 4
+    },
+    "situacionComercial": {
+        "de_descripcion": "Asignada a PdS",
+        "id": 2
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Cerrado",
+        "de_paso_diag": 5,
+        "id": 5,
+        "porcentaje": 100
+    },
+    "solicitaPresupuesto": null,
+    "titular": "oficina de zamora",
+    "tlfContacto": null
+}, {
+    "codigo_postal": "12345",
+    "delegadoComercial": null,
+    "direccion": "restaurante de zamora",
+    "favorito": 0,
+    "fechaCreacion": 1407921702000,
+    "gestorComercial": {
+        "codigo": "DESGC",
+        "control": "1",
+        "id": 134,
+        "tx_mail": "endapp-des-pmuwebudg@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Gestor Comercial"
+    },
+    "id": 413,
+    "nombreDiagnostico": "restaurante de zamora",
+    "nuevo_pds": 0,
+    "pds": {
+        "codigo": "DESPDS",
+        "control": "1",
+        "id": 133,
+        "tx_mail": "endapp-des-pmuwebudp@esp.e-corpnet.org",
+        "tx_nombre": "Prueba PdS"
+    },
+    "poblacion": {
+        "de_poblacion": "Alatoz",
+        "id": 147
+    },
+    "reasignado": 0,
+    "responsableComercial": {
+        "codigo": "DESRES",
+        "control": "1",
+        "id": 137,
+        "tx_mail": "endapp-des-pmuwebudr@esp.e-corpnet.org",
+        "tx_nombre": "Prueba Responsable Comercial"
+    },
+    "resultadoDiagnostico": {
+        "acs_emision": 4376.917785239999,
+        "acs_euros": 1167.0680195704754,
+        "acs_kwh": 11222.866115999997,
+        "ahorro_economico": 0,
+        "ahorro_energetico": 0,
+        "cal_emision": 1588.6538836877257,
+        "cal_euros": 423.60108934893196,
+        "cal_kwh": 4073.471496635194,
+        "clasificacion": "****",
+        "clasificacion_futura": "*******",
+        "de_xml_informar": null,
+        "ee_consumo_coherente": null,
+        "ee_consumo_euros": 11935.239100660658,
+        "ee_consumo_kwn": 86603.7462282829,
+        "ee_emision": 33775.46102903033,
+        "ee_kwh_entrada": 0,
+        "facturacion_euros": 12887.425499260658,
+        "facturacion_kwh": 102263.7462282829,
+        "gn_consumo_coherente": null,
+        "gn_consumo_euros": 952.1863986,
+        "gn_consumo_kwh": 15660,
+        "gn_emision": 3194.64,
+        "gn_kwh_entrada": 0,
+        "id": 534,
+        "ilu_emision": 1878.816715776,
+        "ilu_euros": 500.97054850125966,
+        "ilu_kwh": 4817.4787584,
+        "inversion": 0,
+        "ma1": 2,
+        "ma1_ahorro_economico": 119.19258969741233,
+        "ma1_ahorro_energetico": 1146.190670776581,
+        "ma1_inversion": 10380,
+        "ma1_retorno": "Superior a 5 años",
+        "ma2": 2,
+        "ma2_ahorro_economico": 68.94474365525186,
+        "ma2_ahorro_energetico": 662.9927428990845,
+        "ma2_inversion": 4300,
+        "ma2_retorno": "Superior a 5 años",
+        "mac1": 0,
+        "mac1_ahorro_economico": 46.852018198651855,
+        "mac1_ahorro_energetico": 814.6942993270386,
+        "mac1_inversion": 1800,
+        "mac1_retorno": "Superior a 5 años",
+        "mac2": 2,
+        "mac2_ahorro_economico": 120.65330139669072,
+        "mac2_ahorro_energetico": 1160.2373000733976,
+        "mac2_inversion": 2100,
+        "mac2_retorno": "Superior a 5 años",
+        "mac3": 0,
+        "mac3_ahorro_economico": 59.596294848706165,
+        "mac3_ahorro_energetico": 573.0953353882906,
+        "mac3_inversion": 75,
+        "mac3_retorno": "1.3 años",
+        "mac4": 0,
+        "mac4_ahorro_economico": 583.5340097852377,
+        "mac4_ahorro_energetico": 5611.433057999999,
+        "mac4_inversion": 13797,
+        "mac4_retorno": "Superior a 5 años",
+        "mc1": 0,
+        "mc1_ahorro_economico": 0,
+        "mc1_ahorro_energetico": 0,
+        "mc1_inversion": 15.15,
+        "mc1_retorno": "0 meses",
+        "mc2": 1,
+        "mc2_ahorro_economico": 2003.61,
+        "mc2_ahorro_energetico": 0,
+        "mc2_inversion": 9.04,
+        "mc2_retorno": "0 meses",
+        "mc3": 1,
+        "mc4": 1,
+        "mg1": 2,
+        "mg1_ahorro_economico": 0,
+        "mg1_ahorro_energetico": 0,
+        "mg1_inversion": 750,
+        "mg1_retorno": "0 meses",
+        "mi1": 1,
+        "mi1_ahorro_economico": 209.64423019354842,
+        "mi1_ahorro_energetico": 2016,
+        "mi1_inversion": 75,
+        "mi1_retorno": "4 meses",
+        "mi2": 0,
+        "mi2_ahorro_economico": 0,
+        "mi2_ahorro_energetico": 0,
+        "mi2_inversion": 0,
+        "mi2_retorno": "0.0",
+        "mi3": 0,
+        "mi3_ahorro_economico": 75.14558227518894,
+        "mi3_ahorro_energetico": 722.6218137599999,
+        "mi3_inversion": 200,
+        "mi3_retorno": "2.7 años",
+        "mi4": 1,
+        "mi4_ahorro_economico": 14.76411943945778,
+        "mi4_ahorro_energetico": 141.97607424,
+        "mi4_inversion": 20,
+        "mi4_retorno": "1.4 años",
+        "mi5": 1,
+        "mi5_ahorro_economico": 50.09705485012597,
+        "mi5_ahorro_energetico": 481.74787584,
+        "mi5_inversion": 150,
+        "mi5_retorno": "3 años",
+        "precalculo_consumo_ee": 86603.7462282829,
+        "precalculo_consumo_gn": 15660,
+        "ratio_establecimiento": 591.1199203946989,
+        "ratio_sector": 594.4215820759031,
+        "rc1": 1,
+        "rc2": 1,
+        "rc3": 1,
+        "re3": 1,
+        "ref_emision": 646.4179243266074,
+        "ref_euros": 172.36185913812963,
+        "ref_kwh": 1657.481857247711,
+        "res_emision": 28479.294719999998,
+        "res_euros": 7642.525214335743,
+        "res_kwh": 80492.448,
+        "resultadoAngular": {
+            "ahorro": {
+                "ahorroEconomico": 2276,
+                "ahorroEnergetico": 2638,
+                "inversion": 254
+            },
+            "ahorroEconomico": 2276,
+            "ahorroEnergetico": 2638,
+            "codigoPostal": "12345",
+            "comparativaConsumo": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 102263
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 99625
+                }
+            },
+            "comparativaConsumoAnio": {
+                "actual": {
+                    "desc": "Actual",
+                    "euros": 12887
+                },
+                "previsto": {
+                    "desc": "Previsto",
+                    "euros": 10611
+                }
+            },
+            "comparativaSector": {
+                "establecimiento": {
+                    "desc": "Tu establecimiento",
+                    "euros": 591
+                },
+                "sector": {
+                    "desc": "Sector",
+                    "euros": 594
+                }
+            },
+            "comportamientoEnergetico": 4,
+            "comportamientoEnergeticoActual": 4,
+            "comportamientoEnergeticoMax": 7,
+            "comportamientoEnergeticoPrevisto": 7,
+            "direccion": "restaurante de zamora",
+            "energiasEmpleadas": {
+                "energiaElectrica": {
+                    "desc": "Energía eléctrica",
+                    "euros": 11935,
+                    "kgco2": 33775,
+                    "kwh": 86603
+                },
+                "gasNatural": {
+                    "desc": "Gas Natural",
+                    "euros": 952,
+                    "kgco2": 3194,
+                    "kwh": 15660
+                }
+            },
+            "horarioApertura": 7,
+            "idDiagnostico": 413,
+            "inversion": 254,
+            "nombreDiagnostico": "restaurante de zamora",
+            "poblacion": "Alatoz",
+            "provincia": "Albacete",
+            "superficie": 173,
+            "titular": "restaurante de zamora",
+            "usos": {
+                "aguaCaliente": {
+                    "desc": "Agua caliente sanitaria",
+                    "euros": 1167,
+                    "kgco2": 4376,
+                    "kwh": 11222
+                },
+                "aireAcondicionado": {
+                    "desc": "Aire acondicionado",
+                    "euros": 172,
+                    "kgco2": 646,
+                    "kwh": 1657
+                },
+                "calefaccion": {
+                    "desc": "Calefacción",
+                    "euros": 423,
+                    "kgco2": 1588,
+                    "kwh": 4073
+                },
+                "iluminacion": {
+                    "desc": "Iluminación",
+                    "euros": 500,
+                    "kgco2": 1878,
+                    "kwh": 4817
+                },
+                "resto": {
+                    "desc": "Resto",
+                    "euros": 7642,
+                    "kgco2": 28479,
+                    "kwh": 80492
+                }
+            }
+        },
+        "rg1": 1,
+        "rg2": 1,
+        "rg3": 1,
+        "rg4": 1,
+        "rg5": 1,
+        "rg6": 1,
+        "rg7": 1,
+        "ri1": 1,
+        "ri2": 1,
+        "ri3": 1,
+        "ri4": 1,
+        "ro1": 0,
+        "ro2": 0,
+        "ro3": 0,
+        "ro4": 1,
+        "ro5": 1,
+        "rv1": 1,
+        "rv2": 1,
+        "rv3": 1,
+        "rv4": 1,
+        "rv5": 1,
+        "rv6": 1,
+        "rv7": 1,
+        "rv8": 1,
+        "severidad": "Severidad Verano:Media; Severidad Invierno:Media",
+        "supTotal": 173
+    },
+    "segmento": {
+        "descNegocio": "Restaurante",
+        "id": 7
+    },
+    "situacionComercial": {
+        "de_descripcion": "Asignada a PdS",
+        "id": 2
+    },
+    "situacionDiagnostico": {
+        "de_descripcion": "Diagnóstico Cerrado",
+        "de_paso_diag": 5,
+        "id": 5,
+        "porcentaje": 100
+    },
+    "solicitaPresupuesto": null,
+    "titular": "restaurante de zamora",
+    "tlfContacto": null
+}]

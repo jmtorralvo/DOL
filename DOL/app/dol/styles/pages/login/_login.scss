@@ -1,0 +1,27 @@
+.wrapper-login{
+	margin-top: 80px;
+	margin-bottom: 45px;
+}
+.texto-introduccion{
+	font-family: 'Open Sans Bold';
+	margin-bottom: 15px;
+}
+.listado-con-iconos{
+	list-style-type: none;
+	padding-left: 0;
+
+	>li{
+		margin-bottom: 15px;
+	}
+
+	.texto {
+		display: inline-block;
+		width: 65%;
+		vertical-align: middle;
+		margin: 0;
+	}
+	.icono {
+		min-width: 100px;
+		margin-right: 15px;
+	}
+}

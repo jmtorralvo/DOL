@@ -1,0 +1,22 @@
+{
+    "mail": "avicente@indra.es",
+    "perfilUsuario": "USR-01",
+    "urlsAccesibles": [{
+        "url": "/dol/formulario-diagnostico/negocio-y-titular"
+    }, {
+        "url": "/dol/formulario-diagnostico/datos-establecimiento"
+    }, {
+        "url": "/dol/formulario-diagnostico/agua-caliente-climatizacion-iluminacion"
+    }, {
+        "url": "/dol/formulario-diagnostico/contrato-de-energia"
+    }, {
+        "url": "/dol/formulario-diagnostico/resultado"
+    }, {
+        "url": "/dol/mis-diagnosticos"
+    }, {
+        "url": "/dol/cambio-contraseña"
+    },
+    {
+        "url": "/dol/formulario-diagnostico"
+    }]
+}

@@ -1,0 +1,94 @@
+ 'use strict';
+
+ (function(angular) {
+
+
+     app.controller('FormularioDiagnosticoCtrl', ['$scope', '$state', '$rootScope', 'MisDiagnosticosListadoSrv',
+         function($scope, $state, $rootScope, MisDiagnosticosListadoSrv) {
+
+            $scope.estadoInforme = {};
+            var actualizarPasoActual = function(estadoActual) {
+
+                if (estadoActual === 'crearDiagnostico.paso1') {
+                    $scope.numeroPaso = 1;
+                    $scope.rutaAyuda = $state.href('ayudaCrearDiagnostico-paso1');
+                } else if (estadoActual === 'crearDiagnostico.paso2') {
+                    $scope.numeroPaso = 2;
+                    $scope.rutaAyuda = $state.href('ayudaCrearDiagnostico-paso2')
+                } else if (estadoActual === 'crearDiagnostico.paso3') {
+                    $scope.numeroPaso = 3;
+                    $scope.rutaAyuda = $state.href('ayudaCrearDiagnostico-paso3');
+                } else if (estadoActual === 'crearDiagnostico.paso4') {
+                    $scope.numeroPaso = 4;
+                    $scope.rutaAyuda = $state.href('ayudaCrearDiagnostico-paso4');
+                } else if (estadoActual === 'crearDiagnostico.paso5') {
+                    $scope.numeroPaso = 5;
+                    $scope.rutaAyuda = $state.href('ayudaCrearDiagnostico-paso5');
+                }
+
+                angular.element(".indicador-progreso").width((($scope.numeroPaso - 1) * 25) + '%');
+            }
+
+            $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+                actualizarPasoActual(toState.name);
+            });
+
+             // En la primera carga del controlador no salta el $stateChangeSuccess
+            actualizarPasoActual($state.current.name);
+
+            if (!MisDiagnosticosListadoSrv.getResultadoDiagnostico()) {
+                $scope.diagnostico = {};
+                $scope.diagnostico.nombreDiagnostico = null;
+            }
+
+
+            if (!MisDiagnosticosListadoSrv.getDiagnostico()) {
+                $scope.diagnostico = {};
+                $scope.resultadoDiagnostico = {};
+                $scope.resultadoDiagnostico.resultadoAngular = {};
+            } else {
+                $scope.diagnostico = MisDiagnosticosListadoSrv.getDiagnostico();
+                $scope.resultadoDiagnostico = {};
+                $scope.resultadoDiagnostico.resultadoAngular = {};
+            }
+
+
+             $scope.estadoInforme.accesoInforme = false;
+             if (!MisDiagnosticosListadoSrv.getResultadoDiagnostico()) {
+                 $scope.resultadoDiagnostico = {};
+                 $scope.resultadoDiagnostico.resultadoAngular = {};
+                 $scope.estadoInforme.accesoInforme = false;
+             } else {
+                 $scope.estadoInforme.accesoInforme = true;
+                 $scope.resultadoDiagnostico = MisDiagnosticosListadoSrv.getResultadoDiagnostico();
+                 $scope.diagnostico.nombreDiagnostico = $scope.resultadoDiagnostico.resultadoAngular.nombreDiagnostico;
+             }
+
+            var fixStepsOnScroll = function() {
+                var elementPosition = angular.element('.steps-container').offset();
+
+                angular.element(window).scroll(function() {
+                    if (angular.element(window).scrollTop() > elementPosition.top) {
+                        angular.element('.steps-container').css({
+                            'position': 'fixed',
+                            'top': '0'
+                        });
+                        angular.element('.form-container').css({
+                            'margin-top': '185px'
+                        });
+                    } else {
+                        angular.element('.steps-container').css({
+                            'position': 'static'
+                        });
+                        angular.element('.form-container').css({
+                            'margin-top': '0'
+                        });
+                    }
+                });
+            };
+
+            fixStepsOnScroll();
+        }
+    ]);
+
+}(angular));

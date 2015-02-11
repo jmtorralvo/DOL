@@ -1,0 +1,16 @@
+[{
+    "request": {
+        "url": "^/services/dol/resources/j_spring_security_check$",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Set-Cookie": ["pmuid=\"iaBka+c58XA6TlUYt58SUSTFvvIr40rFrOd4weBktNM=\"; Version=1; Max-Age=900; Expires=Expires=Tue, 02-Sep-2016 11:14:16 GMT;; Path=/",
+                        "pmuUserInfo=\"ew0KICAgICJtYWlsIjogImF2aWNlbnRlQGluZHJhLmVzIiwNCiAgICAicGVyZmlsVXN1YXJpbyI6ICJVU1ItMDEiLA0KICAgICJ0aWVuZURpYWdub3N0aWNvcyI6IHRydWUsDQogICAgInVybHNBY2Nlc2libGVzIjogW3sNCiAgICAgICAgInVybCI6ICIvZG9sL2Zvcm11bGFyaW8tZGlhZ25vc3RpY28vbmVnb2Npby15LXRpdHVsYXIiDQogICAgfSwgew0KICAgICAgICAidXJsIjogIi9kb2wvZm9ybXVsYXJpby1kaWFnbm9zdGljby9kYXRvcy1lc3RhYmxlY2ltaWVudG8iDQogICAgfSwgew0KICAgICAgICAidXJsIjogIi9kb2wvZm9ybXVsYXJpby1kaWFnbm9zdGljby9hZ3VhLWNhbGllbnRlLWNsaW1hdGl6YWNpb24taWx1bWluYWNpb24iDQogICAgfSwgew0KICAgICAgICAidXJsIjogIi9kb2wvZm9ybXVsYXJpby1kaWFnbm9zdGljby9jb250cmF0by1kZS1lbmVyZ2lhIg0KICAgIH0sIHsNCiAgICAgICAgInVybCI6ICIvZG9sL2Zvcm11bGFyaW8tZGlhZ25vc3RpY28vcmVzdWx0YWRvIg0KICAgIH0sIHsNCiAgICAgICAgInVybCI6ICIvZG9sL21pcy1kaWFnbm9zdGljb3MiDQogICAgfSwgew0KICAgICAgICAidXJsIjogIi9kb2wvbWlzLWRpYWdub3N0aWNvcy9saXN0YWRvIg0KICAgIH0sIHsNCiAgICAgICAgInVybCI6ICIvZG9sL21pcy1kaWFnbm9zdGljb3MvbGlzdGFkby1jb21lcmNpYWwiDQogICAgfSwgew0KICAgICAgICAidXJsIjogIi9kb2wvbWlzLWRpYWdub3N0aWNvcy9saXN0YWRvLWFkbWluaXN0cmFjaW9uIg0KICAgIH0sIHsNCiAgICAgICAgInVybCI6ICIvZG9sL2NhbWJpby1jb250cmFzZcOxYSINCiAgICB9LA0KICAgIHsNCiAgICAgICAgInVybCI6ICIvZG9sL2Zvcm11bGFyaW8tZGlhZ25vc3RpY28iDQogICAgfSwNCiAgICB7DQogICAgICAgICJ1cmwiOiAiL2RvbC9udWV2by1kaWFnbm9zdGljbyINCiAgICB9XQ0KfQ0K\"; Version=1; Max-Age=900; Expires=Expires=Tue, 02-Sep-2016 11:14:16 GMT;; Path=/"],
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/login-fixture.json"
+    }
+}]

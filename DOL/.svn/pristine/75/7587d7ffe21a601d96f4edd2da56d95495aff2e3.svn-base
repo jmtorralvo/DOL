@@ -1,0 +1,78 @@
+<section class="diagnostic-name">
+    <div class="container">
+        <form name='nombreDiagnosticoForm' novalidate ed-form role="form" class="form-horizontal form-groups-bordered">
+            <div class="form-group">
+                <label for="field-1" class="pull-left control-label">{{ 'fd_newdiagnostic' | translate }}</label>
+                <div class="pull-right">
+                    <a target="_blank" class="diagnostic-help" href="{{rutaAyuda}}">
+                        <span class="icon"></span>{{ 'fd_help' | translate }}</a>
+                </div>
+                <div class="col-sm-4 col-md-5" ng-class="{ 'has-error' : nombreDiagnosticoForm.nombreDiagnostico.$invalid && !nombreDiagnosticoForm.nombreDiagnostico.$pristine }">
+                    <input  autofocus type="text" class="form-control input-lg" ng-readonly = "numeroPaso == 5" id="field-1" name='nombreDiagnostico' placeholder="{{ 'fd_namediagnostic' | translate }}" ng-model="diagnostico.nombreDiagnostico" required maxlength="50" ed-validation>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+<section class="steps-container">
+    <div class="container">
+        <div class="barra-progreso">
+            <div class="indicador-progreso"></div>
+        </div>
+        <ol class="listado-pasos">
+            <li class="paso" ng-class="{'activo': numeroPaso==1, 'hecho': numeroPaso>1}">
+                <a class="descripcion" ui-sref="crearDiagnostico.paso1" ng-show="numeroPaso>1 && numeroPaso<5">
+                    <span class="numero">1</span>
+                    <span class="text-hide-xs">{{ 'fd_businessandowner' | translate }}</span>
+                </a>
+                <a class="descripcion"ng-show="numeroPaso<2 || numeroPaso>4">
+                    <span class="numero">1</span>
+                    <span class="text-hide-xs">{{ 'fd_businessandowner' | translate }}</span>
+                </a>
+            </li>
+            <li class="paso" ng-class="{'activo': numeroPaso==2, 'hecho': numeroPaso>2}">
+                <a class="descripcion" ui-sref="crearDiagnostico.paso2" ng-show="numeroPaso>2 && numeroPaso<5">
+                    <span class="numero">2</span>
+                    <span class="text-hide-xs">{{ 'fd_databusiness' | translate }}</span>
+                </a>
+                <a class="descripcion"ng-show="numeroPaso<3 || numeroPaso>4">
+                    <span class="numero">2</span>
+                    <span class="text-hide-xs">{{ 'fd_databusiness' | translate }}</span>
+                </a>
+
+            </li>
+            <li class="paso" ng-class="{'activo': numeroPaso==3, 'hecho': numeroPaso>3}">
+                <a class="descripcion" ui-sref="crearDiagnostico.paso3" ng-show="numeroPaso>3 && numeroPaso<5">
+                    <span class="numero">3</span>
+                    <span class="text-hide-xs">{{ 'fd_hotwater_airconditioning_lighting' | translate }}</span>
+                </a>
+                <a class="descripcion" ng-show="numeroPaso<4 || numeroPaso>4">
+                    <span class="numero">3</span>
+                    <span class="text-hide-xs">{{ 'fd_hotwater_airconditioning_lighting' | translate }}</span>
+                </a>
+            </li>
+            <li class="paso" ng-class="{'activo': numeroPaso==4, 'hecho': numeroPaso>4}">
+                <a class="descripcion">
+                    <span class="numero">4</span>
+                    <span class="text-hide-xs">{{ 'fd_energycontract' | translate }}</span>
+                </a>
+            </li>
+            <li class="paso" ng-class="{'activo': numeroPaso==5, 'hecho': numeroPaso>5}">
+                <a class="descripcion">
+                    <span class="numero">5</span>
+                    <span class="text-hide-xs">{{ 'fd_resultdiagnosis' | translate }}</span>
+                </a>
+            </li>
+        </ol>
+    </div>
+</section>
+
+<section class="form-container">
+    <div class="container">
+        <form class="form-horizontal form-wizard" name="diagnosticoForm" novalidate>
+
+            <div id="form-views" ui-view></div>
+
+        </form>
+    </div>
+</section>

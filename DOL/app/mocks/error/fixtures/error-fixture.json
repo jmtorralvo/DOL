@@ -1,0 +1,5 @@
+{
+    "descError": "login_invalid_password",
+    "responseCode": 401,
+    "responseError": "UNAUTHORIZED"
+}

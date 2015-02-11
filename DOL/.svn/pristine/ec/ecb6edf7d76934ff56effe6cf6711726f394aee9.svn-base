@@ -1,0 +1,209 @@
+[{
+    "request": {
+        "url": "^/services/dol/poblaciones/provincias$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/provincias-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/poblaciones$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/poblaciones-murcia-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/tipoconstruccion$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/tipoconstruccion-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/anoconstruccion$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/anoconstruccion-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/tipoproteccionsolar$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/tipoproteccionsolar-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/incidSol$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/incidSol-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/tipoclimatizacion$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/tipocalefaccion-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/usosistema$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/usosistema-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/tipoclimatizacion/aacc$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/tipoclimatizacion-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/antiguedad$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/antiguedad-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/sistemaproduccion$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/tipoclimatizacion-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/sistemacocina$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/sistemascocina-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/superficieacristalada$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/superficieacristalada-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/tipopeluqueria$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/tipopeluqueria-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/descripcionactividad$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/descripcionactividad-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/combos/sistemacierre$",
+        "method": "GET"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/sistemacierre-fixture.json"
+    }
+}]

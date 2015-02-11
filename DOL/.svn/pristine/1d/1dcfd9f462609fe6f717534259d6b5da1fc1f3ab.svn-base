@@ -1,0 +1,53 @@
+[{
+    "request": {
+        "url": "^/services/dol/formulario/paso1$",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/diagnostico-crear-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/formulario/paso2$",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/diagnostico-crear-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/formulario/paso3$",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/diagnostico-crear-fixture.json"
+    }
+}, {
+    "request": {
+        "url": "^/services/dol/formulario/paso4$",
+        "method": "POST"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "latency": 500,
+        "file": "fixtures/diagnostico-crear-fixture_paso4.json"
+    }
+}]
